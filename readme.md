@@ -162,10 +162,10 @@ The concentration of NI SOA in the bottom decile in the UK model means less of o
 
 ## Data sources
 
-* (English Index of Multiple Deprivation 2019)[https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019)
-* (Scottish Index of Multiple Deprivation 2020)[https://www.gov.scot/collections/scottish-index-of-multiple-deprivation-2020/)
-* (Welsh Index of Multiple Deprivation (WIMD) 2019)[https://gov.wales/welsh-index-multiple-deprivation-full-index-update-ranks-2019)
-* (Northern Ireland Multiple Deprivation Measures (NIMDM) 2017)[https://www.nisra.gov.uk/statistics/deprivation/northern-ireland-multiple-deprivation-measure-2017-nimdm2017)
+* [English Index of Multiple Deprivation 2019](https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019)
+* [Scottish Index of Multiple Deprivation 2020](https://www.gov.scot/collections/scottish-index-of-multiple-deprivation-2020/)
+* [Welsh Index of Multiple Deprivation (WIMD) 2019](https://gov.wales/welsh-index-multiple-deprivation-full-index-update-ranks-2019)
+* [Northern Ireland Multiple Deprivation Measures (NIMDM) 2017](https://www.nisra.gov.uk/statistics/deprivation/northern-ireland-multiple-deprivation-measure-2017-nimdm2017)
 
 For WIMD the domain scores in the domains file for Income and Employment are scaled, and you need to use the original single indicator from the stats wales site instead. 
 
