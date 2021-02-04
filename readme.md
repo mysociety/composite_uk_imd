@@ -256,5 +256,9 @@ pipenv run pipenv_to_requirements
 
 ## Licencing
 
-Underlying indexes are Open Government License (OGL) version 3.0
-Composite licence and code are available under a [CC by 4.0 licence](https://creativecommons.org/licenses/by/4.0/).
+Source indexes for each country are licenced as Open Government License (OGL) version 3.0.
+
+Unless otherwise stated, composite datasets are licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+
+Code and scripts are licenced under a MIT Licence. 
+
