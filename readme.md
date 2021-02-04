@@ -246,7 +246,7 @@ Alternatively, the `requirements.txt` can be used without pipenv.
 
 ### Maintenance
 
-The column names and sources files used can be adjusted in `country_indexes\join_description.yaml'.
+The column names and sources files used can be adjusted in `country_indexes\join_description.yaml`.
 
 If you've added or changed the packages used, run the following to update the requirements.txt from pipenv:
 
