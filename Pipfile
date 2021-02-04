@@ -1,0 +1,28 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pylint = "*"
+pipenv-to-requirements = "*"
+
+[packages]
+fabric = "*"
+unicodecsv = "*"
+openpyxl = "*"
+xlrd = "*"
+xlwt = "*"
+six = "==1.15.0"
+Pillow = "*"
+numpy = "*"
+pylint-django = "*"
+altair = "*"
+altair-saver = "*"
+django-debug-toolbar = "*"
+scikit-learn = "*"
+pyyaml = "*"
+sklearn = "*"
+
+[requires]
+python_version = "3.8"
