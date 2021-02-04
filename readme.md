@@ -1,6 +1,6 @@
 # Composite UK Index of Multiple Deprivation
 
-This repository uses methodology from a paper by (Gary A Abel, Matthew E Barclay, and Rupert A Payne)[https://bmjopen.bmj.com/content/6/11/e012750] to create a composite measure of multiple deprivation across the UK. 
+This repository uses methodology from a paper by [Gary A Abel, Matthew E Barclay, and Rupert A Payne](https://bmjopen.bmj.com/content/6/11/e012750) to create a composite measure of multiple deprivation across the UK. 
 
 ## What are the indexes of multiple deprivation?
 
@@ -162,10 +162,10 @@ The concentration of NI SOA in the bottom decile in the UK model means less of o
 
 ## Data sources
 
-* (English Index of Multiple Deprivation 2019)[https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019)
-* (Scottish Index of Multiple Deprivation 2020)[https://www.gov.scot/collections/scottish-index-of-multiple-deprivation-2020/)
-* (Welsh Index of Multiple Deprivation (WIMD) 2019)[https://gov.wales/welsh-index-multiple-deprivation-full-index-update-ranks-2019)
-* (Northern Ireland Multiple Deprivation Measures (NIMDM) 2017)[https://www.nisra.gov.uk/statistics/deprivation/northern-ireland-multiple-deprivation-measure-2017-nimdm2017)
+* [English Index of Multiple Deprivation 2019](https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019)
+* [Scottish Index of Multiple Deprivation 2020](https://www.gov.scot/collections/scottish-index-of-multiple-deprivation-2020/)
+* [Welsh Index of Multiple Deprivation (WIMD) 2019](https://gov.wales/welsh-index-multiple-deprivation-full-index-update-ranks-2019)
+* [Northern Ireland Multiple Deprivation Measures (NIMDM) 2017](https://www.nisra.gov.uk/statistics/deprivation/northern-ireland-multiple-deprivation-measure-2017-nimdm2017)
 
 For WIMD the domain scores in the domains file for Income and Employment are scaled, and you need to use the original single indicator from the stats wales site instead. 
 
@@ -261,4 +261,3 @@ Source indexes for each country are licenced as Open Government License (OGL) ve
 Unless otherwise stated, composite datasets are licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 
 Code and scripts are licenced under a MIT Licence. 
-
