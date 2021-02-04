@@ -258,4 +258,4 @@ pipenv run pipenv_to_requirements
 
 National indexes are Open Government License (OGL) version 3.0
 
-Composite dataset avalaible under the Open Data Commons Attribution License: http://opendatacommons.org/licenses/by/1.0/
+Composite dataset available under the Creative Commons Attribution 4.0 International (CC BY 4.0) https://github.com/mysociety/composite_uk_imd/edit/master/readme.md
