@@ -256,5 +256,6 @@ pipenv run pipenv_to_requirements
 
 ## Licencing
 
-Underlying indexes are Open Government License (OGL) version 3.0
+National indexes are Open Government License (OGL) version 3.0
+
 Composite dataset avalaible under the Open Data Commons Attribution License: http://opendatacommons.org/licenses/by/1.0/
