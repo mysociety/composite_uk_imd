@@ -1,6 +1,6 @@
 # Composite UK Index of Multiple Deprivation
 
-This repository uses methodology from a paper by (Gary A Abel, Matthew E Barclay, and Rupert A Payne)[https://bmjopen.bmj.com/content/6/11/e012750] to create a composite measure of multiple deprivation across the UK. 
+This repository uses methodology from a paper by [Gary A Abel, Matthew E Barclay, and Rupert A Payne](https://bmjopen.bmj.com/content/6/11/e012750) to create a composite measure of multiple deprivation across the UK. 
 
 ## What are the indexes of multiple deprivation?
 
