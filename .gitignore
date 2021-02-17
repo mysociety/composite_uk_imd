@@ -37,3 +37,4 @@ conf/ssh_creds.py
 static/sass
 *.sqlite3
 Pipfile
+.devcontainer/devcontainer.json
