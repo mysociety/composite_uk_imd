@@ -10,17 +10,11 @@
 # `Pipfile.lock` and then regenerate `requirements*.txt`.
 ################################################################################
 
-altair
-altair-saver
-django-debug-toolbar
-fabric
 numpy
 openpyxl
-pillow
-pylint-django
+pandas
 pyyaml
 scikit-learn
-six==1.15.0
 sklearn
 unicodecsv
 xlrd
