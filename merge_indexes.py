@@ -3,6 +3,7 @@ import os
 import pandas as pd
 import numpy as np
 import yaml
+import json
 from sklearn import linear_model
 
 join = os.path.join
@@ -15,9 +16,10 @@ gb_predictors = ["income_score", "employment_score"]
 uk_predictors = ["employment_score"]
 
 nice_nation = {"N": "Northern Ireland",
-                "S": "Scotland",
-                "W": "Wales",
-                "E": "England"}
+               "S": "Scotland",
+               "W": "Wales",
+               "E": "England"}
+
 
 def get_country_info():
     with open("country_indexes//join_description.yaml") as file:
@@ -76,7 +78,6 @@ def summary_models(setting="UK", nations="NSEW"):
         options = ["Employment score"]
     else:
         options = ["Income score", "Employment score"]
-
 
     all_results = []
     for nation in nations:
@@ -223,15 +224,78 @@ def compare_local_global_ranking(nation="E", setting="UK", nations="ENSW"):
     results_df = pd.DataFrame(results).round(2)
     print(results_df)
     results_df.to_csv(join("analysis", setting +
-                   "_imd_{0}_rank_displacement.csv".format(nation)))
+                           "_imd_{0}_rank_displacement.csv".format(nation)))
+
 
 def compare_both_local_global():
     compare_local_global_ranking()
     compare_local_global_ranking(setting="GB", nations="ESW")
 
+
+def add_to_lookup(data, nation):
+    """
+    create json dict for this nation, update if overlapping with others
+    """
+    info = get_country_info()[nation]
+    df = pd.read_csv(join("country_indexes", info["source_file"]))
+    rename = {info[x]: x for x in important_columns}
+    df = df.rename(columns=rename)
+    df = df[important_columns]
+
+    df["local_ranking"] = df["overall_score"].rank(ascending=False)
+    df["local_decile"] = np.ceil(df["local_ranking"]/len(df) * 10).astype(int)
+    df["local_quintile"] = np.ceil(
+        df["local_ranking"]/len(df) * 10).astype(int)
+
+    for x, row in df.iterrows():
+        current = data.get(row["lsoa"], {})
+        current[nation + "_r"] = row["local_ranking"]
+        current[nation + "_d"] = row["local_decile"]
+        current[nation + "_q"] = row["local_quintile"]
+        data[row["lsoa"]] = current
+    return data
+
+
+def add_composite_to_lookup(data, composite):
+    loc = join("{0}_index".format(composite),
+               "{0}_IMD_E.csv".format(composite))
+    df = pd.read_csv(loc)
+    df = df.rename(
+        columns={"{0}_IMD_E_score".format(composite): "overall_score"})
+    df["local_ranking"] = df["overall_score"].rank(ascending=False)
+    df["local_decile"] = np.ceil(df["local_ranking"]/len(df) * 10).astype(int)
+    df["local_quintile"] = np.ceil(
+        df["local_ranking"]/len(df) * 10).astype(int)
+
+    for x, row in df.iterrows():
+        current = data.get(row["lsoa"], {})
+        current[composite + "_r"] = row["local_ranking"]
+        current[composite + "_d"] = row["local_decile"]
+        current[composite + "_q"] = row["local_quintile"]
+        data[row["lsoa"]] = current
+    return data
+
+
+def create_master_lookup():
+    """
+    create single json lookup between LSOA and national deprivation
+    """
+    data = {}
+    for nation in "ESNW":
+        print("adding {0}".format(nation))
+        data = add_to_lookup(data, nation)
+    for composite in ["GB", "UK"]:
+        print("adding {0}".format(composite))
+        data = add_composite_to_lookup(data, composite)
+
+    with open(join("composite_lookups", "imd_lsoa.json"), 'w') as outfile:
+        json.dump(data, outfile)
+
+
 if __name__ == "__main__":
 
-    all_summary_models()
-    transform_all()
-    all_deprivation_breakdowns()
-    compare_both_local_global()
+    # all_summary_models()
+    # transform_all()
+    # all_deprivation_breakdowns()
+    # compare_both_local_global()
+    create_master_lookup()
