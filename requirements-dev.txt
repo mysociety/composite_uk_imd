@@ -12,3 +12,5 @@
 
 pipenv-to-requirements
 pylint
+pycodestyle
+autopep8
