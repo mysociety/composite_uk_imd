@@ -24,6 +24,8 @@ overall_score <- target_income_coefficent*source_income_score + target_employmen
 Unfortunately, Northern Ireland's 2017 Multiple Deprivation Measure deviates from the approach other nations use in their income domain, and so the NIMDM2017 Income measure is no longer directly comparable. 
 For the 2020 data, only the employment score is used in the model. This represents a slight lose of information, but as Income and Employment scores are generally correlated this still explains most of the variance (see tables below). A seperate 'GB' ranking for England, Wales and Scotland uses both options. 
 
+To account for the different sizes of small area units in different nations (Scottish DataZones contain less people than LSOAs), the deciles and quintiles provided are based on deciles and quintiles of the overall population rather the rank. This means that some deciles have more 'areas' than others, but if you sampled a random pool of the population, you should have even an even division. 
+
 ## How is this getting over the fundamental issue the indexes aren't comparable? 
 
 This is a good question, and the answer is it does assume that actually the scores are roughtly compariable when you bundle them all up. As the [original paper](https://bmjopen.bmj.com/content/6/11/e012750) put it *"[o]ur approach treated all standardised residuals as equivalent between the constituent nations, allowing us to create consistent UK-wide estimates of relative deprivation"*. If you think this is reasonable, the rest works fine.
@@ -96,7 +98,7 @@ National subsets of the overall indexes are not identical to the original indexe
 
 This is why a dataset that is mostly Scottish data should use the Scotland based version, as the theoretical basis of the majority of the rankings is clearer.
 
-#### UK index (England based) 
+#### UK rank displacement (England based)
 
 |            | Northern Ireland | Scotland | Wales |
 |------------|------------------|----------|-------|
@@ -110,7 +112,7 @@ This is why a dataset that is mostly Scottish data should use the Scotland based
 | max        | 216              | 819      | 57    |
 | % of total | 97.6             | 99.6     | 96.6  |
 
-#### GB index (England based) 
+#### GB rank displacement (England based) 
 
 |            | Scotland | Wales |
 |------------|----------|-------|
@@ -128,37 +130,37 @@ This is why a dataset that is mostly Scottish data should use the Scotland based
 
 The following table shows the distribution of the population by nation by UK IMD decile (England model):
 
-| IMD Decile distribution   | E   | N   | S   | W   |
+| IMD Decile   distribution | E   | N   | S   | W   |
 |---------------------------|-----|-----|-----|-----|
-| 1                         | 9%  | 42% | 9%  | 8%  |
-| 2                         | 10% | 22% | 9%  | 11% |
-| 3                         | 10% | 16% | 9%  | 11% |
-| 4                         | 10% | 11% | 8%  | 13% |
-| 5                         | 10% | 7%  | 9%  | 12% |
-| 6                         | 10% | 2%  | 11% | 14% |
-| 7                         | 10% | 0%  | 11% | 11% |
-| 8                         | 10% | 0%  | 10% | 9%  |
-| 9                         | 10% | 0%  | 11% | 9%  |
-| 10                        | 10% | 0%  | 14% | 3%  |
+| 1                         | 10% | 12% | 10% | 12% |
+| 2                         | 10% | 16% | 9%  | 12% |
+| 3                         | 9%  | 22% | 8%  | 12% |
+| 4                         | 9%  | 21% | 8%  | 13% |
+| 5                         | 10% | 20% | 9%  | 12% |
+| 6                         | 10% | 8%  | 11% | 12% |
+| 7                         | 10% | 0%  | 11% | 10% |
+| 8                         | 11% | 0%  | 10% | 8%  |
+| 9                         | 11% | 0%  | 11% | 7%  |
+| 10                        | 11% | 0%  | 14% | 1%  |
 
-As in the original paper, England and Scotland have a similar distribution, Wales is on average slightly more deprived, and Northern Ireland is mostly contained in the bottom half of the overall deprivation scale. This is more extreme than in the previous version of the model, where 36.6% of NI population were in the bottom quintile compared to 64% in this model. Without a good way to validate which of these is more credible, this raises the importance of also including a national-level IMD measures when there is a significant amount of data available for Northern Ireland to better understand trends in their proper context.
+As in the original paper, England and Scotland have a similar distribution, Wales is on average slightly more deprived, and Northern Ireland is mostly contained in the bottom half of the overall deprivation scale. This is broadly similar to the previous iteration of the model, where 36.6% of NI population were in the bottom quintile compared to 28% in this model. 
 
 The GB distribution (generated using Income and Employment) is similar to the UK distributions:
 
-| IMD Decile distribution   | E   | S   | W   |
+| IMD Decile   distribution | E   | S   | W   |
 |---------------------------|-----|-----|-----|
 | 1                         | 10% | 10% | 12% |
 | 2                         | 10% | 9%  | 12% |
-| 3                         | 10% | 9%  | 13% |
-| 4                         | 10% | 8%  | 14% |
+| 3                         | 10% | 8%  | 12% |
+| 4                         | 10% | 8%  | 13% |
 | 5                         | 10% | 10% | 13% |
 | 6                         | 10% | 11% | 12% |
 | 7                         | 10% | 11% | 9%  |
 | 8                         | 10% | 10% | 8%  |
-| 9                         | 10% | 10% | 7%  |
-| 10                        | 10% | 13% | 1%  |
+| 9                         | 10% | 11% | 7%  |
+| 10                        | 11% | 13% | 1%  |
 
-The concentration of NI SOA in the bottom decile in the UK model means less of other nations appear in this decile. When comparing datasets without NI data, using the GB index will present a cleaner picture between deciles. Although if part of the overall picture is *"we don't have data/have good takeup of services in a part of the UK that is on average more deprived"*, the UK index may still be appropriate. 
+The concentration of NI SOA in the lower deciles in the UK model means less of other nations appear in this decile. When comparing datasets without NI data, using the GB index will present a cleaner picture between deciles. Although if part of the overall picture is *"we don't have data/have good takeup of services in a part of the UK that is on average more deprived"*, the UK index may still be appropriate. 
 
 ## Data sources
 

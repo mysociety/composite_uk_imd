@@ -149,10 +149,23 @@ def transform_all_to(destination_index="E", setting="UK", nations="NSEW"):
 
     df = pd.concat(collection)
     df[col_name + "_rank"] = df[col_name + "_score"].rank(ascending=False)
-    df[col_name +
-        "_decile"] = np.ceil(df[col_name + "_rank"]/len(df) * 10).astype(int)
 
+    pop = pd.read_csv(join("analysis", "population",
+                           "2019_population.csv"), thousands=',')
+    df = pd.merge(df, pop, on="lsoa")
+
+    # create cumulative sum column on rank so we create deciles based on even pop
+    # and get around that some small areas are different sizes
     df = df.sort_values(col_name + "_rank")
+    df["cum_pop"] = df["pop"].astype("int").cumsum()
+
+    df[col_name +
+        "_pop_decile"] = np.ceil(df["cum_pop"]/sum(df["pop"]) * 10).astype(int)
+    df[col_name +
+        "_pop_quintile"] = np.ceil(df["cum_pop"]/sum(df["pop"]) * 5).astype(int)
+
+    df = df.drop(columns=["pop", "cum_pop"])
+
     df = df.rename(columns={"overall_score": "overall_local_score"})
     df.to_csv(join(setting + "_index", col_name + ".csv"), index=False)
 
@@ -170,14 +183,19 @@ def transform_all():
 
 
 def deprivation_breakdown(nation="E", setting="UK", nations="ENSW"):
+    """
+    create breakdown of where the nations sit in different deciles
+    of combined models
+    """
     df = pd.read_csv(join(setting + "_index", setting +
                           "_IMD_{0}.csv".format(nation)))
 
-    pop = pd.read_csv(join("analysis", "population", "2019_population.csv"))
+    pop = pd.read_csv(join("analysis", "population",
+                           "2019_population.csv"), thousands=',')
     df = pd.merge(df, pop, on="lsoa")
 
     pt = df.pivot_table("pop", columns="nation", index=[
-                        setting + "_IMD_{0}_decile".format(nation)], aggfunc='count').fillna(0)
+        setting + "_IMD_{0}_pop_decile".format(nation)], aggfunc='count').fillna(0)
     pt.index.name = "IMD Decile distribution"
     pt.columns.name = None
     for n in nations:
@@ -257,21 +275,16 @@ def add_to_lookup(data, nation):
 
 
 def add_composite_to_lookup(data, composite):
+    core = "{0}_IMD_E".format(composite)
     loc = join("{0}_index".format(composite),
-               "{0}_IMD_E.csv".format(composite))
+               core + ".csv")
     df = pd.read_csv(loc)
-    df = df.rename(
-        columns={"{0}_IMD_E_score".format(composite): "overall_score"})
-    df["local_ranking"] = df["overall_score"].rank(ascending=False)
-    df["local_decile"] = np.ceil(df["local_ranking"]/len(df) * 10).astype(int)
-    df["local_quintile"] = np.ceil(
-        df["local_ranking"]/len(df) * 10).astype(int)
 
     for x, row in df.iterrows():
         current = data.get(row["lsoa"], {})
-        current[composite + "_r"] = row["local_ranking"]
-        current[composite + "_d"] = row["local_decile"]
-        current[composite + "_q"] = row["local_quintile"]
+        current[composite + "_r"] = row[core + "_rank"]
+        current[composite + "_d"] = row[core + "_pop_decile"]
+        current[composite + "_q"] = row[core + "_pop_quintile"]
         data[row["lsoa"]] = current
     return data
 
@@ -294,8 +307,8 @@ def create_master_lookup():
 
 if __name__ == "__main__":
 
-    # all_summary_models()
-    # transform_all()
-    # all_deprivation_breakdowns()
-    # compare_both_local_global()
+    all_summary_models()
+    transform_all()
+    all_deprivation_breakdowns()
+    compare_both_local_global()
     create_master_lookup()
