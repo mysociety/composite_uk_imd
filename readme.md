@@ -68,7 +68,6 @@ For the UK (England, Scotland, Wales and Northern Ireland), there are versions o
 
 If only using data from England, Scotland or Wales, there is a separate GB index that uses both of the comparable Income and Employment domains to create rankings. 
 
-
 ## Data analysis
 
 ### Regression models
@@ -77,20 +76,22 @@ In all cases, the r² shows majority of the variation in the IMD score is explai
 
 #### UK models
 
-| Nation           | Intercept | Employment score | r²   | Residuals SD |
-|------------------|-----------|------------------|------|--------------|
-| England          | 0.06      | 2.16             | 0.9  | 4.74         |
-| Scotland         | 0.11      | 2.26             | 0.94 | 3.9          |
-| Wales            | -3.49     | 2.4              | 0.87 | 5.54         |
-| Northern Ireland | -7.84     | 1.4              | 0.88 | 5.11         |
+| Nation           |   Intercept |   Employment score |   r² |   Residuals SD |
+|------------------|-------------|--------------------|------|----------------|
+| England          |        0.06 |               2.16 | 0.9  |           4.74 |
+| Scotland         |        0.11 |               2.26 | 0.94 |           3.9  |
+| Wales            |       -3.49 |               2.4  | 0.87 |           5.54 |
+| Northern Ireland |       -7.84 |               1.4  | 0.88 |           5.11 |
+
 
 #### GB Models
 
-| Nation   | Intercept | Income score | Employment score | r2   | Residuals SD |
-|----------|-----------|--------------|------------------|------|--------------|
-| England  | 0.51      | 1.09         | 0.72             | 0.94 | 3.63         |
-| Scotland | 0.28      | 1.03         | 0.92             | 0.97 | 2.82         |
-| Wales    | -3.73     | 1.24         | 0.53             | 0.94 | 3.87         |
+| Nation   |   Intercept |   Income score |   Employment score |   r² |   Residuals SD |
+|----------|-------------|----------------|--------------------|------|----------------|
+| England  |        0.51 |           1.09 |               0.72 | 0.94 |           3.63 |
+| Scotland |        0.28 |           1.03 |               0.92 | 0.97 |           2.82 |
+| Wales    |       -3.73 |           1.24 |               0.53 | 0.94 |           3.87 |
+
 
 ### Rank intergrity is not preserved
 
@@ -100,67 +101,73 @@ This is why a dataset that is mostly Scottish data should use the Scotland based
 
 #### UK rank displacement (England based)
 
-|            | Northern Ireland | Scotland | Wales |
-|------------|------------------|----------|-------|
-| count      | 869              | 6945     | 1845  |
-| mean       | 29.58            | 108.93   | 8.61  |
-| std        | 26.72            | 102.22   | 8.03  |
-| min        | 1                | 1        | 0.5   |
-| 25%        | 9                | 31       | 2.5   |
-| 50%        | 23               | 81       | 6     |
-| 75%        | 42               | 154      | 12    |
-| max        | 216              | 819      | 57    |
-| % of total | 97.6             | 99.6     | 96.6  |
+|            |   Northern Ireland |   Scotland |   Wales |
+|------------|--------------------|------------|---------|
+| count      |             874    |    6953    | 1876    |
+| mean       |              26.06 |     117.22 |   13.12 |
+| std        |              26.38 |     113.24 |   11.46 |
+| min        |               1    |       1    |    0.5  |
+| 25%        |               7    |      31    |    4    |
+| 50%        |              18    |      81    |    9.5  |
+| 75%        |              37    |     170    |   19.5  |
+| max        |             237    |    1037    |   69.5  |
+| % of total |              98.2  |      99.7  |   98.3  |
+
 
 #### GB rank displacement (England based) 
 
-|            | Scotland | Wales |
-|------------|----------|-------|
-| count      | 6953     | 1876  |
-| mean       | 117.22   | 13.12 |
-| std        | 113.24   | 11.46 |
-| min        | 1        | 0.5   |
-| 25%        | 31       | 4     |
-| 50%        | 81       | 9.5   |
-| 75%        | 170      | 19.5  |
-| max        | 1037     | 69.5  |
-| % of total | 99.7     | 98.3  |
+
+|            |   Scotland |   Wales |
+|------------|------------|---------|
+| count      |    6953    | 1876    |
+| mean       |     117.22 |   13.12 |
+| std        |     113.24 |   11.46 |
+| min        |       1    |    0.5  |
+| 25%        |      31    |    4    |
+| 50%        |      81    |    9.5  |
+| 75%        |     170    |   19.5  |
+| max        |    1037    |   69.5  |
+| % of total |      99.7  |   98.3  |
+
 
 ### Deprivation distribution
 
 The following table shows the distribution of the population by nation by UK IMD decile (England model):
 
-| IMD Decile   distribution | E   | N   | S   | W   |
+|   IMD Decile distribution | E   | N   | S   | W   |
 |---------------------------|-----|-----|-----|-----|
-| 1                         | 10% | 12% | 10% | 12% |
-| 2                         | 10% | 16% | 9%  | 12% |
-| 3                         | 9%  | 22% | 8%  | 12% |
-| 4                         | 9%  | 21% | 8%  | 13% |
-| 5                         | 10% | 20% | 9%  | 12% |
-| 6                         | 10% | 8%  | 11% | 12% |
-| 7                         | 10% | 0%  | 11% | 10% |
-| 8                         | 11% | 0%  | 10% | 8%  |
-| 9                         | 11% | 0%  | 11% | 7%  |
-| 10                        | 11% | 0%  | 14% | 1%  |
+|                         1 | 10% | 12% | 10% | 12% |
+|                         2 | 10% | 16% | 9%  | 12% |
+|                         3 | 9%  | 22% | 8%  | 12% |
+|                         4 | 9%  | 21% | 8%  | 13% |
+|                         5 | 10% | 20% | 9%  | 12% |
+|                         6 | 10% | 8%  | 11% | 12% |
+|                         7 | 10% | 0%  | 11% | 10% |
+|                         8 | 11% | 0%  | 10% | 8%  |
+|                         9 | 11% | 0%  | 11% | 7%  |
+|                        10 | 11% | 0%  | 14% | 1%  |
+
 
 As in the original paper, England and Scotland have a similar distribution, Wales is on average slightly more deprived, and Northern Ireland is mostly contained in the bottom half of the overall deprivation scale. This is broadly similar to the previous iteration of the model, where 36.6% of NI population were in the bottom quintile compared to 28% in this model. 
 
 The GB distribution (generated using Income and Employment) is similar to the UK distributions:
 
-| IMD Decile   distribution | E   | S   | W   |
+|   IMD Decile distribution | E   | S   | W   |
 |---------------------------|-----|-----|-----|
-| 1                         | 10% | 10% | 12% |
-| 2                         | 10% | 9%  | 12% |
-| 3                         | 10% | 8%  | 12% |
-| 4                         | 10% | 8%  | 13% |
-| 5                         | 10% | 10% | 13% |
-| 6                         | 10% | 11% | 12% |
-| 7                         | 10% | 11% | 9%  |
-| 8                         | 10% | 10% | 8%  |
-| 9                         | 10% | 11% | 7%  |
-| 10                        | 11% | 13% | 1%  |
+|                         1 | 10% | 10% | 12% |
+|                         2 | 10% | 9%  | 12% |
+|                         3 | 10% | 8%  | 12% |
+|                         4 | 10% | 8%  | 13% |
+|                         5 | 10% | 10% | 13% |
+|                         6 | 10% | 11% | 12% |
+|                         7 | 10% | 11% | 9%  |
+|                         8 | 10% | 10% | 8%  |
+|                         9 | 10% | 11% | 7%  |
+|                        10 | 11% | 13% | 1%  |
+
 
 The concentration of NI SOA in the lower deciles in the UK model means less of other nations appear in this decile. When comparing datasets without NI data, using the GB index will present a cleaner picture between deciles. Although if part of the overall picture is *"we don't have data/have good takeup of services in a part of the UK that is on average more deprived"*, the UK index may still be appropriate. 
+
 
 ## Data sources
 

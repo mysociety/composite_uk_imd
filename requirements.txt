@@ -19,3 +19,4 @@ sklearn
 unicodecsv
 xlrd
 xlwt
+tabulate
