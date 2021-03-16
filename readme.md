@@ -132,7 +132,7 @@ This is why a dataset that is mostly Scottish data should use the Scotland based
 
 ### Deprivation distribution
 
-The following table shows the distribution of the population by nation by UK IMD decile (England model):
+The following table and table show the distribution of the population by nation by UK IMD decile (England model):
 
 |   IMD Decile distribution | E   | N   | S   | W   |
 |---------------------------|-----|-----|-----|-----|
@@ -146,6 +146,15 @@ The following table shows the distribution of the population by nation by UK IMD
 |                         8 | 11% | 0%  | 10% | 8%  |
 |                         9 | 11% | 0%  | 11% | 7%  |
 |                        10 | 11% | 0%  | 14% | 1%  |
+
+
+
+
+
+    
+![png](_notebook_resources/readme_15_0.png)
+    
+
 
 
 As in the original paper, England and Scotland have a similar distribution, Wales is on average slightly more deprived, and Northern Ireland is mostly contained in the bottom half of the overall deprivation scale. This is broadly similar to the previous iteration of the model, where 36.6% of NI population were in the bottom quintile compared to 28% in this model. 

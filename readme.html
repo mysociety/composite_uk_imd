@@ -14526,7 +14526,7 @@ For the 2020 data, only the employment score is used in the model. This represen
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Deprivation-distribution">Deprivation distribution<a class="anchor-link" href="#Deprivation-distribution">&#182;</a></h3><p>The following table shows the distribution of the population by nation by UK IMD decile (England model):</p>
+<h3 id="Deprivation-distribution">Deprivation distribution<a class="anchor-link" href="#Deprivation-distribution">&#182;</a></h3><p>The following table and table show the distribution of the population by nation by UK IMD decile (England model):</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14576,6 +14576,68 @@ For the 2020 data, only the employment score is used in the model. This represen
 
 </div>
 
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">altair.expr</span> <span class="kn">import</span> <span class="n">datum</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;analysis&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="s2">&quot;UK_imd_E_breakdown.csv&quot;</span><span class="p">)</span>
+<span class="n">melt</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="s2">&quot;IMD Decile distribution&quot;</span><span class="p">,</span> <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;distribution&quot;</span><span class="p">)</span>
+
+<span class="n">melt</span><span class="p">[</span><span class="s2">&quot;distribution&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">melt</span><span class="o">.</span><span class="n">distribution</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="s2">&quot;E&quot;</span><span class="p">:</span><span class="s2">&quot;England&quot;</span><span class="p">,</span> <span class="s2">&quot;S&quot;</span><span class="p">:</span><span class="s2">&quot;Scotland&quot;</span><span class="p">,</span><span class="s2">&quot;W&quot;</span><span class="p">:</span><span class="s2">&quot;Wales&quot;</span><span class="p">,</span><span class="s2">&quot;N&quot;</span><span class="p">:</span><span class="s2">&quot;Northern Ireland&quot;</span><span class="p">})</span>
+
+<span class="n">melt</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span> <span class="o">*=</span> <span class="mi">100</span>
+
+<span class="n">base</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">melt</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;IMD Decile distribution&quot;</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Composite IMD distribution&quot;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)))),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;%&quot;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">domain</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">25</span><span class="p">))),</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;distribution&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+
+<span class="n">chart</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">vconcat</span><span class="p">()</span>
+<span class="n">row</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">hconcat</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;England&quot;</span><span class="p">,</span> <span class="s2">&quot;Scotland&quot;</span><span class="p">]:</span>
+    <span class="n">row</span> <span class="o">|=</span> <span class="n">base</span><span class="o">.</span><span class="n">transform_filter</span><span class="p">(</span><span class="n">datum</span><span class="o">.</span><span class="n">distribution</span> <span class="o">==</span> <span class="n">n</span><span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+<span class="n">chart</span> <span class="o">&amp;=</span> <span class="n">row</span>
+<span class="n">row</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">hconcat</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Wales&quot;</span><span class="p">,</span> <span class="s2">&quot;Northern Ireland&quot;</span><span class="p">]:</span>
+    <span class="n">row</span> <span class="o">|=</span> <span class="n">base</span><span class="o">.</span><span class="n">transform_filter</span><span class="p">(</span><span class="n">datum</span><span class="o">.</span><span class="n">distribution</span> <span class="o">==</span> <span class="n">n</span><span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+<span class="n">chart</span> <span class="o">&amp;=</span> <span class="n">row</span>
+
+<span class="n">chart</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+
+
+
+
+<div class="jp-RenderedImage jp-OutputArea-output jp-OutputArea-executeResult">
+<img src="_notebook_resources/readme_15_0.png"
+>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14586,7 +14648,7 @@ For the 2020 data, only the employment score is used in the model. This represen
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;analysis&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="s2">&quot;GB_imd_E_breakdown.csv&quot;</span><span class="p">)</span>
