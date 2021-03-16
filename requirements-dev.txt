@@ -14,4 +14,3 @@ pipenv-to-requirements
 pylint
 pycodestyle
 autopep8
-jupyter

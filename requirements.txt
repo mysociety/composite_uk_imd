@@ -20,3 +20,6 @@ unicodecsv
 xlrd
 xlwt
 tabulate
+altair
+altair_saver
+jupyter

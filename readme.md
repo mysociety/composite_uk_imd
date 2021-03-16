@@ -263,6 +263,8 @@ If you've added or changed the packages used, run the following to update the re
 pipenv run pipenv_to_requirements
 ```
 
+The readme file should not be edited directly, instead edit the jupyter notebook and rerun the final cell to update.
+
 ## Licencing
 
 Source indexes for each country are licenced as Open Government License (OGL) version 3.0.
