@@ -307,8 +307,8 @@ def create_master_lookup():
 
 if __name__ == "__main__":
 
-    #all_summary_models()
-    #transform_all()
+    all_summary_models()
+    transform_all()
     all_deprivation_breakdowns()
-    #compare_both_local_global()
-    #create_master_lookup()
+    compare_both_local_global()
+    create_master_lookup()
