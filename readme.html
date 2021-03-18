@@ -14273,7 +14273,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Composite-UK-Index-of-Multiple-Deprivation">Composite UK Index of Multiple Deprivation<a class="anchor-link" href="#Composite-UK-Index-of-Multiple-Deprivation">&#182;</a></h1><p>This repository uses methodology from a paper by <a href="https://bmjopen.bmj.com/content/6/11/e012750">Gary A Abel, Matthew E Barclay, and Rupert A Payne</a> to create a composite measure of multiple deprivation across the UK.</p>
+<h1 id="Composite-2020-UK-Index-of-Multiple-Deprivation">Composite 2020 UK Index of Multiple Deprivation<a class="anchor-link" href="#Composite-2020-UK-Index-of-Multiple-Deprivation">&#182;</a></h1><p>This repository uses methodology from a paper by <a href="https://bmjopen.bmj.com/content/6/11/e012750">Gary A Abel, Matthew E Barclay, and Rupert A Payne</a> to create a composite measure of multiple deprivation across the UK.</p>
 
 </div>
 </div>
@@ -14299,7 +14299,7 @@ For the 2020 data, only the employment score is used in the model. This represen
 <h3 id="Why-would-it-not-be-reasonable?">Why would it not be reasonable?<a class="anchor-link" href="#Why-would-it-not-be-reasonable?">&#182;</a></h3><p>As expressed in various ways in the accompaning material to the indexes, there are reasons not to treat indexes are comparable that this method does not avoid:</p>
 <ul>
 <li>This lump of 'other' deprivation is not measuring the same thing in different indexes. Different indicators are combined in different ways in each nation to create the overall score.</li>
-<li>Different nations have different problems the indexes that are deliberately tuned to address (through including specific forms of deprivation that other nations do not), or this arises implicitly from the different results of the principle component analysis (PCA) in different national datasets.</li>
+<li>Different nations have different problems the indexes that are deliberately tuned to address (through including specific forms of deprivation that other nations do not), or this arises implicitly from the different results of the principal component analysis (PCA) in different national datasets.</li>
 <li>If one nation has a higher rate of one form of deprivation (for instance, if one generally has higher health deprivation), areas that would considered highly deprived in another context would be rescaled as less deprived. </li>
 <li>In general, the lump is difficult to examine exactly why one area is rated as more deprived as another. While within each national index you can explore domains to understand why one area is ranked above another, this just is not possible to compare in the same way between the lumps. </li>
 </ul>
@@ -14526,7 +14526,7 @@ For the 2020 data, only the employment score is used in the model. This represen
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Deprivation-distribution">Deprivation distribution<a class="anchor-link" href="#Deprivation-distribution">&#182;</a></h3><p>The following table and table show the distribution of the population by nation by UK IMD decile (England model):</p>
+<h3 id="Deprivation-distribution">Deprivation distribution<a class="anchor-link" href="#Deprivation-distribution">&#182;</a></h3><p>The following table and graph show the distribution of the population by nation and UK IMD decile (England model):</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14923,9 +14923,18 @@ pipenv run python merge_indexes.py</code></pre>
 
 <pre><code>pipenv run pipenv_to_requirements</code></pre>
 <p>The readme file should not be edited directly, instead edit the jupyter notebook and rerun the final cell to update.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Licencing">Licencing<a class="anchor-link" href="#Licencing">&#182;</a></h2><p>Source indexes for each country are licenced as Open Government License (OGL) version 3.0.</p>
 <p>Unless otherwise stated, composite datasets are licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
 <p>Code and scripts are licenced under a MIT Licence.</p>
+<h2 id="Citation">Citation<a class="anchor-link" href="#Citation">&#182;</a></h2><p>Future versions may use same URL, but past versions will be included in git history.</p>
+<p>Suggested citation if using the dataset, but worth also referencing the original methodology paper:</p>
+
+<pre><code>Parsons, Alex (2021), UK 2020 Composite Index of Multiple Deprivation, https://github.com/mysociety/composite_uk_imd</code></pre>
 
 </div>
 </div>

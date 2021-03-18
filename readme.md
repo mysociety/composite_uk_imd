@@ -1,4 +1,4 @@
-# Composite UK Index of Multiple Deprivation
+# Composite 2020 UK Index of Multiple Deprivation
 
 This repository uses methodology from a paper by [Gary A Abel, Matthew E Barclay, and Rupert A Payne](https://bmjopen.bmj.com/content/6/11/e012750) to create a composite measure of multiple deprivation across the UK. 
 
@@ -35,7 +35,7 @@ This is a good question, and the answer is it does assume that actually the scor
 As expressed in various ways in the accompaning material to the indexes, there are reasons not to treat indexes are comparable that this method does not avoid:
 
 * This lump of 'other' deprivation is not measuring the same thing in different indexes. Different indicators are combined in different ways in each nation to create the overall score.
-* Different nations have different problems the indexes that are deliberately tuned to address (through including specific forms of deprivation that other nations do not), or this arises implicitly from the different results of the principle component analysis (PCA) in different national datasets.
+* Different nations have different problems the indexes that are deliberately tuned to address (through including specific forms of deprivation that other nations do not), or this arises implicitly from the different results of the principal component analysis (PCA) in different national datasets.
 * If one nation has a higher rate of one form of deprivation (for instance, if one generally has higher health deprivation), areas that would considered highly deprived in another context would be rescaled as less deprived. 
 * In general, the lump is difficult to examine exactly why one area is rated as more deprived as another. While within each national index you can explore domains to understand why one area is ranked above another, this just is not possible to compare in the same way between the lumps. 
 
@@ -132,7 +132,7 @@ This is why a dataset that is mostly Scottish data should use the Scotland based
 
 ### Deprivation distribution
 
-The following table and table show the distribution of the population by nation by UK IMD decile (England model):
+The following table and graph show the distribution of the population by nation and UK IMD decile (England model):
 
 |   IMD Decile distribution | E   | N   | S   | W   |
 |---------------------------|-----|-----|-----|-----|
@@ -274,10 +274,22 @@ pipenv run pipenv_to_requirements
 
 The readme file should not be edited directly, instead edit the jupyter notebook and rerun the final cell to update.
 
+
+
 ## Licencing
 
 Source indexes for each country are licenced as Open Government License (OGL) version 3.0.
 
 Unless otherwise stated, composite datasets are licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 
-Code and scripts are licenced under a MIT Licence. 
+Code and scripts are licenced under a MIT Licence.
+
+## Citation
+
+Future versions may use same URL, but past versions will be included in git history. 
+
+Suggested citation if using the dataset, but worth also referencing the original methodology paper:
+
+```
+Parsons, Alex (2021), UK 2020 Composite Index of Multiple Deprivation, https://github.com/mysociety/composite_uk_imd
+```
