@@ -136,16 +136,16 @@ The following table and graph show the distribution of the population by nation 
 
 |   IMD Decile distribution | E   | N   | S   | W   |
 |---------------------------|-----|-----|-----|-----|
-|                         1 | 10% | 12% | 10% | 12% |
-|                         2 | 10% | 16% | 9%  | 12% |
-|                         3 | 9%  | 22% | 8%  | 12% |
-|                         4 | 9%  | 21% | 8%  | 13% |
-|                         5 | 10% | 20% | 9%  | 12% |
+|                         1 | 10% | 11% | 10% | 12% |
+|                         2 | 10% | 16% | 8%  | 12% |
+|                         3 | 10% | 24% | 8%  | 12% |
+|                         4 | 10% | 23% | 8%  | 13% |
+|                         5 | 10% | 19% | 9%  | 13% |
 |                         6 | 10% | 8%  | 11% | 12% |
 |                         7 | 10% | 0%  | 11% | 10% |
-|                         8 | 11% | 0%  | 10% | 8%  |
-|                         9 | 11% | 0%  | 11% | 7%  |
-|                        10 | 11% | 0%  | 14% | 1%  |
+|                         8 | 10% | 0%  | 11% | 8%  |
+|                         9 | 10% | 0%  | 11% | 7%  |
+|                        10 | 10% | 0%  | 14% | 1%  |
 
 
 
@@ -157,7 +157,7 @@ The following table and graph show the distribution of the population by nation 
 
 
 
-As in the original paper, England and Scotland have a similar distribution, Wales is on average slightly more deprived, and Northern Ireland is mostly contained in the bottom half of the overall deprivation scale. This is broadly similar to the previous iteration of the model, where 36.6% of NI population were in the bottom quintile compared to 28% in this model. 
+As in the original paper, England and Scotland have a similar distribution, Wales is on average slightly more deprived, and Northern Ireland is mostly contained in the bottom half of the overall deprivation scale. For comparsion to the previous model, 37% of NI population were in the bottom overall quintile compared to 27% in this model. 
 
 The GB distribution (generated using Income and Employment) is similar to the UK distributions:
 
@@ -167,12 +167,12 @@ The GB distribution (generated using Income and Employment) is similar to the UK
 |                         2 | 10% | 9%  | 12% |
 |                         3 | 10% | 8%  | 12% |
 |                         4 | 10% | 8%  | 13% |
-|                         5 | 10% | 10% | 13% |
+|                         5 | 10% | 9%  | 13% |
 |                         6 | 10% | 11% | 12% |
-|                         7 | 10% | 11% | 9%  |
+|                         7 | 10% | 11% | 10% |
 |                         8 | 10% | 10% | 8%  |
 |                         9 | 10% | 11% | 7%  |
-|                        10 | 11% | 13% | 1%  |
+|                        10 | 10% | 14% | 1%  |
 
 
 The concentration of NI SOA in the lower deciles in the UK model means less of other nations appear in this decile. When comparing datasets without NI data, using the GB index will present a cleaner picture between deciles. Although if part of the overall picture is *"we don't have data/have good takeup of services in a part of the UK that is on average more deprived"*, the UK index may still be appropriate. 
@@ -184,6 +184,10 @@ The concentration of NI SOA in the lower deciles in the UK model means less of o
 * [Scottish Index of Multiple Deprivation 2020](https://www.gov.scot/collections/scottish-index-of-multiple-deprivation-2020/)
 * [Welsh Index of Multiple Deprivation (WIMD) 2019](https://gov.wales/welsh-index-multiple-deprivation-full-index-update-ranks-2019)
 * [Northern Ireland Multiple Deprivation Measures (NIMDM) 2017](https://www.nisra.gov.uk/statistics/deprivation/northern-ireland-multiple-deprivation-measure-2017-nimdm2017)
+* [ONS 2019 population estimates](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/lowersuperoutputareamidyearpopulationestimates)
+* [National Records Scotland 2019 Population Estimates](https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates)
+* [NISRA 2019 2019 population estimates](https://www.nisra.gov.uk/publications/2019-mid-year-population-estimates-northern-ireland)
+
 
 For WIMD the domain scores in the domains file for Income and Employment are scaled, and you need to use the original single indicator from the stats wales site instead. 
 

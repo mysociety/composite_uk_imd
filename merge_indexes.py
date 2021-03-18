@@ -195,7 +195,7 @@ def deprivation_breakdown(nation="E", setting="UK", nations="ENSW"):
     df = pd.merge(df, pop, on="lsoa")
 
     pt = df.pivot_table("pop", columns="nation", index=[
-        setting + "_IMD_{0}_pop_decile".format(nation)], aggfunc='count').fillna(0)
+        setting + "_IMD_{0}_pop_decile".format(nation)], aggfunc='sum').fillna(0)
     pt.index.name = "IMD Decile distribution"
     pt.columns.name = None
     for n in nations:
@@ -307,8 +307,8 @@ def create_master_lookup():
 
 if __name__ == "__main__":
 
-    all_summary_models()
-    transform_all()
+    #all_summary_models()
+    #transform_all()
     all_deprivation_breakdowns()
-    compare_both_local_global()
-    create_master_lookup()
+    #compare_both_local_global()
+    #create_master_lookup()

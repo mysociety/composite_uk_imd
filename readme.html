@@ -14558,16 +14558,16 @@ For the 2020 data, only the employment score is used in the model. This represen
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>|   IMD Decile distribution | E   | N   | S   | W   |
 |---------------------------|-----|-----|-----|-----|
-|                         1 | 10% | 12% | 10% | 12% |
-|                         2 | 10% | 16% | 9%  | 12% |
-|                         3 | 9%  | 22% | 8%  | 12% |
-|                         4 | 9%  | 21% | 8%  | 13% |
-|                         5 | 10% | 20% | 9%  | 12% |
+|                         1 | 10% | 11% | 10% | 12% |
+|                         2 | 10% | 16% | 8%  | 12% |
+|                         3 | 10% | 24% | 8%  | 12% |
+|                         4 | 10% | 23% | 8%  | 13% |
+|                         5 | 10% | 19% | 9%  | 13% |
 |                         6 | 10% | 8%  | 11% | 12% |
 |                         7 | 10% | 0%  | 11% | 10% |
-|                         8 | 11% | 0%  | 10% | 8%  |
-|                         9 | 11% | 0%  | 11% | 7%  |
-|                        10 | 11% | 0%  | 14% | 1%  |
+|                         8 | 10% | 0%  | 11% | 8%  |
+|                         9 | 10% | 0%  | 11% | 7%  |
+|                        10 | 10% | 0%  | 14% | 1%  |
 </pre>
 </div>
 </div>
@@ -14642,7 +14642,7 @@ For the 2020 data, only the employment score is used in the model. This represen
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>As in the original paper, England and Scotland have a similar distribution, Wales is on average slightly more deprived, and Northern Ireland is mostly contained in the bottom half of the overall deprivation scale. This is broadly similar to the previous iteration of the model, where 36.6% of NI population were in the bottom quintile compared to 28% in this model.</p>
+<p>As in the original paper, England and Scotland have a similar distribution, Wales is on average slightly more deprived, and Northern Ireland is mostly contained in the bottom half of the overall deprivation scale. For comparsion to the previous model, 37% of NI population were in the bottom overall quintile compared to 27% in this model.</p>
 <p>The GB distribution (generated using Income and Employment) is similar to the UK distributions:</p>
 
 </div>
@@ -14679,12 +14679,12 @@ For the 2020 data, only the employment score is used in the model. This represen
 |                         2 | 10% | 9%  | 12% |
 |                         3 | 10% | 8%  | 12% |
 |                         4 | 10% | 8%  | 13% |
-|                         5 | 10% | 10% | 13% |
+|                         5 | 10% | 9%  | 13% |
 |                         6 | 10% | 11% | 12% |
-|                         7 | 10% | 11% | 9%  |
+|                         7 | 10% | 11% | 10% |
 |                         8 | 10% | 10% | 8%  |
 |                         9 | 10% | 11% | 7%  |
-|                        10 | 11% | 13% | 1%  |
+|                        10 | 10% | 14% | 1%  |
 </pre>
 </div>
 </div>
@@ -14707,6 +14707,9 @@ For the 2020 data, only the employment score is used in the model. This represen
 <li><a href="https://www.gov.scot/collections/scottish-index-of-multiple-deprivation-2020/">Scottish Index of Multiple Deprivation 2020</a></li>
 <li><a href="https://gov.wales/welsh-index-multiple-deprivation-full-index-update-ranks-2019">Welsh Index of Multiple Deprivation (WIMD) 2019</a></li>
 <li><a href="https://www.nisra.gov.uk/statistics/deprivation/northern-ireland-multiple-deprivation-measure-2017-nimdm2017">Northern Ireland Multiple Deprivation Measures (NIMDM) 2017</a></li>
+<li><a href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/lowersuperoutputareamidyearpopulationestimates">ONS 2019 population estimates</a></li>
+<li><a href="https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates">National Records Scotland 2019 Population Estimates</a></li>
+<li><a href="https://www.nisra.gov.uk/publications/2019-mid-year-population-estimates-northern-ireland">NISRA 2019 2019 population estimates</a></li>
 </ul>
 <p>For WIMD the domain scores in the domains file for Income and Employment are scaled, and you need to use the original single indicator from the stats wales site instead.</p>
 <p>The SIMD and NIMDM datasets do not contain the raw score for the combined index. This was regenerated from the domain indexes (<code>create_missing_overall_scores.py</code>) using the following procedure:</p>
