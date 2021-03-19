@@ -157,6 +157,27 @@ The following table and graph show the distribution of the population by nation 
 
 
 
+# National composition of each decile
+
+
+
+| nation           | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | 10   |
+|------------------|-----|-----|-----|-----|-----|-----|-----|-----|-----|------|
+| England          | 83% | 83% | 82% | 81% | 81% | 83% | 86% | 87% | 88% | 88%  |
+| Northern Ireland | 3%  | 4%  | 7%  | 6%  | 5%  | 2%  | 0%  | 0%  | 0%  | 0%   |
+| Scotland         | 8%  | 7%  | 6%  | 6%  | 7%  | 9%  | 9%  | 9%  | 9%  | 12%  |
+| Wales            | 6%  | 6%  | 6%  | 6%  | 6%  | 6%  | 5%  | 4%  | 3%  | 0%   |
+
+
+
+
+
+    
+![png](_notebook_resources/readme_17_1.png)
+    
+
+
+
 As in the original paper, England and Scotland have a similar distribution, Wales is on average slightly more deprived, and Northern Ireland is mostly contained in the bottom half of the overall deprivation scale. For comparsion to the previous model, 37% of NI population were in the bottom overall quintile compared to 27% in this model. 
 
 The GB distribution (generated using Income and Employment) is similar to the UK distributions:
