@@ -199,7 +199,7 @@ def deprivation_breakdown(nation="E", setting="UK", nations="ENSW"):
     pt.index.name = "IMD Decile distribution"
     pt.columns.name = None
     for n in nations:
-        pt[n] = round(pt[n]/pt[n].sum(), 2)
+        pt[n] = round(pt[n]/pt[n].sum(), 4)
     print(pt)
     pt.to_csv(join("analysis", setting +
                    "_imd_{0}_breakdown.csv".format(nation)))
