@@ -5,8 +5,7 @@ import numpy as np
 import yaml
 import json
 from sklearn import linear_model
-
-join = os.path.join
+from pathlib import Path
 
 important_columns = ["lsoa", "overall_score",
                      "income_score", "employment_score"]
@@ -32,7 +31,7 @@ def get_dataset(nation):
     load source from yaml and process to consistent format
     """
     info = get_country_info()[nation]
-    df = pd.read_csv(join("country_indexes", info["source_file"]))
+    df = pd.read_csv(Path("country_indexes", info["source_file"]))
     rename = {info[x]: x for x in important_columns}
     df = df.rename(columns=rename)
     df["nation"] = nation
@@ -95,7 +94,7 @@ def summary_models(setting="UK", nations="NSEW"):
     df = pd.DataFrame(all_results)
     df = df.round(2)
     df
-    df.to_csv(join("analysis", "{0}_models.csv".format(setting)), index=False)
+    df.to_csv(Path("analysis", f"{setting}_models.csv"), index=False)
 
 
 def all_summary_models():
@@ -148,11 +147,14 @@ def transform_all_to(destination_index="E", setting="UK", nations="NSEW"):
         collection.append(df)
 
     df = pd.concat(collection)
-    df[col_name + "_rank"] = df[col_name + "_score"].rank(ascending=False)
-
-    pop = pd.read_csv(join("analysis", "population",
+    pop = pd.read_csv(Path("analysis", "population",
                            "2019_population.csv"), thousands=',')
     df = pd.merge(df, pop, on="lsoa")
+
+    national_index = national_decile_lookups()
+    df = pd.merge(df, national_index, on="lsoa")
+
+    df[col_name + "_rank"] = df[col_name + "_score"].rank(ascending=False)
 
     # create cumulative sum column on rank so we create deciles based on even pop
     # and get around that some small areas are different sizes
@@ -167,7 +169,7 @@ def transform_all_to(destination_index="E", setting="UK", nations="NSEW"):
     df = df.drop(columns=["pop", "cum_pop"])
 
     df = df.rename(columns={"overall_score": "overall_local_score"})
-    df.to_csv(join(setting + "_index", col_name + ".csv"), index=False)
+    df.to_csv(Path(setting + "_index", col_name + ".csv"), index=False)
 
 
 def transform_all():
@@ -187,10 +189,10 @@ def deprivation_breakdown(nation="E", setting="UK", nations="ENSW"):
     create breakdown of where the nations sit in different deciles
     of combined models
     """
-    df = pd.read_csv(join(setting + "_index", setting +
+    df = pd.read_csv(Path(setting + "_index", setting +
                           "_IMD_{0}.csv".format(nation)))
 
-    pop = pd.read_csv(join("analysis", "population",
+    pop = pd.read_csv(Path("analysis", "population",
                            "2019_population.csv"), thousands=',')
     df = pd.merge(df, pop, on="lsoa")
 
@@ -201,7 +203,7 @@ def deprivation_breakdown(nation="E", setting="UK", nations="ENSW"):
     for n in nations:
         pt[n] = round(pt[n]/pt[n].sum(), 4)
     print(pt)
-    pt.to_csv(join("analysis", setting +
+    pt.to_csv(Path("analysis", setting +
                    "_imd_{0}_breakdown.csv".format(nation)))
 
 
@@ -216,7 +218,7 @@ def compare_local_global_ranking(nation="E", setting="UK", nations="ENSW"):
     """
     Calculate difference in rankings between original and composite index
     """
-    filepath = join(setting + "_index", setting +
+    filepath = Path(setting + "_index", setting +
                     "_IMD_{0}.csv".format(nation))
     df = pd.read_csv(filepath)
     score_col = "{1}_IMD_{0}_score".format(nation, setting)
@@ -241,7 +243,7 @@ def compare_local_global_ranking(nation="E", setting="UK", nations="ENSW"):
         results[nice_nation[n]] = displacement
     results_df = pd.DataFrame(results).round(2)
     print(results_df)
-    results_df.to_csv(join("analysis", setting +
+    results_df.to_csv(Path("analysis", setting +
                            "_imd_{0}_rank_displacement.csv".format(nation)))
 
 
@@ -250,59 +252,34 @@ def compare_both_local_global():
     compare_local_global_ranking(setting="GB", nations="ESW")
 
 
-def add_to_lookup(data, nation):
-    """
-    create json dict for this nation, update if overlapping with others
-    """
-    info = get_country_info()[nation]
-    df = pd.read_csv(join("country_indexes", info["source_file"]))
-    rename = {info[x]: x for x in important_columns}
-    df = df.rename(columns=rename)
-    df = df[important_columns]
-
-    df["local_ranking"] = df["overall_score"].rank(ascending=False)
-    df["local_decile"] = np.ceil(df["local_ranking"]/len(df) * 10).astype(int)
-    df["local_quintile"] = np.ceil(
-        df["local_ranking"]/len(df) * 10).astype(int)
-
-    for x, row in df.iterrows():
-        current = data.get(row["lsoa"], {})
-        current[nation + "_r"] = row["local_ranking"]
-        current[nation + "_d"] = row["local_decile"]
-        current[nation + "_q"] = row["local_quintile"]
-        data[row["lsoa"]] = current
-    return data
-
-
-def add_composite_to_lookup(data, composite):
-    core = "{0}_IMD_E".format(composite)
-    loc = join("{0}_index".format(composite),
-               core + ".csv")
-    df = pd.read_csv(loc)
-
-    for x, row in df.iterrows():
-        current = data.get(row["lsoa"], {})
-        current[composite + "_r"] = row[core + "_rank"]
-        current[composite + "_d"] = row[core + "_pop_decile"]
-        current[composite + "_q"] = row[core + "_pop_quintile"]
-        data[row["lsoa"]] = current
-    return data
-
-
 def create_master_lookup():
     """
     create single json lookup between LSOA and national deprivation
     """
+    df = pd.read_csv(Path("uk_index", "UK_IMD_E.csv"))
     data = {}
-    for nation in "ESNW":
-        print("adding {0}".format(nation))
-        data = add_to_lookup(data, nation)
-    for composite in ["GB", "UK"]:
-        print("adding {0}".format(composite))
-        data = add_composite_to_lookup(data, composite)
+    for n, row in df.iterrows():
+        item = {"nation": row["nation"],
+                "composite_decile": row["UK_IMD_E_pop_decile"],
+                "national_decile": row["national_decile"]}
+        data[row["lsoa"]] = item
 
-    with open(join("composite_lookups", "imd_lsoa.json"), 'w') as outfile:
+    with open(Path("composite_lookups", "imd_lsoa.json"), 'w') as outfile:
         json.dump(data, outfile)
+
+
+def national_decile_lookups():
+    """
+    create decile lookup for each individual nation
+    """
+    dfs = []
+    for n in "ENWS":
+        df = get_dataset(n)
+        df["rank"] = df["overall_score"].rank(ascending=False)
+        df["national_decile"] = np.ceil(df["rank"]/len(df) * 10).astype(int)
+        dfs.append(df)
+    df = pd.concat(dfs)[["lsoa", "national_decile"]]
+    return df
 
 
 if __name__ == "__main__":
