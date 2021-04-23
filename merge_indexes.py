@@ -143,6 +143,7 @@ def transform_all_to(destination_index="E", setting="UK", nations="NSEW"):
             df = transform_index(nation, destination_index, col_name, setting)
         else:
             df = get_dataset(nation)
+
             df[col_name + "_score"] = df["overall_score"]
         collection.append(df)
 
@@ -152,12 +153,28 @@ def transform_all_to(destination_index="E", setting="UK", nations="NSEW"):
     df = pd.merge(df, pop, on="lsoa")
 
     national_index = national_decile_lookups()
+
     df = pd.merge(df, national_index, on="lsoa")
 
-    df[col_name + "_rank"] = df[col_name + "_score"].rank(ascending=False)
+    # expand a national set of deciles to cover equiv scores elsewhere
+    just_origin = df.loc[df["nation"] == destination_index]
+    just_origin = just_origin.groupby("original_decile")
+    limits = just_origin.agg({col_name + "_score": ['min']})
+    limits = limits.reset_index()
+    limits.columns = ["decile", "min_score"]
+    limits = limits.sort_values('decile', ascending=True)
+
+    decile_col = destination_index + "_expanded_decile"
+    df[decile_col] = 1
+    for n, r in limits.iterrows():
+        if n == 9:
+            continue
+        df.loc[df[col_name + "_score"] < r["min_score"], decile_col] = r["decile"] + 1
+
 
     # create cumulative sum column on rank so we create deciles based on even pop
     # and get around that some small areas are different sizes
+    df[col_name + "_rank"] = df[col_name + "_score"].rank(ascending=False)
     df = df.sort_values(col_name + "_rank")
     df["cum_pop"] = df["pop"].astype("int").cumsum()
 
@@ -167,7 +184,6 @@ def transform_all_to(destination_index="E", setting="UK", nations="NSEW"):
         "_pop_quintile"] = np.ceil(df["cum_pop"]/sum(df["pop"]) * 5).astype(int)
 
     df = df.drop(columns=["pop", "cum_pop"])
-
     df = df.rename(columns={"overall_score": "overall_local_score"})
     df.to_csv(Path(setting + "_index", col_name + ".csv"), index=False)
 
@@ -261,7 +277,7 @@ def create_master_lookup():
     for n, row in df.iterrows():
         item = {"nation": row["nation"],
                 "composite_decile": row["UK_IMD_E_pop_decile"],
-                "national_decile": row["national_decile"]}
+                "original_decile": row["original_decile"]}
         data[row["lsoa"]] = item
 
     with open(Path("composite_lookups", "imd_lsoa.json"), 'w') as outfile:
@@ -276,9 +292,9 @@ def national_decile_lookups():
     for n in "ENWS":
         df = get_dataset(n)
         df["rank"] = df["overall_score"].rank(ascending=False)
-        df["national_decile"] = np.ceil(df["rank"]/len(df) * 10).astype(int)
+        df["original_decile"] = np.ceil(df["rank"]/len(df) * 10).astype(int)
         dfs.append(df)
-    df = pd.concat(dfs)[["lsoa", "national_decile"]]
+    df = pd.concat(dfs)[["lsoa", "original_decile"]]
     return df
 
 
