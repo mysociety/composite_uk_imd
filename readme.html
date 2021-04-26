@@ -14291,11 +14291,13 @@ a.anchor-link {
 <li><code>UK_IMD_E_pop_decile</code> - A new set of deciles for the whole dataset, so that 10% of the population is in each decile (there will be an uneven number of areas). </li>
 <li><code>UK_IMD_E_pop_quintile</code> - A new set of quintiles for the whole dataset, so that 20% of the population is in each quintile (there will be an uneven number of areas). </li>
 </ul>
-<p>Example of usage of different kinds of deciles:</p>
-<p>Given the theoretical basis for national metrics is more sound than the composite index, you should chose the base that better reflects the majority of your data.</p>
+<h3 id="Example-usage-of-different-kinds-of-deciles">Example usage of different kinds of deciles<a class="anchor-link" href="#Example-usage-of-different-kinds-of-deciles">&#182;</a></h3><p>Given the theoretical basis for national metrics is more sound than the composite index, you should chose the base that better reflects the majority of your data.</p>
 <p>If your analysis runs across the whole country, you would use <code>uk_index\UK_IMD_E.csv</code> (as the majority of data is English), and use the <code>UK_IMD_E_pop_decile</code> column to break the country in ten deciles by population. If a variable is evenly spread amount different levels of deprivation across the whole country, aggregating by this decile type should return a similar value for all deciles.</p>
 <p>If you wanted to base the analysis in SIMD, but include a few compariable English examples on the other side of the border, you would use <code>uk_index\UK_IMD_S.csv</code> and the <code>S_expanded_decile</code> column. This will reflect the ordering and deciles of the original SIMD dataset, but put areas in other nations into Scottish deciles. Overall, this set of deciles is uneven because extra areas are being squeezed into the divisions made on the basis of national data.</p>
 <p>In many cases, the two kinds of deciles are similar if based in English data (only 11% of areas have disagreements between the two kinds of deciles). If unsure, think about how you would explain what is happening in your analysis (e.g. if conceptually exploring <code>UK deprivation</code>, it is best to stick to the population deciles).</p>
+<h3 id="How-would-I-map-this-data---what-variable-should-I-use?">How would I map this data - what variable should I use?<a class="anchor-link" href="#How-would-I-map-this-data---what-variable-should-I-use?">&#182;</a></h3><p>There is no single answer to this question. There are four files that cover the whole UK at the small area level (<code>UK_IMD_E.csv</code>, <code>UK_IMD_N.csv</code>, <code>UK_IMD_S.csv</code>, <code>UK_IMD_W.csv</code>), each of which is slightly different. If you are an England-based researcher, for example, and you want to map the whole UK in a comparable way so that you can meaningfully compare patterns of deprivation in East London with patterns of deprivation in the Scottish Highlands, then you would use the <code>UK_IMD_E.csv</code> file and make a map using the <code>UK_IMD_E_pop_decile</code> column in this dataset. This would create a map that puts every LSOA/SOA/DZ in the UK into one of ten deciles (1 = most deprived, 10 = least deprived) so that an equal number of people are in each decile (n.b. this means that there won't be an equal number of small areas in each decile because populations vary by LSOA/SOA/DZ).</p>
+<p>Our advice for anyone making a UK deprivation map would be to use the base UK_IMD file that makes most sense to them from an end user point of view. If you primarily work with SIMD data and want to see how the decile position of a data zone in Scotland might compare to an SOA in Northern Ireland or a LSOA in England and Wales, then the UK_IMD_S.csv would likely be most meaningful.</p>
+<p><a href="https://twitter.com/undertheraedar">Alasdair Rae</a> has created <a href="https://drive.google.com/drive/folders/1L-C-Ym7VTwRhIRDQUMHPxFvOznMrKfy3">a single shapefile</a> that covers the different sets of small area that will be helpful in cross-border mapping.</p>
 
 </div>
 </div>
@@ -14808,6 +14810,83 @@ For the 2020 data, only the employment score is used in the model. This represen
 <p>The concentration of NI SOA in the lower deciles in the UK model means less of other nations appear in this decile. When comparing datasets without NI data, using the GB index will present a cleaner picture between deciles. Although if part of the overall picture is <em>"we don't have data/have good takeup of services in a part of the UK that is on average more deprived"</em>, the UK index may still be appropriate.</p>
 
 </div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Comparison-of-different-national-base-population-indexes">Comparison of different national base population indexes<a class="anchor-link" href="#Comparison-of-different-national-base-population-indexes">&#182;</a></h3><p>The different processes for different national base files change rankings to the extent that decile divisions are noticeably different between the different files. The table below shows that while there is a high (93%) agreement between the England and Wales deciles, the Wales and Northern Ireland dataset only agree in 76% of cases. This reinforces the need for choosing a base dataset that best reflects the largest set of your data, where the rankings are most theoretically valid.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">nations</span> <span class="o">=</span> <span class="s2">&quot;EWSN&quot;</span>
+
+<span class="n">columns</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;uk_index&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="s2">&quot;UK_IMD_</span><span class="si">{0}</span><span class="s2">.csv&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nations</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">nations</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+    <span class="n">ndf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;uk_index&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="s2">&quot;UK_IMD_</span><span class="si">{0}</span><span class="s2">.csv&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">ndf</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;lsoa&quot;</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;UK_IMD_</span><span class="si">{0}</span><span class="s2">_pop_decile&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">nations</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;lsoa&quot;</span><span class="p">]]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;UK_IMD_</span><span class="si">{0}</span><span class="s2">_pop_decile&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">):</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">nations</span><span class="p">})</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;lsoa&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">n1</span> <span class="ow">in</span> <span class="n">nations</span><span class="p">:</span>
+    <span class="n">row</span> <span class="o">=</span> <span class="p">[</span><span class="n">n1</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">n2</span> <span class="ow">in</span> <span class="n">nations</span><span class="p">:</span>
+        <span class="n">overlap</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">n1</span><span class="p">]</span> <span class="o">==</span> <span class="n">df</span><span class="p">[</span><span class="n">n2</span><span class="p">])</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+        <span class="n">overlap</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">overlap</span> <span class="o">*</span> <span class="mi">100</span> <span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">overlap</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{0}</span><span class="s2">%&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">overlap</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">n1</span> <span class="o">==</span> <span class="n">n2</span><span class="p">:</span>
+            <span class="n">row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">overlap</span><span class="p">)</span>
+
+    <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+<span class="n">data_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Nation&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">nations</span><span class="p">))</span>
+<span class="n">markdown_table</span><span class="p">(</span><span class="n">data_df</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>| Nation   | E     | W     | S     | N     |
+|----------|-------|-------|-------|-------|
+| E        | -     | 92.6% | 83.7% | 80.9% |
+| W        | 92.6% | -     | 77.8% | 76.0% |
+| S        | 83.7% | 77.8% | -     | 95.1% |
+| N        | 80.9% | 76.0% | 95.1% | -     |
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">

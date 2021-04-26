@@ -18,7 +18,7 @@ The composite labels vary by national dataset, but the key columns in the UK Eng
 - `UK_IMD_E_pop_decile` - A new set of deciles for the whole dataset, so that 10% of the population is in each decile (there will be an uneven number of areas). 
 - `UK_IMD_E_pop_quintile` - A new set of quintiles for the whole dataset, so that 20% of the population is in each quintile (there will be an uneven number of areas). 
 
-Example of usage of different kinds of deciles:
+### Example usage of different kinds of deciles
 
 Given the theoretical basis for national metrics is more sound than the composite index, you should chose the base that better reflects the majority of your data.
 
@@ -28,6 +28,13 @@ If you wanted to base the analysis in SIMD, but include a few compariable Englis
 
 In many cases, the two kinds of deciles are similar if based in English data (only 11% of areas have disagreements between the two kinds of deciles). If unsure, think about how you would explain what is happening in your analysis (e.g. if conceptually exploring `UK deprivation`, it is best to stick to the population deciles). 
 
+### How would I map this data - what variable should I use?
+
+There is no single answer to this question. There are four files that cover the whole UK at the small area level (`UK_IMD_E.csv`, `UK_IMD_N.csv`, `UK_IMD_S.csv`, `UK_IMD_W.csv`), each of which is slightly different. If you are an England-based researcher, for example, and you want to map the whole UK in a comparable way so that you can meaningfully compare patterns of deprivation in East London with patterns of deprivation in the Scottish Highlands, then you would use the `UK_IMD_E.csv` file and make a map using the `UK_IMD_E_pop_decile` column in this dataset. This would create a map that puts every LSOA/SOA/DZ in the UK into one of ten deciles (1 = most deprived, 10 = least deprived) so that an equal number of people are in each decile (n.b. this means that there won't be an equal number of small areas in each decile because populations vary by LSOA/SOA/DZ). 
+
+Our advice for anyone making a UK deprivation map would be to use the base UK_IMD file that makes most sense to them from an end user point of view. If you primarily work with SIMD data and want to see how the decile position of a data zone in Scotland might compare to an SOA in Northern Ireland or a LSOA in England and Wales, then the UK_IMD_S.csv would likely be most meaningful.
+
+[Alasdair Rae](https://twitter.com/undertheraedar) has created [a single shapefile](https://drive.google.com/drive/folders/1L-C-Ym7VTwRhIRDQUMHPxFvOznMrKfy3) that covers the different sets of small area that will be helpful in cross-border mapping. 
 
 ## What are the indexes of multiple deprivation?
 
@@ -224,6 +231,18 @@ The GB distribution (generated using Income and Employment) is similar to the UK
 
 
 The concentration of NI SOA in the lower deciles in the UK model means less of other nations appear in this decile. When comparing datasets without NI data, using the GB index will present a cleaner picture between deciles. Although if part of the overall picture is *"we don't have data/have good takeup of services in a part of the UK that is on average more deprived"*, the UK index may still be appropriate. 
+
+
+### Comparison of different national base population deciles
+
+The different processes for different national base files change rankings to the extent that decile divisions are noticeably different between the different files. The table below shows that while there is a high (93%) agreement between the England and Wales deciles, the Wales and Northern Ireland dataset only agree in 76% of cases. This reinforces the need for choosing a base dataset that best reflects the largest set of your data, where the rankings are most theoretically valid. 
+
+| Nation   | E     | W     | S     | N     |
+|----------|-------|-------|-------|-------|
+| E        | -     | 92.6% | 83.7% | 80.9% |
+| W        | 92.6% | -     | 77.8% | 76.0% |
+| S        | 83.7% | 77.8% | -     | 95.1% |
+| N        | 80.9% | 76.0% | 95.1% | -     |
 
 
 ## Data sources
