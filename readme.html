@@ -14279,6 +14279,28 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Using-this-dataset">Using this dataset<a class="anchor-link" href="#Using-this-dataset">&#182;</a></h2><p>There are two sets of files depending if you want a GB or UK index (methodological differences explained below). For each set (<code>uk_index</code> and <code>gb_index</code> folders), there is a different file for each nation. In each case, the measures of deprivation in the other nations has been integrated into the base scores for that nation.</p>
+<p>When in a dataset for a particular nation (for instance, <code>uk_index/UK_IMD_E.csv</code>), the rank order of the original deprivation index is preserved, but it is not for other countries (explained more below).</p>
+<p>The composite labels vary by national dataset, but the key columns in the UK England dataset are:</p>
+<ul>
+<li><code>lsoa</code> - The code for the LSOA/Datazone/SOA</li>
+<li><code>original_decile</code> - the original decile in the four different IMD datasets. </li>
+<li><code>overall_local_score</code> - the original deprivation score in the four different IMD datasets. </li>
+<li><code>UK_IMD_E_score</code> - the transformed deprivation score into the combined index. This will be the same as the original for the base country. </li>
+<li><code>E_expanded_decile</code> - the English deciles, with scores for other nations fitted into the same devisions as the original deciles. </li>
+<li><code>UK_IMD_E_pop_decile</code> - A new set of deciles for the whole dataset, so that 10% of the population is in each decile (there will be an uneven number of areas). </li>
+<li><code>UK_IMD_E_pop_quintile</code> - A new set of quintiles for the whole dataset, so that 20% of the population is in each quintile (there will be an uneven number of areas). </li>
+</ul>
+<p>Example of usage of different kinds of deciles:</p>
+<p>Given the theoretical basis for national metrics is more sound than the composite index, you should chose the base that better reflects the majority of your data.</p>
+<p>If your analysis runs across the whole country, you would use <code>uk_index\UK_IMD_E.csv</code> (as the majority of data is English), and use the <code>UK_IMD_E_pop_decile</code> column to break the country in ten deciles by population. If a variable is evenly spread amount different levels of deprivation across the whole country, aggregating by this decile type should return a similar value for all deciles.</p>
+<p>If you wanted to base the analysis in SIMD, but include a few compariable English examples on the other side of the border, you would use <code>uk_index\UK_IMD_S.csv</code> and the <code>S_expanded_decile</code> column. This will reflect the ordering and deciles of the original SIMD dataset, but put areas in other nations into Scottish deciles. Overall, this set of deciles is uneven because extra areas are being squeezed into the divisions made on the basis of national data.</p>
+<p>In many cases, the two kinds of deciles are similar if based in English data (only 11% of areas have disagreements between the two kinds of deciles). If unsure, think about how you would explain what is happening in your analysis (e.g. if conceptually exploring <code>UK deprivation</code>, it is best to stick to the population deciles).</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="What-are-the-indexes-of-multiple-deprivation?">What are the indexes of multiple deprivation?<a class="anchor-link" href="#What-are-the-indexes-of-multiple-deprivation?">&#182;</a></h2><p>For each nation in the UK, the relevant statistics authority has created a ranking of multiple deprivation that ranks small census areas (LSOAs in England/Wales, DZs in Scotland and SOA in Northern Ireland). There is no equivalent ranking of areas across the entire UK.</p>
 <p>These indexes are independent and cannot be directly compared. These measures are not directly comparable because the underlying indicators and the method used to combine them are different in each case. Additionally data is collected at different times for each index. It is not directly possible to take a DataZone from Scotland and see where it would fit inside the deprivation measure in England.</p>
 <p>However, Abel and colleagues suggests you can fudge this a bit to create a combined index that gives useful results. This repository uses this approach to create an updated index with the national indexes avaliable in Feburary 2021.</p>
@@ -14629,7 +14651,7 @@ For the 2020 data, only the employment score is used in the model. This represen
 
 
 <div class="jp-RenderedImage jp-OutputArea-output jp-OutputArea-executeResult">
-<img src="_notebook_resources/readme_15_0.png"
+<img src="_notebook_resources/readme_16_0.png"
 >
 </div>
 
@@ -14716,7 +14738,7 @@ For the 2020 data, only the employment score is used in the model. This represen
 
 
 <div class="jp-RenderedImage jp-OutputArea-output jp-OutputArea-executeResult">
-<img src="_notebook_resources/readme_17_1.png"
+<img src="_notebook_resources/readme_18_1.png"
 >
 </div>
 

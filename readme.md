@@ -2,6 +2,33 @@
 
 This repository uses methodology from a paper by [Gary A Abel, Matthew E Barclay, and Rupert A Payne](https://bmjopen.bmj.com/content/6/11/e012750) to create a composite measure of multiple deprivation across the UK. 
 
+## Using this dataset
+
+There are two sets of files depending if you want a GB or UK index (methodological differences explained below). For each set (`uk_index` and `gb_index` folders), there is a different file for each nation. In each case, the measures of deprivation in the other nations has been integrated into the base scores for that nation. 
+
+When in a dataset for a particular nation (for instance, `uk_index/UK_IMD_E.csv`), the rank order of the original deprivation index is preserved, but it is not for other countries (explained more below). 
+
+The composite labels vary by national dataset, but the key columns in the UK England dataset are: 
+
+- `lsoa` - The code for the LSOA/Datazone/SOA
+- `original_decile` - the original decile in the four different IMD datasets. 
+- `overall_local_score` - the original deprivation score in the four different IMD datasets. 
+- `UK_IMD_E_score` - the transformed deprivation score into the combined index. This will be the same as the original for the base country. 
+- `E_expanded_decile` - the English deciles, with scores for other nations fitted into the same devisions as the original deciles. 
+- `UK_IMD_E_pop_decile` - A new set of deciles for the whole dataset, so that 10% of the population is in each decile (there will be an uneven number of areas). 
+- `UK_IMD_E_pop_quintile` - A new set of quintiles for the whole dataset, so that 20% of the population is in each quintile (there will be an uneven number of areas). 
+
+Example of usage of different kinds of deciles:
+
+Given the theoretical basis for national metrics is more sound than the composite index, you should chose the base that better reflects the majority of your data.
+
+If your analysis runs across the whole country, you would use `uk_index\UK_IMD_E.csv` (as the majority of data is English), and use the `UK_IMD_E_pop_decile` column to break the country in ten deciles by population. If a variable is evenly spread amount different levels of deprivation across the whole country, aggregating by this decile type should return a similar value for all deciles. 
+
+If you wanted to base the analysis in SIMD, but include a few compariable English examples on the other side of the border, you would use `uk_index\UK_IMD_S.csv` and the `S_expanded_decile` column. This will reflect the ordering and deciles of the original SIMD dataset, but put areas in other nations into Scottish deciles. Overall, this set of deciles is uneven because extra areas are being squeezed into the divisions made on the basis of national data.
+
+In many cases, the two kinds of deciles are similar if based in English data (only 11% of areas have disagreements between the two kinds of deciles). If unsure, think about how you would explain what is happening in your analysis (e.g. if conceptually exploring `UK deprivation`, it is best to stick to the population deciles). 
+
+
 ## What are the indexes of multiple deprivation?
 
 For each nation in the UK, the relevant statistics authority has created a ranking of multiple deprivation that ranks small census areas (LSOAs in England/Wales, DZs in Scotland and SOA in Northern Ireland). There is no equivalent ranking of areas across the entire UK. 
@@ -152,7 +179,7 @@ The following table and graph show the distribution of the population by nation 
 
 
     
-![png](_notebook_resources/readme_15_0.png)
+![png](_notebook_resources/readme_16_0.png)
     
 
 
@@ -173,7 +200,7 @@ The following table and graph show the distribution of the population by nation 
 
 
     
-![png](_notebook_resources/readme_17_1.png)
+![png](_notebook_resources/readme_18_1.png)
     
 
 
