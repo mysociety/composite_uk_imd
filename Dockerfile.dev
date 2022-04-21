@@ -1,0 +1,24 @@
+FROM python:3.10-buster
+
+ENV DEBIAN_FRONTEND noninteractive
+
+# Run the common library install
+# This should be the same across all notebooks and so can be cached ok
+COPY src/data_common/ /setup/src/data_common/
+RUN cd /setup/src/data_common/bin \
+    && chmod +x packages_setup.bash \
+    && ./packages_setup.bash \
+    && export PATH="$HOME/.poetry/bin:$PATH" \
+    && cd /setup/src/data_common && poetry install
+
+# This is project specific, and should not be adding much on top each time
+# Templated versions will change the folder name and the pyproject.toml, so the general cache
+# doesn't work at this point
+# Make an empty project directory so the 'self' setup doesn't fail and scripts can be setup
+# Override the .pth created at previous stages to point to where the working directory will land
+COPY pyproject.toml poetry.lock /setup/ 
+RUN mkdir /setup/src/template_data_repo && touch /setup/src/template_data_repo/__init__.py \
+    && export PATH="$HOME/.poetry/bin:$PATH" \
+    && cd /setup/ && poetry install \
+    && echo "/workspaces/template_data_repo/src/" > /usr/local/lib/python3.10/site-packages/template_data_repo.pth \
+    && echo "/workspaces/template_data_repo/src/data_common/src" > /usr/local/lib/python3.10/site-packages/data_common.pth

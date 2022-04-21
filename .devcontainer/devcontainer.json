@@ -1,0 +1,18 @@
+{
+	"name": "mysoc_notebook",
+
+	"dockerComposeFile": "../docker-compose.yml",
+	"service": "app",
+	"overrideCommand": true,
+	"initializeCommand": "[ ! -d \"src/data_common/src\" ] && git submodule update --init || echo \"Already exists\"",
+
+	"extensions": [
+		"ms-vscode.test-adapter-converter",
+		"bungcip.better-toml",
+		"ms-python.python",
+		"ms-python.vscode-pylance",
+		"ms-azuretools.vscode-docker",
+		"valentjn.vscode-ltex"
+	]
+
+}

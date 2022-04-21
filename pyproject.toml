@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "template_data_repo"
+version = "0.1.0"
+description = "Standardised template for mysociety data repositories"
+authors = []
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+data_common = { path = "src/data_common/", develop = true }
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.1"
+
+[tool.poetry.scripts]
+notebook = 'template_data_repo.cli:main'
+
+[notebook.settings]
+default_page_title = "Settings file defined title"

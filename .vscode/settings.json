@@ -1,0 +1,34 @@
+{
+    "python.linting.pylintEnabled": true,
+    "python.defaultInterpreterPath": "/usr/local/bin/python",
+    "python.terminal.activateEnvironment": false,
+    "python.formatting.provider": "black",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/*.pyc": {
+            "when": "$(basename).py"
+        },
+        "**/__pycache__": true
+    },
+    "files.associations": {
+        "**/*.html": "html",
+        "**/templates/**/*.html": "django-html",
+        "**/templates/**/*": "django-txt",
+        "**/requirements{/**,*}.{txt,in}": "pip-requirements"
+    },
+    "python.linting.pylintArgs": [
+        "--max-line-length=88",
+        "--disable=C0103,E1101,W5101,E1123,E501,E203",
+        "--load-plugins=pylint_django"
+    ],
+    "jupyter.jupyterServerType": "local",
+    "ltex.language": "en-GB",
+    "ltex.ltex-ls.path": "/ltex/ltex-ls-15.2.0/",
+    "[markdown]": {
+        "editor.quickSuggestions": true
+    }
+}
