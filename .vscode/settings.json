@@ -31,5 +31,10 @@
     "ltex.ltex-ls.path": "/ltex/ltex-ls-15.2.0/",
     "[markdown]": {
         "editor.quickSuggestions": true
-    }
+    },
+    "python.testing.pytestArgs": [
+        "tests/"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
 }
