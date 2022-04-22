@@ -1,9 +1,21 @@
-FROM ghcr.io/mysociety/notebook_helper:v1.2.1
+# This dockerfile is used by binder.
+
+FROM ghcr.io/mysociety/data_common:latest
+
+# Make an empty project directory so the 'self' setup doesn't fail and scripts can be setup
+# Override the .pth created at previous stages to point to where the working directory will land
+COPY pyproject.toml poetry.lock /setup/ 
+COPY src/data_common/pyproject.toml src/data_common/poetry.lock /setup/src/data_common/
+RUN mkdir /setup/src/template_data_repo && touch /setup/src/template_data_repo/__init__.py \
+    && touch /setup/src/data_common/__init__.py \
+    && export PATH="$HOME/.poetry/bin:$PATH" \
+    && cd /setup/ && poetry install \
+    && echo "/workspaces/template_data_repo/src/" > /usr/local/lib/python3.10/site-packages/template_data_repo.pth \
+    && echo "/workspaces/template_data_repo/src/data_common/src" > /usr/local/lib/python3.10/site-packages/data_common.pth
+
+# special binder instructions
 
 RUN pip install --no-cache-dir notebook
-
-COPY requirements.txt /
-RUN pip install -r /requirements.txt
 
 ARG NB_USER=jovyan
 ARG NB_UID=1000
