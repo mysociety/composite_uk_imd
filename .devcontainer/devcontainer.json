@@ -6,7 +6,7 @@
 	"overrideCommand": true,
 	"initializeCommand": "[ ! -d \"src/data_common/src\" ] && git submodule update --init || echo \"Already exists\"",
 
-	"extensions": [
+		"extensions": [
 		"ms-vscode.test-adapter-converter",
 		"bungcip.better-toml",
 		"ms-python.python",
