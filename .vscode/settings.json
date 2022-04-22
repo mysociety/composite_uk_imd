@@ -3,6 +3,7 @@
     "python.defaultInterpreterPath": "/usr/local/bin/python",
     "python.terminal.activateEnvironment": false,
     "python.formatting.provider": "black",
+    "editor.formatOnSave": true,
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
