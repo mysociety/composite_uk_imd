@@ -1,6 +1,6 @@
 *.pyc
 secrets.yaml
 .env
-data/private
+data/private/*
 _render/_parts
 _render/_papermills
