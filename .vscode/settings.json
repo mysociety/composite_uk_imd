@@ -3,6 +3,8 @@
     "python.defaultInterpreterPath": "/usr/local/bin/python",
     "python.terminal.activateEnvironment": false,
     "python.formatting.provider": "black",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.stubPath": "src/data_common/typing",
     "editor.formatOnSave": true,
     "files.exclude": {
         "**/.git": true,

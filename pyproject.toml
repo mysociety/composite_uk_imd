@@ -14,5 +14,12 @@ pytest = "^7.1.1"
 [tool.poetry.scripts]
 notebook = 'template_data_repo.cli:main'
 
+[tool.pyright]
+include = ["src", "notebooks"]
+exclude=["src/data_common/typings"]
+stubPath="src/data_common/typings"
+typeCheckingMode="basic"
+
+
 [notebook.settings]
 default_page_title = "Settings file defined title"
