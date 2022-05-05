@@ -1,18 +1,35 @@
 {
 	"name": "mysoc_notebook",
-
 	"dockerComposeFile": "../docker-compose.yml",
 	"service": "app",
 	"overrideCommand": true,
 	"initializeCommand": "[ ! -d \"src/data_common/src\" ] && git submodule update --init || echo \"Already exists\"",
-
-		"extensions": [
+	"extensions": [
 		"ms-vscode.test-adapter-converter",
 		"bungcip.better-toml",
 		"ms-python.python",
 		"ms-python.vscode-pylance",
 		"ms-azuretools.vscode-docker",
 		"valentjn.vscode-ltex"
-	]
-
+	],
+	"customizations": {
+		"codespaces": {
+			"repositories": {
+				"mysociety/data_common": {
+					"permissions": {
+						"contents": "write",
+						"checks": "checks",
+						"actions": "write",
+						"deployments": "write",
+						"issues": "write",
+						"packages": "read",
+						"pull_requests": "write",
+						"repository_projects": "write",
+						"statuses": "write",
+						"workflows": "write"
+					}
+				}
+			}
+		}
+	}
 }
