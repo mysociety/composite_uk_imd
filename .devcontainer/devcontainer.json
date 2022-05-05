@@ -18,7 +18,6 @@
 				"mysociety/data_common": {
 					"permissions": {
 						"contents": "write",
-						"checks": "checks",
 						"actions": "write",
 						"deployments": "write",
 						"issues": "write",
