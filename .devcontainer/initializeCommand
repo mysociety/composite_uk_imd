@@ -1,0 +1,2 @@
+#!/bin/sh
+[ ! -d "src/data_common/src" ] && git submodule update --init || echo "Already exists"

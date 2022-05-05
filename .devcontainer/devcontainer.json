@@ -3,7 +3,8 @@
 	"dockerComposeFile": "../docker-compose.yml",
 	"service": "app",
 	"overrideCommand": true,
-	"initializeCommand": "[ ! -d \"src/data_common/src\" ] && git submodule update --init || echo \"Already exists\"",
+	"initializeCommand": ".devcontainer/initializeCommand",
+	"postCreateCommand": ".devcontainer/postCreateCommand",
 	"extensions": [
 		"ms-vscode.test-adapter-converter",
 		"bungcip.better-toml",

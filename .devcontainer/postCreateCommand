@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "get submodule to appear as main rather than latest comment"
+cd src/data_common
+git checkout main
