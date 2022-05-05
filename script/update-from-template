@@ -5,9 +5,9 @@ git remote add template https://github.com/mysociety/template_data_repo
 git fetch template
 git merge template/main
 
-cd notebook_helper
+cd src/data_common
 git remote rm origin
-git remote add origin https://github.com/mysociety/notebook_helper
+git remote add origin https://github.com/mysociety/data_common
 git fetch origin
 git pull origin main
 git checkout main
