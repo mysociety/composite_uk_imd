@@ -6,8 +6,6 @@ git fetch template
 git merge template/main
 
 cd src/data_common
-git remote rm origin
-git remote add origin https://github.com/mysociety/data_common
 git fetch origin
 git pull origin main
 git checkout main
