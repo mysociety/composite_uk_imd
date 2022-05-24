@@ -1,20 +1,66 @@
-# mySociety Jupyter notebook system
+# mySociety standard data repository
 
 This is a pattern for running mySociety Jupyter notebooks. See `notebooks\example.ipynb` for an example of use.
 
-## How to use
+# Structure of this repo
+
+- `.devcontainer` - The setup instructions for vscode and codespaces to work with the relevant dockerfile. Includes expected exemptions.
+- `.vscode` - Default code processing settings for vscode.
+- `data` - data storage. Has some subfolders to help with common sorting. Files put in `data\private` will not be committed.
+- `docs` - jekyll directory that maps to the github pages site for this repo.
+- `notebooks` - store any jupyter notebooks here. 
+- `script` - script-to`rule`them`all directory.
+- `src/data_common` - submodule for the `data_common` repo that contains common tools and helper libraries. This also contains the
+- `src/[repo_name]` - where you should put specific python scripts for this repository. 
+- `tests` - directory for pytest tests. 
+- `Dockerfile.dev` - The dockerfile for this repo. Is locked to the `data_common` image at the latest commit when the repo was upgraded. This can be updated if you make changes that require a new docker setup. 
+
+# Code standards
+
+This repo uses:
+
+- black formatting for python
+- pyright's 'basic' type checking for python
+
+`script/test`, as well as running all pytests, enforces black formatting over the repository and pyright's 'basic' checking for python typing. 
+
+
+
+## Dataset management
+
+This repo template is meant to help manage and publish datasets in a light-weight way. 
+
+The `dataset` helper tool uses the [frictionless standard](https://specs.frictionlessdata.io/data-package/) to describe datasets. 
+
+A csv table + accompanying resource and schema is a frictionless 'resource'.  Multiple 'resources' are a frictionless data package.
+
+A datapackage joins all resources together in a single Excel file.
+
+### Managing a new dataset
+
+- Run `dataset create` - this will walk you through a series of questions and create a config file in `data\data_packages\[dataset_name]`.
+- Now, either manually or using scripts in `src\[repo]` create csv files in this repo. 
+- Then run 'dataset refresh' (either *in* the dataset folder, or using the ``--slug [dataset_name]' or `--all` arguments. This will create a yml file for each csv with the schema of the csv file.
+- Your task is then, through all yml files in the directory, to go through and fill in the `description` field (and title where missing). 
+- `dataset detail` will tell you which fields remain to be filled in. When you think you've got them all, `dataset validate` will tell you if you've created a valid data package that passes tests.
+- Then `dataset build` will take these files, compile composite `datapackage.json`, excel and sqlite files, and move them to the Jekyll site in the `docs` directory. This will also create Jekyll markdown files for the pages.
+- To run a preview server, use `script\server`.
+
+### Extra notes
+
+- If you want resources to be in a specific order on the website or the Excel sheet, you can use the `sheet_order` property in the resource YAML. This expects a number and the default is 999. Otherwise, files are ordered alphabetically. 
+- If you add/remove columns from a table or change the value types, the validation will start to fail. `dataset refresh` will update with new column information, but preserve previous descriptions added (but no other manual changes). 
+
+
+## How to use notebooks
 
 In a new notebook, add the boilerplate:
 
 ```
-from notebook_helper import *
-
-notebook_setup()
+from data_common.notebook import *
 ```
 
 This will load common libaries like Pandas, Altair, and numpy, as well as the mySociety customisation of these.
-
-The try/except pattern is because the notebooks will be run by users in the `notebooks` folder, and so need the setup script to add the level above to path, but the papermill process will run from the top-level.
 
 # Binder
 
