@@ -1,3 +1,6 @@
 [submodule "src/data_common"]
 	path = src/data_common
 	url = https://github.com/mysociety/data_common
+[submodule "docs/theme"]
+	path = docs/theme
+	url = https://github.com/mysociety/mysociety-docs-theme/
