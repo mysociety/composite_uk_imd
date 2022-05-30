@@ -1,0 +1,64 @@
+.site-header {
+    color: #fff;
+    
+    a {
+        color: inherit;
+    }
+    
+    h1 {
+        font-size: 2em;
+        margin-bottom: 0.2em;
+        
+        @media (min-width: 48em) {
+            max-width: 50%;
+        }
+    }
+}
+
+a.site-header__research-home-link {
+    color: mix($colour_brand, #fff, 20%);
+    
+    &:hover, &:focus {
+        color: inherit;
+    }
+}
+
+.nav-position {
+    @media (min-width: 48em) {
+        position: absolute;
+        top: 50%;
+        right: 160px;
+        margin-top: -1em;
+    }
+}
+
+.site-nav {
+    ul {
+        margin-top: 0;
+        margin-bottom: 0;
+        @extend .unstyled-list;
+    }
+    
+    li {
+        @media (min-width: 47.5em) {
+            display: inline-block;
+        }
+    }
+    
+    a {
+        margin-right: 0.33em;
+        display: block;
+        padding: 0.33em;
+        border-top: 1px solid rgba(#fff, 0.2);
+
+        @media (min-width: 47.5em) {
+            display: inline-block;
+            border-top: none;
+        }
+
+        @media (min-width: $large-screen) {
+            font-size: 1.125em;
+            margin-right: 0.66em;
+        }
+    }
+}

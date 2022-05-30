@@ -1,0 +1,100 @@
+---
+layout: default
+---
+<h1>Dataset: {{page.title}}</h1>
+
+
+{{ content }}
+
+{{page.description}}
+
+<ul class="dataset-composite-options">
+    <li><a href="{{ site.baseurl }}/downloads/{{page.composite.xlsx}}/">Download as Excel file (xlsx)</a></li>
+    <li><a href="https://lite.datasette.io/?url={{site.url}}{{ site.baseurl }}/data/{{page.name}}/{{page.name}}.sqlite">Explore
+            data in Datasette</a></li>
+</ul>
+
+{% if page.contributors %}
+<h2>Contributors</h2>
+<ul class="dataset-author-list">
+    {% for author in page.contributors %}
+    {% if author.path %}
+    <li><a href="{{author.path}}">{{author.title}}</a></li>
+    {% else %}
+    <li>{{author.title}}</li>
+    {% endif %}
+    {% endfor %}
+</ul>
+
+{% endif %}
+
+{% if page.sources %}
+<h2>Sources</h2>
+<ul class="dataset-source-list">
+    {% for source in page.sources %}
+    {% if source.path %}
+    <li><a href="{{source.path}}">{{source.title}}</a></li>
+    {% else %}
+    <li>{{source.title}}</li>
+    {% endif %}
+    {% endfor %}
+</ul>
+
+{% endif %}
+{% if page.licenses %}
+<h2>Licences</h2>
+<ul class="dataset-source-list">
+    {% for licence in page.licenses %}
+    {% if licence.path %}
+    <li><a href="{{licence.path}}">{{licence.title}}</a></li>
+    {% else %}
+    <li>{{licence.title}}</li>
+    {% endif %}
+    {% endfor %}
+</ul>
+
+{% endif %}
+
+<h2>Individual tables</h2>
+
+<ul class="data-resource-list">
+    {% for resource in page.resources %}
+    <li>
+        <a href="#{{ resource.name }}">{{resource.title}}</a> - {{resource.description}}
+    </li>
+    {% endfor %}
+</ul>
+
+{% for resource in page.resources %}
+<a name="{{ resource.name }}"></a>
+<h3>Table: {{resource.title}}</h3>
+
+<p>Description: {{resource.description}}</p>
+
+<p><a href="{{ site.baseurl }}/downloads/{{resource.download_id }}/">Download {{resource.format |
+        upcase }}</a></p>
+
+
+<h4>Data description</h4>
+
+<table class="resource-table">
+    <tr>
+        <th>Column name</th>
+        <th>Data type</th>
+        <th>Description</th>
+        <th>Unique</th>
+        <th>Required values</th>
+    </tr>
+    {% for field in resource.schema.fields %}
+    <tr>
+        <td class="resource-table-field-name">{{field.name}}</td>
+        <td>{{field.type}}</td>
+        <td>{{field.description}}</td>
+        <td>{% if field.constraints.unique %}Yes{% else %}No{% endif %}</td>
+        <td>{% for value in field.constraints.enum %}{{value}}{% if forloop.last == false %}, {% endif %}{% endfor %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endfor %}

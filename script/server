@@ -1,2 +1,4 @@
 #!/bin/bash 
-jupyter-lab --allow-root --collaborative --no-browser
+cd docs
+bundle install
+bundle exec jekyll serve

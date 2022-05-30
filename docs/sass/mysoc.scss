@@ -1,0 +1,40 @@
+---
+---
+$colour_brand: #4faded; // $colour_blue
+$colour_links: #f3f1eb; // $colour_off_white
+$colour_background: #ffffff;
+$colour_yellow: #FFD836;
+$colour_green: #62B356;
+$colour_red: #E04B4B;
+$colour_violet: #A94CA6;
+$colour_orange: #F4A140;
+$colour_green: #62B356;
+$theme_dir: '../theme';
+
+
+@import "global";
+@import "bootstrap-compat";
+@import "header";
+@import "mysoc-jkan";
+
+.main-content {
+    background: #fff;
+    padding: 1.6em 5%;
+    position: relative;
+    margin-bottom: $base-spacing-unit;
+    h2 {
+        border-top: 0px;
+        padding-top: 1px;
+    }
+    h3 {
+        padding-top: 10px;
+    }
+    .lead + h2 {
+        border-top: none;
+        padding-top: 0;
+    }
+    .reveal-on-click + h2 {
+        border-top: none;
+    }
+
+}

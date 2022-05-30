@@ -1,5 +1,6 @@
 ---
 title: "Download template_data_repo"
+layout: front
 ---
 
 # This is some actual content

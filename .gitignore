@@ -4,3 +4,4 @@ secrets.yaml
 data/private/*
 _render/_parts
 _render/_papermills
+docs/_site

@@ -1,3 +1,49 @@
 theme: jekyll-theme-slate
 title: {{cookiecutter.project_name}}
 description: {{cookiecutter.description}}
+
+baseurl: "/template_data_repo"
+url: "https://mysociety.github.io"
+
+collections:
+  datasets:
+    output: true
+    permalink: /datasets/:name/
+  downloads:
+    output: true
+    permalink: /downloads/:name/
+
+
+defaults:
+  - scope:
+      path: ""
+      type: datasets
+    values:
+      layout: dataset
+  - scope:
+      path: ""
+      type: downloads
+    values:
+      layout: download
+
+plugins:
+  - jekyll-feed
+
+sass:
+    sass_dir: 
+    load_paths:
+        - theme/sass
+        - sass  
+
+
+# Exclude these files from the build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .travis.yml
+  - node_modules
+  - scripts/src
+  - package.json
+  - webpack.config.js
+  - README.md

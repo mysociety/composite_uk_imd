@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+{{ content }}
+
+<h1>Datasets</h1>
+
+
+<ul>
+    {% for dataset in site.datasets %}
+    <li>
+        <a href="{{ dataset.url | prepend:site.baseurl }}">{{ dataset.title }}</a> - {{ dataset.description }}
+    </li>
+    {% endfor %}
+</ul>
