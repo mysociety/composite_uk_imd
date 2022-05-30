@@ -1,6 +1,6 @@
 theme: jekyll-theme-slate
-title: {{cookiecutter.project_name}}
-description: {{cookiecutter.description}}
+title: template_data_repo
+description: Standardised template for mysociety data repositories
 
 baseurl: "/template_data_repo"
 url: "https://mysociety.github.io"
