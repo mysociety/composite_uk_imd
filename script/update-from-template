@@ -9,3 +9,8 @@ cd src/data_common
 git fetch origin
 git pull origin main
 git checkout main
+
+cd docs/theme
+git fetch origin
+git pull origin main
+git checkout main
