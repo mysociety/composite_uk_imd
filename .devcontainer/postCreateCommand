@@ -3,3 +3,5 @@
 echo "get submodule to appear as main rather than latest comment"
 cd src/data_common
 git checkout main
+cd docs/theme
+git checkout main

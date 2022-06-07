@@ -1,6 +1,6 @@
 ---
 title: "Download template_data_repo"
-layout: front
+layout: datasets/front
 ---
 
 # This is some actual content

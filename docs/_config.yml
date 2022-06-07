@@ -19,15 +19,26 @@ defaults:
       path: ""
       type: datasets
     values:
-      layout: dataset
+      layout: datasets/dataset
   - scope:
       path: ""
       type: downloads
     values:
-      layout: download
-
+      download_gate_type: soft
+      download_form_header: Can you help us with funding by telling us more about yourself?
+      download_survey: 6876792/Data-usage
+      layout: datasets/download
 plugins:
   - jekyll-feed
+
+# Twitter
+twittercard:
+  enabled: true
+  username: "@mysociety"
+
+logo: "/theme/img/mysociety-large-social.png"
+layouts_dir: theme/_layouts
+includes_dir: theme/_includes
 
 sass:
     sass_dir: 
