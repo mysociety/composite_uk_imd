@@ -28,6 +28,19 @@
 						"statuses": "write",
 						"workflows": "write"
 					}
+				},
+				"mysociety/mysociety-docs-theme": {
+					"permissions": {
+						"contents": "write",
+						"actions": "write",
+						"deployments": "write",
+						"issues": "write",
+						"packages": "read",
+						"pull_requests": "write",
+						"repository_projects": "write",
+						"statuses": "write",
+						"workflows": "write"
+					}
 				}
 			}
 		}
