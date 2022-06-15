@@ -10,6 +10,7 @@ git fetch origin
 git pull origin main
 git checkout main
 
+cd ../..
 cd docs/theme
 git fetch origin
 git pull origin main
