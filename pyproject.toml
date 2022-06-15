@@ -12,7 +12,7 @@ data_common = { path = "src/data_common/", develop = true }
 pytest = "^7.1.1"
 
 [tool.poetry.scripts]
-notebook = 'template_data_repo.cli:main'
+project = 'template_data_repo.__main__:main'
 dataset = "data_common.dataset.__main__:run"
 
 [tool.pyright]
