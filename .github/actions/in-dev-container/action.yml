@@ -1,0 +1,37 @@
+name: 'Run command in dev-container'
+description: 'Run a series of commands inside the default devcontainer'
+inputs:
+  run: 
+    description: 'Commands to run inside context'
+    required: true
+  shell: 
+    description: 'shell to run command on inside docker'
+    default: 'bash --noprofile --norc -eo pipefail'
+  app: 
+    description: 'docker-compose app to run command in'
+    required: true
+    default: 'app'
+
+runs:
+  using: "composite"
+
+  steps:
+    - name: Build image from docker-compose
+      uses: ./.github/actions/cached-build
+      with:
+        branch: "main"
+        dockerfile: Dockerfile.dev
+        push_to_registry: false
+    
+    - name: construct docker command
+      shell: bash
+      run: |
+        composeFiles="-f docker-compose.yml"
+        shellCommands='$@'
+        echo "docker-compose $composeFiles run --volume /home/runner:/home/runner/ ${{ inputs.app }} ${{ inputs.shell }} $shellCommands" > ${{ github.action_path }}/docker_command.sh
+        echo "${{ github.action_path }}" >> $GITHUB_PATH
+
+    - name: Run script in docker
+      shell: bash docker_command.sh {0}
+      run: |
+        ${{ inputs.run }}

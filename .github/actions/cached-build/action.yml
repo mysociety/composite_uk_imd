@@ -1,0 +1,94 @@
+name: 'Cached build'
+description: 'Assuming a top-level Dockerfile and docker-compose, build cached images to the current repo register'
+inputs:
+  registry: 
+    description: 'Registry to upload to (default ghcr.io)'
+    required: true
+    default: "ghcr.io"
+  github_token:
+    description: 'Authenticated github token for this repo'
+    default: ""
+  branch: 
+    description: 'Should be github.ref_name'
+    required: true
+  docker_compose_file: 
+    description: 'Docker-compose file to build app'
+    required: true
+    default: docker-compose.yml
+  docker_compose_file_app: 
+    description: 'App to build in docker compose'
+    required: true
+    default: app
+  dockerfile: 
+    description: 'If multi-stage build, needed to extract the base image'
+    required: true
+    default: Dockerfile
+  push_to_registry: 
+    description: 'Boolean if building should also push to registry'
+    default: 'true'
+
+runs:
+  using: "composite"
+  steps:
+
+  - name: Extract metadata (tags, labels) for Docker
+    id: meta
+    uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
+    with:
+      images: ${{ inputs.registry }}/${{ github.repository }}
+      tags: |
+        type=sha
+        type=ref,event=branch
+        type=ref,event=tag
+  - name: Build and push Docker image (base if present)
+    shell: bash
+    run: |
+      if grep -q " as base" "./${{ inputs.dockerfile }}"; then
+        docker build \
+          --target base \
+          --cache-from $REGISTRY/$IMAGE_NAME:base_$BRANCH \
+          --tag $REGISTRY/$IMAGE_NAME:base_$BRANCH \
+          --file ./${{ inputs.dockerfile }} \
+          --build-arg BUILDKIT_INLINE_CACHE=1 \
+          "."
+      fi
+    env:
+      REGISTRY: ${{ inputs.registry }}
+      IMAGE_NAME: ${{ github.repository }}
+      BRANCH: ${{ inputs.branch }}
+      DOCKER_BUILDKIT: 1
+      COMPOSE_DOCKER_CLI_BUILD: 1
+
+  - name: Build and tag relevant app from docker-compose
+    shell: bash
+    run: |
+      docker-compose -f  ${{ inputs.docker_compose_file }} build ${{ inputs.docker_compose_file_app }}
+      docker tag "$IMAGE_NAME" "$REGISTRY/$IMAGE_NAME"
+      for val in $TAGS; do
+        docker tag "$IMAGE_NAME" "$val"
+      done
+    env:
+      TAGS: ${{ steps.meta.outputs.tags }}
+      REGISTRY: ${{ inputs.registry }}
+      IMAGE_NAME: ${{ github.repository }}
+      DOCKER_BUILDKIT: 1
+      COMPOSE_DOCKER_CLI_BUILD: 1
+
+  - name: Log in to the Container registry
+    if: ${{ inputs.push_to_registry == 'true' }}
+    uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
+    with:
+      registry: ${{ inputs.registry }}
+      username: ${{ github.actor }}
+      password: ${{ inputs.github_token }}
+
+  - name: Push to repo
+    if: ${{ inputs.push_to_registry == 'true' }}
+    shell: bash
+    run: |
+      docker push "$REGISTRY/$IMAGE_NAME:base_$BRANCH"
+      docker push --all-tags "$REGISTRY/$IMAGE_NAME"
+    env:
+      BRANCH: ${{ inputs.branch }}
+      REGISTRY: ${{ inputs.registry }}
+      IMAGE_NAME: ${{ github.repository }}

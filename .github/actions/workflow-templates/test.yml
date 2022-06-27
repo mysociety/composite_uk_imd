@@ -1,0 +1,30 @@
+name: Run project tests
+
+concurrency: 
+  group: ${{ github.workflow }}-${{ github.ref }}-tests
+  cancel-in-progress: true
+  
+on:
+  push:
+    branches-ignore: ["main"]
+  pull_request:
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: checkout repo content
+        uses: actions/checkout@v2
+        with:
+          submodules: 'recursive'
+
+      - name: Run project tests
+        uses: ./.github/actions/in-dev-container
+        with:
+          run: |
+            script/test
+            dataset build --all
+            dataset version auto --auto-ban major --all

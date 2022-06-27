@@ -1,0 +1,33 @@
+name: Build datasets
+
+concurrency: 
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+  
+on:
+  push: 
+    branches: ["main"]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout repo content
+        uses: actions/checkout@v2
+        with:
+          submodules: 'recursive'
+          
+      - name: Run tests and try and build project
+        uses: ./.github/actions/in-dev-container
+        with:
+          run: |
+            script/test
+            dataset build --all
+            dataset version auto --auto-ban major --all --publish
+            
+      - name: Push new data
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Update repo data based on source changes"
