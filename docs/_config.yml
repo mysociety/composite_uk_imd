@@ -6,15 +6,20 @@ baseurl: "/template_data_repo"
 url: "https://mysociety.github.io"
 
 collections:
+  versionlists:
+    output: true
   datasets:
     output: true
-    permalink: /datasets/:name/
   downloads:
     output: true
-    permalink: /downloads/:name/
 
 
 defaults:
+  - scope:
+      path: ""
+      type: versionlists
+    values:
+      layout: datasets/versions
   - scope:
       path: ""
       type: datasets
