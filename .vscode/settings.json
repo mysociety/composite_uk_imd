@@ -32,7 +32,11 @@
     "ltex.language": "en-GB",
     "ltex.ltex-ls.path": "/ltex/ltex-ls-15.2.0/",
     "[markdown]": {
-        "editor.quickSuggestions": true
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+        }
     },
     "python.testing.pytestArgs": [
         "tests/"
