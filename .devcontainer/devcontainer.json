@@ -3,8 +3,11 @@
 	"dockerComposeFile": "../docker-compose.yml",
 	"service": "app",
 	"overrideCommand": true,
-	"initializeCommand": ".devcontainer/initializeCommand",
+	"initializeCommand": [
+		".devcontainer/initializeCommand"
+	],
 	"postCreateCommand": ".devcontainer/postCreateCommand",
+	"workspaceFolder": "/workspaces/template_data_repo",
 	"extensions": [
 		"ms-vscode.test-adapter-converter",
 		"bungcip.better-toml",
