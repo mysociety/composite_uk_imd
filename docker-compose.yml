@@ -4,5 +4,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.dev
+    working_dir: /workspaces/template_data_repo      
     volumes:
       - ./:/workspaces/template_data_repo/
