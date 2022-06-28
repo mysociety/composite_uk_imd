@@ -35,3 +35,8 @@ runs:
       shell: bash docker_command.sh {0}
       run: |
         ${{ inputs.run }}
+
+    - name: Clean up created shell
+      shell: bash
+      run: |
+        rm -r ${{ github.action_path }}/docker_command.sh
