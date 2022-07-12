@@ -13,6 +13,7 @@ pytest = "^7.1.1"
 
 [tool.poetry.scripts]
 project = 'template_data_repo.__main__:main'
+notebook = "data_common.notebookcli.__main__:run"
 dataset = "data_common.dataset.__main__:run"
 
 [tool.pyright]
