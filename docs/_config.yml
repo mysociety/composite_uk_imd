@@ -12,9 +12,16 @@ collections:
     output: true
   downloads:
     output: true
+  analysis:
+    output: true
 
 
 defaults:
+  - scope:
+      path: ""
+      type: analysis
+    values:
+      layout: default
   - scope:
       path: ""
       type: versionlists
