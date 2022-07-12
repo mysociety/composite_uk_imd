@@ -4,8 +4,8 @@ FROM ghcr.io/mysociety/data_common:latest
 
 # Make an empty project directory so the 'self' setup doesn't fail and scripts can be setup
 # Override the .pth created at previous stages to point to where the working directory will land
-COPY pyproject.toml poetry.lock /setup/ 
-COPY src/data_common/pyproject.toml src/data_common/poetry.lock /setup/src/data_common/
+COPY pyproject.toml poetry.loc[k] /setup/ 
+COPY src/data_common/pyproject.toml src/data_common/poetry.loc[k] /setup/src/data_common/
 RUN mkdir /setup/src/template_data_repo && touch /setup/src/template_data_repo/__init__.py \
     && touch /setup/src/data_common/__init__.py \
     && export PATH="$HOME/.poetry/bin:$PATH" \
