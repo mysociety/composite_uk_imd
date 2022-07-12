@@ -11,11 +11,18 @@ inputs:
     description: 'docker-compose app to run command in'
     required: true
     default: 'app'
+  dotenv:
+    description: .env format environmental variables. Make avaliable to docker-compose build context.
+    required: false
+    default: ''
+
 
 runs:
   using: "composite"
 
   steps:
+
+
     - name: Build image from docker-compose
       uses: ./.github/actions/cached-build
       with:
@@ -26,10 +33,13 @@ runs:
     - name: construct docker command
       shell: bash
       run: |
+        echo "$DOTENV" > .env
         composeFiles="-f docker-compose.yml"
         shellCommands='$@'
         echo "docker-compose $composeFiles run --volume /home/runner:/home/runner/ ${{ inputs.app }} ${{ inputs.shell }} $shellCommands" > ${{ github.action_path }}/docker_command.sh
         echo "${{ github.action_path }}" >> $GITHUB_PATH
+      env:
+        DOTENV: ${{ inputs.dotenv }}
 
     - name: Run script in docker
       shell: bash docker_command.sh {0}
@@ -39,4 +49,5 @@ runs:
     - name: Clean up created shell
       shell: bash
       run: |
+        rm -r .env
         rm -r ${{ github.action_path }}/docker_command.sh
