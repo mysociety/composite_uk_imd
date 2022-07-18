@@ -21,7 +21,7 @@ include = ["src", "notebooks"]
 exclude=["src/data_common/typings"]
 stubPath="src/data_common/typings"
 typeCheckingMode="basic"
-
+reportPrivateImportUsage="warning"
 
 [notebook.settings]
 default_page_title = "Settings file defined title"
