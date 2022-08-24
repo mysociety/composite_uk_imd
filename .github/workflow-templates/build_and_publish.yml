@@ -1,5 +1,10 @@
 name: Build datasets and deploy
 
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 concurrency: 
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -38,10 +43,13 @@ jobs:
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./
-          destination: ./_site
+          source: docs
+          destination: docs/_site
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
+        with:
+          path: docs/_site
 
   deploy:
     environment:
