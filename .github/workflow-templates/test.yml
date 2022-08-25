@@ -25,6 +25,7 @@ jobs:
         uses: ./.github/actions/in-dev-container
         with:
           run: |
+            pip install poetry
             script/test
             dataset build --all
             dataset version auto --auto-ban major --all
