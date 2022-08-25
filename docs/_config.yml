@@ -21,7 +21,11 @@ defaults:
       path: ""
       type: analysis
     values:
-      layout: default
+      layout: datasets/analysis
+      external_css:
+        - https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css
+      external_js:
+        - https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js
   - scope:
       path: ""
       type: versionlists
