@@ -2,6 +2,10 @@
 
 This repository uses methodology from a paper by [Gary A Abel, Matthew E Barclay, and Rupert A Payne](https://bmjopen.bmj.com/content/6/11/e012750) to create a composite measure of multiple deprivation across the UK. 
 
+The data can be downloaded from: https://mysociety.github.io/composite_uk_imd/
+
+Update 26/08/2022: A previous version of this dataset had incorrect rankings for Northern Ireland SOAs. [You can read a write-up of this error.](https://mysociety.github.io/composite_uk_imd/analysis/v1_uk_index_error_analysis.html) 
+
 ## Using this dataset
 
 There are two sets of files depending if you want a GB or UK index (methodological differences explained below). For each set (`uk_index` and `gb_index` folders), there is a different file for each nation. In each case, the measures of deprivation in the other nations has been integrated into the base scores for that nation. 
