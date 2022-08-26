@@ -1,4 +1,4 @@
-import template_data_repo
+import composite_uk_imd
 
 import pytest
 

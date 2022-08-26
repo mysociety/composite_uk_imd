@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "template_data_repo"
+name = "composite_uk_imd"
 version = "0.1.0"
-description = "Standardised template for mysociety data repositories"
+description = "Composite version of UK and GB wide deprivation indexes for small areas."
 authors = []
 
 [tool.poetry.dependencies]
@@ -12,7 +12,7 @@ data_common = { path = "src/data_common/", develop = true }
 pytest = "^7.1.1"
 
 [tool.poetry.scripts]
-project = 'template_data_repo.__main__:main'
+project = 'composite_uk_imd.__main__:main'
 notebook = "data_common.notebookcli.__main__:run"
 dataset = "data_common.dataset.__main__:run"
 
@@ -29,6 +29,6 @@ default_page_title = "Settings file defined title"
 [tool.dataset]
 dataset_dir = "data/packages"
 publish_dir = "docs/"
-publish_url = "https://mysociety.github.io/template_data_repo/"
+publish_url = "https://mysociety.github.io/composite_uk_imd/"
 credit_text = "If you find this data useful, please let us know to help us make the case for future funding."
 credit_url = "https://survey.alchemer.com/s3/6876792/Data-usage"

@@ -7,7 +7,7 @@
 		".devcontainer/initializeCommand"
 	],
 	"postCreateCommand": ".devcontainer/postCreateCommand",
-	"workspaceFolder": "/workspaces/template_data_repo",
+	"workspaceFolder": "/workspaces/composite_uk_imd",
 	"extensions": [
 		"ms-vscode.test-adapter-converter",
 		"bungcip.better-toml",

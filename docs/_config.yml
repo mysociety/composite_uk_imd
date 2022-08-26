@@ -1,8 +1,8 @@
 theme: jekyll-theme-slate
-title: template_data_repo
-description: Standardised template for mysociety data repositories
+title: Composite 2020 UK Index of Multiple Deprivation
+description: Composite version of UK and GB wide deprivation indexes for small areas.
 
-baseurl: "/template_data_repo"
+baseurl: "/composite_uk_imd"
 url: "https://mysociety.github.io"
 
 collections:
