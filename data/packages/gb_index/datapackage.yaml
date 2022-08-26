@@ -1,4 +1,4 @@
-name: composite_gb_imd_index
+name: gb_index
 title: Composite GB IMD Index
 description : |
   Composite index that combines three national IMD indexes (Excluding Northern Ireland)
