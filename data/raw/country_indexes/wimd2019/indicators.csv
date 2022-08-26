@@ -1,0 +1,1910 @@
+name,lsoa,indicator_income,indicator_employment
+Aberffraw & Rhosneigr 1 ,W01000001,15,12
+Aberffraw & Rhosneigr 2 ,W01000002,13,7
+Amlwch Port ,W01000003,23,15
+Amlwch Rural ,W01000004,12,9
+Beaumaris ,W01000005,14,7
+Bodffordd ,W01000006,10,9
+Bodorgan ,W01000007,11,8
+Braint ,W01000008,7,4
+Bryngwran ,W01000009,16,11
+Brynteg ,W01000010,9,7
+Cadnant (Isle of Anglesey) ,W01000011,9,7
+Cefni ,W01000012,10,7
+Cwm Cadnant ,W01000013,5,5
+Cyngar ,W01000014,14,11
+Gwyngyll ,W01000015,7,6
+Holyhead Town ,W01000016,34,21
+Kingsland ,W01000017,26,13
+Llanbadrig ,W01000018,17,10
+Llanbedrgoch ,W01000019,10,9
+Llanddyfnan ,W01000020,7,5
+Llaneilian ,W01000021,12,9
+Llanfaethlu ,W01000022,14,7
+Llanfair-yn-Neubwll 1 ,W01000023,15,8
+Llanfair-yn-Neubwll 2 ,W01000024,13,7
+Llanfihangel Ysgeifiog ,W01000025,11,7
+Llangoed ,W01000026,14,10
+Llanidan ,W01000027,12,8
+Llannerch-y-medd ,W01000028,15,9
+London Road ,W01000029,28,18
+Maeshyfryd ,W01000030,28,17
+Mechell ,W01000031,15,10
+Moelfre ,W01000032,15,10
+Morawelon ,W01000033,29,19
+Parc a'r Mynydd ,W01000034,14,9
+Pentraeth ,W01000035,12,7
+Porthyfelin 1 ,W01000036,28,19
+Porthyfelin 2 ,W01000037,17,11
+Rhosyr ,W01000038,16,10
+Trearddur 1 ,W01000039,9,5
+Trearddur 2 ,W01000040,9,6
+Tudur ,W01000041,30,16
+Tysilio ,W01000042,11,7
+Valley 1 ,W01000043,20,10
+Valley 2 ,W01000044,6,5
+Abererch ,W01000047,10,7
+Abermaw 1 ,W01000048,15,9
+Abermaw 2 ,W01000049,14,10
+Arllechwedd ,W01000050,14,10
+Bala ,W01000051,14,9
+Bethel & Cwm-y-Glo 1 ,W01000052,6,4
+Bethel & Cwm-y-Glo 2 ,W01000053,6,3
+Bontnewydd ,W01000054,8,6
+Bowydd and Rhiw ,W01000056,19,12
+Brithdir and Llanfachreth/Ganllwyd/Llanelltyd ,W01000057,8,6
+Cadnant (Gwynedd) ,W01000059,26,17
+Corris/Mawddwy ,W01000060,11,6
+Criccieth ,W01000061,12,6
+Deiniol ,W01000062,8,4
+Deiniolen ,W01000063,17,10
+Dewi ,W01000064,15,9
+Diffwys and Maenofferen ,W01000065,18,13
+Dolbenmaen ,W01000066,12,8
+Dolgellau North ,W01000067,9,8
+Dolgellau South ,W01000068,12,10
+Dyffryn Ardudwy ,W01000069,10,6
+Efail-newydd/Buan ,W01000070,10,5
+Gerlan ,W01000071,16,9
+Glyder ,W01000072,10,8
+Groeslon ,W01000073,9,5
+Harlech ,W01000074,12,7
+Hendre (Gwynedd) ,W01000075,16,8
+Hirael & Garth 1 ,W01000076,10,6
+Hirael & Garth 2 ,W01000077,13,6
+Llanaelhaearn ,W01000078,18,9
+Llanbedr ,W01000079,11,5
+Llanbedrog & Abersoch ,W01000080,13,6
+Llanberis ,W01000081,13,5
+Llandderfel & Llanuwchllyn 1 ,W01000082,10,5
+Llandderfel & Llanuwchllyn 2 ,W01000083,7,3
+Llanengan ,W01000084,7,4
+Llangelynin ,W01000085,16,12
+Llanllyfni & Clynnog ,W01000086,15,8
+Llanrug ,W01000087,10,5
+Llanwnda ,W01000088,12,7
+Llanystumdwy ,W01000089,8,5
+Marchog 1 ,W01000090,30,13
+Marchog 2 ,W01000091,31,21
+Menai (Bangor) ,W01000092,2,2
+Menai (Caernarfon) ,W01000093,8,8
+Morfa Nefyn ,W01000094,11,6
+Nefyn ,W01000095,12,7
+Ogwen 1 ,W01000096,17,11
+Ogwen 2 ,W01000097,17,13
+Peblig (Caernarfon) ,W01000098,34,19
+Penisarwaun ,W01000099,11,6
+Penrhyndeudraeth 1 ,W01000100,10,4
+Penrhyndeudraeth 2 ,W01000101,10,6
+Pentir 1 ,W01000102,6,4
+Pentir 2 ,W01000103,13,8
+Penygroes (Gwynedd) ,W01000104,18,11
+Porthmadog East ,W01000105,11,7
+Porthmadog West ,W01000106,7,4
+Porthmadog - Tremadog ,W01000107,12,7
+Pwllheli North ,W01000108,15,9
+Pwllheli South ,W01000109,17,10
+Seiont 1 ,W01000110,14,9
+Seiont 2 ,W01000111,17,11
+Talysarn ,W01000112,19,11
+Teigl ,W01000113,16,9
+Trawsfynydd ,W01000114,11,6
+Tregarth & Mynydd Llandygai ,W01000115,11,7
+Tywyn 1 ,W01000116,10,6
+Tywyn 2 ,W01000117,19,11
+Waunfawr ,W01000118,12,7
+Y Felinheli ,W01000119,8,6
+Aberdaron / Botwnnog & Tudweiliog,W01001932,9,4
+Aberdovey / Bryn-crug / Llanfihangel ,W01001933,9,5
+Betws-y-Coed ,W01000121,8,5
+Betws yn Rhos ,W01000122,8,5
+Bryn ,W01000123,15,12
+Caerhun ,W01000124,8,6
+Capelulo ,W01000125,12,7
+Colwyn 1 ,W01000126,12,7
+Colwyn 2 ,W01000127,35,22
+Colwyn 3 ,W01000128,16,11
+Conwy 1 ,W01000129,24,13
+Conwy 2 ,W01000130,8,6
+Conwy 3 ,W01000131,9,5
+Craig-y-Don 1 ,W01000132,18,17
+Craig-y-Don 2 ,W01000133,8,5
+Crwst ,W01000134,16,10
+Deganwy 1 ,W01000135,6,5
+Deganwy 2 ,W01000136,10,6
+Eglwysbach ,W01000137,7,5
+Eirias 1 ,W01000138,22,16
+Eirias 2 ,W01000139,11,5
+Gele 1 ,W01000140,23,12
+Gele 2 ,W01000141,10,7
+Gele 3 ,W01000142,5,5
+Glyn (Conwy) 1 ,W01000143,22,15
+Glyn (Conwy) 2 ,W01000144,43,36
+Glyn (Conwy) 3 ,W01000145,20,12
+Gogarth 1 ,W01000146,17,14
+Gogarth 2 ,W01000147,15,9
+Gower (Conwy) ,W01000148,14,7
+Kinmel Bay 1 ,W01000149,24,16
+Kinmel Bay 2 ,W01000150,18,10
+Kinmel Bay 3 ,W01000151,21,13
+Kinmel Bay 4 ,W01000152,19,13
+Llanddulas ,W01000153,10,9
+Llandrillo yn Rhos 1 ,W01000154,7,5
+Llandrillo yn Rhos 2 ,W01000155,11,8
+Llandrillo yn Rhos 3 ,W01000156,13,8
+Llandrillo yn Rhos 4 ,W01000157,24,15
+Llandrillo yn Rhos 5 ,W01000158,11,8
+Llangernyw ,W01000159,9,5
+Llansannan ,W01000162,9,5
+Llysfaen 1 ,W01000163,36,17
+Llysfaen 2 ,W01000164,12,6
+Marl 1 ,W01000165,5,4
+Marl 2 ,W01000166,13,7
+Mochdre ,W01000167,20,12
+Mostyn (Conwy) 1 ,W01000168,22,14
+Mostyn (Conwy) 2 ,W01000169,18,15
+Pandy ,W01000170,11,7
+Pant-yr-afon/Penmaenan 1 ,W01000171,17,14
+Pant-yr-afon/Penmaenan 2 ,W01000172,24,13
+Penrhyn 1 ,W01000173,6,3
+Penrhyn 2 ,W01000174,5,4
+Penrhyn 3 ,W01000175,5,4
+Pensarn 1 ,W01000176,18,10
+Pensarn 2 ,W01000177,14,7
+Pentre Mawr 1 ,W01000178,30,18
+Pentre Mawr 2 ,W01000179,8,7
+Rhiw 1 ,W01000180,5,6
+Rhiw 2 ,W01000181,7,5
+Rhiw 3 ,W01000182,29,27
+Rhiw 4 ,W01000183,14,9
+Towyn ,W01000184,22,14
+Trefriw ,W01000185,12,7
+Tudno 1 ,W01000186,24,15
+Tudno 2 ,W01000187,38,23
+Tudno 3 ,W01000188,11,8
+Uwch Conwy ,W01000189,9,5
+Uwchaled ,W01000190,8,5
+Llansanffraid ,W01001926,7,5
+Abergele Pensarn 1 ,W01001927,18,10
+Abergele Pensarn 2 ,W01001928,36,34
+Bodelwyddan ,W01000191,13,9
+Corwen 1 ,W01000192,11,8
+Corwen 2 ,W01000193,15,8
+Denbigh Central ,W01000194,19,16
+Denbigh Lower 1 ,W01000195,5,4
+Denbigh Lower 2 ,W01000196,6,5
+Denbigh Lower 3 ,W01000197,8,6
+Denbigh Upper/Henllan 1 ,W01000198,31,20
+Denbigh Upper/Henllan 2 ,W01000199,19,12
+Dyserth 1 ,W01000200,10,7
+Dyserth 2 ,W01000201,20,12
+Efenechtyd ,W01000202,6,4
+Llanarmon-yn-Ial/Llandegla ,W01000203,6,4
+Llanbedr Dyffryn Clwyd/Llangynhafal ,W01000204,5,3
+Llandrillo ,W01000205,8,5
+Llandyrnog ,W01000206,7,7
+Llanfair Dyffryn Clwyd/Gwyddelwern ,W01000207,6,4
+Llangollen 1 ,W01000208,11,10
+Llangollen 2 ,W01000209,15,7
+Llangollen 3 ,W01000210,10,6
+Llanrhaeadr-yng-Nghinmeirch ,W01000211,7,4
+Prestatyn Central 1 ,W01000212,10,7
+Prestatyn Central 2 ,W01000213,26,16
+Prestatyn East 1 ,W01000214,23,12
+Prestatyn East 2 ,W01000215,6,5
+Prestatyn East 3 ,W01000216,23,13
+Prestatyn Meliden ,W01000217,21,10
+Prestatyn North 1 ,W01000218,20,14
+Prestatyn North 2 ,W01000219,19,10
+Prestatyn North 3 ,W01000220,15,13
+Prestatyn South West 1 ,W01000221,22,13
+Prestatyn South West 2 ,W01000222,17,10
+Rhuddlan 1 ,W01000223,9,8
+Rhuddlan 2 ,W01000224,14,7
+Rhuddlan 3 ,W01000225,15,9
+Rhyl East 1 ,W01000226,26,15
+Rhyl East 2 ,W01000227,18,11
+Rhyl East 3 ,W01000228,29,25
+Rhyl South 1 ,W01000229,22,16
+Rhyl South 2 ,W01000230,13,8
+Rhyl South East 1 ,W01000231,18,11
+Rhyl South East 2 ,W01000232,17,8
+Rhyl South East 3 ,W01000233,19,11
+Rhyl South East 4 ,W01000234,34,18
+Rhyl South East 5 ,W01000235,11,8
+Rhyl South West 1 ,W01000236,39,22
+Rhyl South West 2 ,W01000237,44,22
+Rhyl South West 3 ,W01000238,20,12
+Rhyl West 1 ,W01000239,50,35
+Rhyl West 2 ,W01000240,61,43
+Rhyl West 3 ,W01000241,47,26
+Ruthin 1 ,W01000242,16,10
+Ruthin 2 ,W01000243,12,7
+Ruthin 3 ,W01000244,5,4
+St. Asaph East ,W01000245,11,7
+St. Asaph West ,W01000246,14,10
+Trefnant ,W01000247,10,9
+Tremeirchion ,W01000248,7,3
+Argoed (Flintshire) 1 ,W01000249,5,4
+Argoed (Flintshire) 2 ,W01000250,6,4
+Aston 1 ,W01000251,16,8
+Aston 2 ,W01000252,6,6
+Bagillt East ,W01000253,16,8
+Bagillt West ,W01000254,21,11
+Broughton North East ,W01000255,10,5
+Broughton South 1 ,W01000256,13,6
+Broughton South 2 ,W01000257,4,3
+Brynford ,W01000258,10,6
+Buckley Bistre East 1 ,W01000259,19,9
+Buckley Bistre East 2 ,W01000260,9,6
+Buckley Bistre West 1 ,W01000261,8,5
+Buckley Bistre West 2 ,W01000262,19,11
+Buckley Bistre West 3 ,W01000263,26,15
+Buckley Mountain 1 ,W01000264,8,5
+Buckley Mountain 2 ,W01000265,7,4
+Buckley Pentrobin 1 ,W01000266,7,5
+Buckley Pentrobin 2 ,W01000267,8,5
+Buckley Pentrobin 3 ,W01000268,4,3
+Caergwrle ,W01000269,12,9
+Caerwys 1 ,W01000270,4,3
+Caerwys 2 ,W01000271,10,6
+Cilcain ,W01000272,5,5
+Connah's Quay Central 1 ,W01000273,19,10
+Connah's Quay Central 2 ,W01000274,26,17
+Connah's Quay Golftyn 1 ,W01000275,9,6
+Connah's Quay Golftyn 2 ,W01000276,10,4
+Connah's Quay Golftyn 3 ,W01000277,9,5
+Connah's Quay Golftyn 4 ,W01000278,29,17
+Connah's Quay South 1 ,W01000279,9,7
+Connah's Quay South 2 ,W01000280,9,5
+Connah's Quay South 3 ,W01000281,10,7
+Connah's Quay South 4 ,W01000282,5,2
+Connah's Quay Wepre ,W01000283,10,6
+Ewloe 1 ,W01000284,4,3
+Ewloe 2 ,W01000285,4,3
+Ewloe 3 ,W01000286,5,3
+Ffynnongroyw ,W01000287,20,13
+Flint Castle ,W01000288,24,15
+Flint Coleshill 1 ,W01000289,8,5
+Flint Coleshill 2 ,W01000290,26,18
+Flint Coleshill 3 ,W01000291,13,8
+Flint Oakenholt 1 ,W01000292,23,10
+Flint Oakenholt 2 ,W01000293,16,9
+Flint Trelawny 1 ,W01000294,6,4
+Flint Trelawny 2 ,W01000295,9,5
+Greenfield 1 ,W01000296,28,16
+Greenfield 2 ,W01000297,14,8
+Gronant ,W01000298,22,15
+Gwernaffield ,W01000299,6,3
+Gwernymynydd ,W01000300,7,3
+Halkyn ,W01000301,7,5
+Hawarden ,W01000302,6,4
+Higher Kinnerton ,W01000303,4,3
+Holywell Central ,W01000304,32,21
+Holywell East ,W01000305,15,10
+Holywell West ,W01000306,22,13
+Hope 1 ,W01000307,4,3
+Hope 2 ,W01000308,12,6
+Leeswood ,W01000309,12,7
+Llanfynydd ,W01000310,7,4
+Mancot 1 ,W01000311,13,8
+Mancot 2 ,W01000312,14,9
+Mold Broncoed 1 ,W01000313,14,8
+Mold Broncoed 2 ,W01000314,18,14
+Mold East ,W01000315,14,9
+Mold South 1 ,W01000316,4,3
+Mold South 2 ,W01000317,2,2
+Mold West 1 ,W01000318,28,15
+Mold West 2 ,W01000319,13,12
+Mostyn (Flintshire) ,W01000320,23,13
+New Brighton 1 ,W01000321,5,3
+New Brighton 2 ,W01000322,10,10
+Northop 1 ,W01000323,6,3
+Northop 2 ,W01000324,5,3
+Northop Hall ,W01000325,6,3
+Penyffordd 1 ,W01000326,6,3
+Penyffordd 2 ,W01000327,6,3
+Queensferry ,W01000328,18,8
+Saltney Mold Junction ,W01000329,18,9
+Saltney Stonebridge 1 ,W01000330,17,9
+Saltney Stonebridge 2 ,W01000331,8,5
+Sealand 1 ,W01000332,15,8
+Sealand 2 ,W01000333,27,17
+Shotton East ,W01000334,14,9
+Shotton Higher 1 ,W01000335,29,15
+Shotton Higher 2 ,W01000336,32,18
+Shotton West ,W01000337,12,8
+Trelawnyd and Gwaenysgor ,W01000338,13,8
+Treuddyn ,W01000339,10,6
+Whitford ,W01000340,5,5
+Acton 1 ,W01000341,15,10
+Acton 2 ,W01000342,24,14
+Borras Park 1 ,W01000343,4,5
+Borras Park 2 ,W01000344,5,5
+Bronington 1 ,W01000345,6,5
+Bronington 2 ,W01000346,6,3
+Brymbo 1 ,W01000347,8,4
+Brymbo 2 ,W01000348,23,13
+Brynyffynnon 1 ,W01000349,12,9
+Brynyffynnon 2 ,W01000350,16,10
+Bryn Cefn ,W01000351,15,9
+Cartrefle 1 ,W01000352,20,14
+Cartrefle 2 ,W01000353,33,17
+Cefn 1 ,W01000354,11,9
+Cefn 2 ,W01000355,20,13
+Cefn 3 ,W01000356,19,11
+Chirk North 1 ,W01000359,11,5
+Chirk North 2 ,W01000360,16,11
+Chirk South ,W01000361,15,10
+Coedpoeth 1 ,W01000362,24,13
+Coedpoeth 2 ,W01000363,13,8
+Coedpoeth 3 ,W01000364,11,8
+Erddig ,W01000365,10,6
+Esclusham 1 ,W01000366,15,8
+Esclusham 2 ,W01000367,6,4
+Garden Village ,W01000368,4,4
+Gresford East and West 1 ,W01000369,9,6
+Gresford East and West 2 ,W01000370,6,3
+Grosvenor 1 ,W01000371,15,10
+Grosvenor 2 ,W01000372,21,13
+Gwenfro ,W01000373,24,14
+Gwersyllt East and South 1 ,W01000374,17,12
+Gwersyllt East and South 2 ,W01000375,8,6
+Gwersyllt East and South 3 ,W01000376,8,5
+Gwersyllt North 1 ,W01000377,10,6
+Gwersyllt North 2 ,W01000378,26,14
+Gwersyllt West 1 ,W01000379,24,17
+Gwersyllt West 2 ,W01000380,10,10
+Hermitage 1 ,W01000381,20,13
+Hermitage 2 ,W01000382,27,17
+Holt 1 ,W01000383,6,4
+Holt 2 ,W01000384,8,5
+Johnstown 1 ,W01000385,6,5
+Johnstown 2 ,W01000386,19,12
+Little Acton 1 ,W01000387,4,4
+Little Acton 2 ,W01000388,10,8
+Llangollen Rural ,W01000389,10,6
+Llay 1 ,W01000390,9,6
+Llay 2 ,W01000391,9,7
+Llay 3 ,W01000392,24,14
+Maesydre ,W01000393,16,8
+Marchwiel 1 ,W01000394,4,3
+Marchwiel 2 ,W01000395,12,7
+Marford and Hoseley 1 ,W01000396,4,3
+Marford and Hoseley 2 ,W01000397,2,1
+Minera 1 ,W01000398,10,7
+Minera 2 ,W01000399,5,4
+New Broughton 1 ,W01000400,17,8
+New Broughton 2 ,W01000401,20,10
+Offa ,W01000402,15,9
+Overton 1 ,W01000403,6,3
+Overton 2 ,W01000404,9,5
+Pant ,W01000405,25,13
+Penycae ,W01000406,25,15
+Penycae and Ruabon South 1 ,W01000407,5,4
+Penycae and Ruabon South 2 ,W01000408,18,10
+Plas Madoc ,W01000409,39,20
+Ponciau 1 ,W01000410,14,10
+Ponciau 2 ,W01000411,22,15
+Ponciau 3 ,W01000412,13,10
+Queensway 1 ,W01000413,47,24
+Queensway 2 ,W01000414,39,18
+Rhosnesni 1 ,W01000415,10,8
+Rhosnesni 2 ,W01000416,4,3
+Rossett 1 ,W01000417,3,2
+Rossett 2 ,W01000418,9,5
+Ruabon 1 ,W01000419,19,11
+Ruabon 2 ,W01000420,13,10
+Stansty ,W01000422,11,9
+Whitegate 1 ,W01000423,18,10
+Whitegate 2 ,W01000424,13,9
+Wynnstay ,W01000425,38,21
+Smithfield 2 ,W01001929,17,11
+Ceiriog Valley 3 ,W01001930,10,6
+Smithfield 3 ,W01001931,25,17
+Aber-craf ,W01000426,13,12
+Beguildy ,W01000427,11,6
+Berriew ,W01000428,7,4
+Blaen Hafren ,W01000429,7,5
+Bronllys ,W01000430,7,5
+Builth 1 ,W01000431,13,8
+Builth 2 ,W01000432,8,4
+Caersws ,W01000433,10,7
+Churchstoke ,W01000434,8,5
+Disserth and Trecoed ,W01000438,15,14
+Dolforwyn ,W01000439,6,4
+Felin-fâch ,W01000440,5,4
+Forden ,W01000441,5,3
+Glantwymyn ,W01000442,9,5
+Glasbury ,W01000443,6,3
+Guilsfield ,W01000444,6,5
+Gwernyfed ,W01000445,7,5
+Hay ,W01000446,10,6
+Kerry ,W01000447,8,4
+Knighton 1 ,W01000448,13,9
+Knighton 2 ,W01000449,9,7
+Llanafanfawr ,W01000450,5,3
+Llanbadarn Fawr ,W01000451,10,5
+Llanbrynmair & Banwy ,W01000452,10,8
+Llandinam ,W01000453,6,3
+Llandrindod East/Llandrindod West ,W01000454,24,21
+Llandrindod North ,W01000455,20,12
+Llandrindod South ,W01000456,15,14
+Llandrinio ,W01000457,6,4
+Llandysilio ,W01000458,8,5
+Llanelwedd ,W01000459,9,5
+Llanfair Caereinion ,W01000460,10,5
+Llanfyllin ,W01000461,14,10
+Llangunllo ,W01000464,9,3
+Llangynidr ,W01000465,5,3
+Llanidloes 1 ,W01000466,12,8
+Llanidloes 2 ,W01000467,11,8
+Llansantffraid ,W01000470,9,5
+Llanwrtyd Wells ,W01000471,10,9
+Llanyre ,W01000472,7,6
+Machynlleth ,W01000473,13,8
+Maescar/Llywel ,W01000474,7,5
+Meifod & Llanfihangel ,W01000475,9,5
+Montgomery ,W01000476,7,5
+Nantmel ,W01000477,10,5
+Newtown Central 1 ,W01000478,25,15
+Newtown Central 2 ,W01000479,23,11
+Newtown East ,W01000480,20,15
+Newtown Llanllwchaiarn North ,W01000481,8,5
+Newtown Llanllwchaiarn West ,W01000482,9,7
+Newtown South ,W01000483,26,17
+Old Radnor ,W01000484,8,5
+Presteigne 1 ,W01000485,9,6
+Presteigne 2 ,W01000486,12,7
+Rhayader ,W01000487,13,9
+Rhiwcynon ,W01000488,7,4
+St. David Within ,W01000489,12,9
+St. Mary 1 ,W01000492,11,7
+St. Mary 2 ,W01000493,5,3
+Talgarth ,W01000494,9,7
+Tawe-Uchaf ,W01000496,14,10
+Trewern ,W01000497,7,4
+Welshpool Castle ,W01000498,27,14
+Welshpool Gungrog 1 ,W01000499,19,12
+Welshpool Gungrog 2 ,W01000500,13,8
+Welshpool Llanerchyddol ,W01000501,12,8
+Ynyscedwyn ,W01000502,12,11
+Yscir ,W01000503,7,3
+Ystradgynlais 1 ,W01000504,31,26
+Ystradgynlais 2 ,W01000505,14,12
+Talybont-on-Usk ,W01001897,7,5
+Cwm-twrch ,W01001899,15,11
+St. John 1 ,W01001901,8,5
+St. John 2 ,W01001902,20,15
+Crickhowell ,W01001903,8,6
+Llangattock and Glangrwyney ,W01001904,5,4
+"Llangors, Bwlch & Grwyney ",W01001905,5,3
+Llanrhaeadr-ym-Mochnant ,W01001906,9,6
+Llansilin ,W01001907,8,3
+Aberaeron ,W01000506,14,8
+Aberporth 1 ,W01000507,8,8
+Aberporth 2 ,W01000508,18,11
+Aberteifi/Cardigan - Mwldan ,W01000509,17,13
+Aberteifi/Cardigan - Rhyd-y-Fuwch ,W01000510,25,21
+Aberteifi/Cardigan - Teifi ,W01000511,37,21
+Aberystwyth Bronglais ,W01000512,5,4
+Aberystwyth Canol/Central ,W01000513,7,6
+Aberystwyth Penparcau 1 ,W01000515,21,16
+Aberystwyth Penparcau 2 ,W01000516,21,11
+Aberystwyth Rheidol 1 ,W01000517,8,7
+Aberystwyth Rheidol 2 ,W01000518,13,8
+Beulah ,W01000519,11,6
+Capel Dewi ,W01000522,11,8
+Ceulanamaesmawr ,W01000523,9,6
+Ciliau Aeron ,W01000524,12,7
+Faenor 1 ,W01000525,3,3
+Lampeter 1 ,W01000527,8,6
+Lampeter 2 ,W01000528,15,12
+Llanarth ,W01000529,17,9
+Llandyfriog ,W01000531,16,11
+Llandysiliogogo ,W01000532,9,6
+Llandysul Town ,W01000533,18,13
+Llanfarian ,W01000534,8,4
+Llanfihangel Ystrad ,W01000535,13,9
+Llangeitho ,W01000536,14,9
+Llangybi ,W01000537,15,8
+Llanrhystyd ,W01000538,8,6
+Llansantffraed 1 ,W01000539,10,6
+Llansantffraed 2 ,W01000540,13,9
+Llanwenog ,W01000541,11,8
+Lledrod ,W01000542,11,7
+Melindwr ,W01000543,11,7
+New Quay ,W01000544,16,8
+Penbryn ,W01000545,9,6
+Pen-parc 1 ,W01000546,16,10
+Pen-parc 2 ,W01000547,12,7
+Tirymynach ,W01000548,12,7
+Trefeurig ,W01000549,6,2
+Tregaron ,W01000550,14,11
+Troedyraur ,W01000551,13,8
+Ystwyth ,W01000552,8,5
+Penglais ,W01001934,6,4
+Llanbadarn Fawr South ,W01001935,8,5
+Llanbadarn Fawr North ,W01001936,5,3
+Borth ,W01001937,10,7
+Amroth ,W01000553,11,6
+Burton ,W01000554,8,7
+Camrose 1 ,W01000555,7,5
+Camrose 2 ,W01000556,10,7
+Carew ,W01000557,8,5
+Cilgerran ,W01000558,10,7
+Clydau ,W01000559,12,6
+Crymych 1 ,W01000560,8,7
+Crymych 2 ,W01000561,12,6
+Dinas Cross ,W01000562,9,5
+East Williamston 1 ,W01000563,12,9
+East Williamston 2 ,W01000564,13,7
+Fishguard North East ,W01000565,17,10
+Fishguard North West ,W01000566,17,12
+Goodwick ,W01000567,18,10
+Haverfordwest: Castle ,W01000568,22,17
+Haverfordwest: Garth 1 ,W01000569,12,5
+Haverfordwest: Garth 2 ,W01000570,39,20
+Haverfordwest: Portfield ,W01000571,16,9
+Haverfordwest: Prendergast ,W01000572,10,7
+Haverfordwest: Priory ,W01000573,11,7
+Hundleton ,W01000574,9,7
+Johnston ,W01000575,13,8
+Kilgetty/Begelly ,W01000576,14,9
+Lampeter Velfrey ,W01000577,8,6
+Lamphey ,W01000578,10,8
+Letterston ,W01000579,11,6
+Llangwm ,W01000580,8,5
+Llanrhian ,W01000581,9,6
+Maenclochog 1 ,W01000582,11,5
+Maenclochog 2 ,W01000583,10,5
+Manorbier ,W01000584,14,7
+Martletwy ,W01000585,7,4
+Merlin's Bridge ,W01000586,22,12
+Milford: Central ,W01000587,17,12
+Milford: East ,W01000588,25,19
+Milford: Hakin 1 ,W01000589,20,13
+Milford: Hakin 2 ,W01000590,16,12
+Milford: Hubberston 1 ,W01000591,16,9
+Milford: Hubberston 2 ,W01000592,30,16
+Milford: North ,W01000593,19,11
+Milford: West ,W01000594,27,19
+Narberth ,W01000595,14,10
+Narberth Rural ,W01000596,8,5
+Newport ,W01000597,9,6
+Neyland: East ,W01000598,15,10
+Neyland: West ,W01000599,18,10
+Pembroke Dock: Central ,W01000600,28,23
+Pembroke Dock: Llanion 1 ,W01000601,36,23
+Pembroke Dock: Llanion 2 ,W01000602,16,12
+Pembroke Dock: Market ,W01000603,17,13
+Pembroke Dock: Pennar 1 ,W01000604,28,16
+Pembroke Dock: Pennar 2 ,W01000605,16,11
+Pembroke: Monkton ,W01000606,37,21
+Pembroke: St. Mary North ,W01000607,25,15
+Pembroke: St. Mary South ,W01000608,18,12
+Pembroke: St. Michael ,W01000609,9,8
+Penally ,W01000610,8,6
+Rudbaxton ,W01000611,7,6
+St. David's ,W01000612,11,10
+St. Dogmaels ,W01000613,12,7
+St. Ishmael's ,W01000614,9,5
+Saundersfoot 1 ,W01000615,10,7
+Saundersfoot 2 ,W01000616,12,6
+Scleddau ,W01000617,13,10
+Solva ,W01000618,9,5
+Tenby: North ,W01000619,10,7
+Tenby: South 1 ,W01000620,15,8
+Tenby: South 2 ,W01000621,13,9
+The Havens ,W01000622,6,5
+Wiston ,W01000623,7,5
+Abergwili ,W01000624,8,5
+Ammanford 1 ,W01000625,22,18
+Ammanford 2 ,W01000626,24,17
+Betws ,W01000627,13,10
+Bigyn 1 ,W01000628,11,6
+Bigyn 2 ,W01000629,19,13
+Bigyn 3 ,W01000630,16,12
+Bigyn 4 ,W01000631,35,21
+Burry Port 1 ,W01000632,18,13
+Burry Port 2 ,W01000633,22,17
+Burry Port 3 ,W01000634,15,11
+Bynea 1 ,W01000635,10,7
+Bynea 2 ,W01000636,19,12
+Carmarthen Town North 1 ,W01000637,21,13
+Carmarthen Town North 2 ,W01000638,27,16
+Carmarthen Town North 3 ,W01000639,18,12
+Carmarthen Town North 4 ,W01000640,4,4
+Carmarthen Town South 1 ,W01000641,20,17
+Carmarthen Town South 2 ,W01000642,9,7
+Carmarthen Town West 1 ,W01000643,16,10
+Carmarthen Town West 2 ,W01000644,9,5
+Carmarthen Town West 3 ,W01000645,11,8
+Cenarth ,W01000646,16,10
+Cilycwm ,W01000647,10,6
+Cynwyl Elfed 1 ,W01000648,9,5
+Cynwyl Elfed 2 ,W01000649,7,5
+Cynwyl Gaeo ,W01000650,10,6
+Dafen 1 ,W01000651,12,9
+Dafen 2 ,W01000652,20,14
+Elli 1 ,W01000653,12,11
+Elli 2 ,W01000654,19,14
+Felinfoel ,W01000655,27,15
+Garnant ,W01000656,22,15
+Glanamman 1 ,W01000657,22,15
+Glanamman 2 ,W01000658,19,17
+Glanymor 1 ,W01000659,26,16
+Glanymor 2 ,W01000660,27,20
+Glyn (Carmarthenshire) ,W01000662,13,10
+Gorslas 1 ,W01000663,13,9
+Gorslas 2 ,W01000664,10,10
+Hendy 1 ,W01000665,7,6
+Hendy 2 ,W01000666,13,9
+Hengoed (Carmarthenshire) 1 ,W01000667,11,10
+Kidwelly 1 ,W01000670,27,19
+Kidwelly 2 ,W01000671,13,10
+Laugharne Township 1 ,W01000672,14,9
+Laugharne Township 2 ,W01000673,12,10
+Llanboidy ,W01000674,8,5
+Llanddarog ,W01000675,8,5
+Llandeilo 1 ,W01000676,7,4
+Llandeilo 2 ,W01000677,20,14
+Llandovery 1 ,W01000678,14,8
+Llandovery 2 ,W01000679,16,8
+Llandybie 1 ,W01000680,10,7
+Llandybie 2 ,W01000681,20,15
+Llanegwad 1 ,W01000682,9,6
+Llanegwad 2 ,W01000683,13,9
+Llanfihangel Aberbythych ,W01000684,9,6
+Llanfihangel-ar-Arth 1 ,W01000685,15,11
+Llanfihangel-ar-Arth 2 ,W01000686,10,7
+Llangadog ,W01000687,10,9
+Llangeler 1 ,W01000688,21,13
+Llangeler 2 ,W01000689,11,7
+Llangennech 1 ,W01000690,11,9
+Llangennech 2 ,W01000691,12,9
+Llangennech 3 ,W01000692,12,9
+Llangunnor 1 ,W01000693,16,11
+Llangunnor 2 ,W01000694,5,5
+Llangyndeyrn 1 ,W01000695,18,13
+Llangyndeyrn 2 ,W01000696,14,10
+Llannon 1 ,W01000697,16,10
+Llannon 2 ,W01000698,14,11
+Llannon 3 ,W01000699,8,6
+Llansteffan ,W01000700,9,5
+Llanybydder 1 ,W01000701,11,8
+Llanybydder 2 ,W01000702,16,8
+Lliedi 1 ,W01000703,21,15
+Lliedi 2 ,W01000704,11,8
+Lliedi 3 ,W01000705,24,15
+Llwynhendy 1 ,W01000706,18,11
+Llwynhendy 2 ,W01000707,29,18
+Llwynhendy 3 ,W01000708,31,21
+Manordeilo and Salem ,W01000709,10,8
+Pembrey 1 ,W01000710,9,6
+Pembrey 2 ,W01000711,27,17
+Penygroes (Carmarthenshire) 1 ,W01000712,11,9
+Penygroes (Carmarthenshire) 2 ,W01000713,14,12
+Pontamman 1 ,W01000714,21,17
+Pontamman 2 ,W01000715,9,8
+Pontyberem 1 ,W01000716,9,7
+Pontyberem 2 ,W01000717,16,13
+Quarter Bach 1 ,W01000718,19,14
+Quarter Bach 2 ,W01000719,14,11
+St. Clears 1 ,W01000720,12,10
+St. Clears 2 ,W01000721,11,7
+St. Ishmael 1 ,W01000722,7,4
+St. Ishmael 2 ,W01000723,12,8
+Saron 1 ,W01000724,16,11
+Saron 2 ,W01000725,16,12
+Swiss Valley 1 ,W01000726,5,5
+Swiss Valley 2 ,W01000727,10,8
+Trelech ,W01000728,9,6
+Trimsaran 1 ,W01000729,24,16
+Trimsaran 2 ,W01000730,21,13
+Tycroes ,W01000731,12,9
+Tyisha 1 ,W01000732,20,14
+Tyisha 2 ,W01000733,36,28
+Tyisha 3 ,W01000734,27,20
+Whitland ,W01000735,11,6
+Glanymor 3 ,W01001923,17,11
+Glanymor 4 ,W01001924,33,22
+Hengoed 2 ,W01001925,14,11
+Bishopston 1 ,W01000736,4,4
+Bishopston 2 ,W01000737,7,4
+Bonymaen 1 ,W01000738,35,23
+Bonymaen 2 ,W01000739,24,12
+Bonymaen 3 ,W01000740,14,10
+Bonymaen 4 ,W01000741,28,17
+Castle 1 ,W01000742,41,30
+Castle 3 ,W01000744,25,16
+Castle 4 ,W01000745,22,12
+Castle 5 ,W01000746,22,12
+Castle 6 ,W01000747,18,9
+Castle 8 ,W01000749,17,10
+Clydach 1 ,W01000750,23,17
+Clydach 2 ,W01000751,6,6
+Clydach 3 ,W01000752,29,17
+Clydach 4 ,W01000753,21,12
+Clydach 5 ,W01000754,17,15
+Cockett 1 ,W01000755,16,10
+Cockett 2 ,W01000756,25,23
+Cockett 3 ,W01000757,19,14
+Cockett 4 ,W01000758,14,9
+Cockett 5 ,W01000759,10,8
+Cockett 6 ,W01000760,18,13
+Cockett 7 ,W01000761,19,10
+Cockett 8 ,W01000762,31,16
+Cwmbwrla 1 ,W01000763,20,10
+Cwmbwrla 2 ,W01000764,17,8
+Cwmbwrla 3 ,W01000765,19,11
+Cwmbwrla 4 ,W01000766,14,8
+Cwmbwrla 5 ,W01000767,24,17
+Dunvant 1 ,W01000768,11,8
+Dunvant 2 ,W01000769,7,6
+Dunvant 3 ,W01000770,6,5
+Fairwood 2 ,W01000771,11,8
+Fairwood 1 ,W01000772,8,4
+Gorseinon 1 ,W01000773,17,12
+Gorseinon 2 ,W01000774,14,11
+Gower (Swansea) 1 ,W01000775,5,4
+Gower (Swansea) 2 ,W01000776,5,4
+Gowerton 1 ,W01000777,9,5
+Gowerton 2 ,W01000778,11,8
+Gowerton 3 ,W01000779,14,9
+Killay North 2 ,W01000781,5,4
+Killay South 1 ,W01000782,8,5
+Kingsbridge 1 ,W01000784,11,8
+Kingsbridge 2 ,W01000785,3,4
+Kingsbridge 3 ,W01000786,7,7
+Landore 1 ,W01000787,24,14
+Landore 2 ,W01000788,29,20
+Landore 3 ,W01000789,28,18
+Landore 4 ,W01000790,23,14
+Llangyfelach 1 ,W01000791,5,5
+Llangyfelach 2 ,W01000792,6,4
+Llangyfelach 3 ,W01000793,4,4
+Llansamlet 1 ,W01000794,12,7
+Llansamlet 2 ,W01000795,8,7
+Llansamlet 3 ,W01000796,7,5
+Llansamlet 4 ,W01000797,10,9
+Llansamlet 5 ,W01000798,11,11
+Llansamlet 6 ,W01000799,29,14
+Llansamlet 7 ,W01000800,7,5
+Llansamlet 8 ,W01000801,31,21
+Lower Loughor ,W01000802,18,13
+Mawr ,W01000803,12,7
+Mayals 1 ,W01000804,5,3
+Mayals 2 ,W01000805,3,2
+Morriston 1 ,W01000806,15,9
+Morriston 2 ,W01000807,6,6
+Morriston 3 ,W01000808,11,10
+Morriston 4 ,W01000809,17,13
+Morriston 5 ,W01000810,38,23
+Morriston 6 ,W01000811,23,17
+Morriston 7 ,W01000812,31,21
+Morriston 8 ,W01000813,11,9
+Morriston 9 ,W01000814,27,17
+Morriston 10 ,W01000815,7,7
+Morriston 11 ,W01000816,7,5
+Mynyddbach 1 ,W01000817,40,26
+Mynyddbach 2 ,W01000818,25,14
+Mynyddbach 3 ,W01000819,8,7
+Mynyddbach 4 ,W01000820,13,12
+Mynyddbach 5 ,W01000821,19,12
+Mynyddbach 6 ,W01000822,13,9
+Newton (Swansea) 1 ,W01000823,3,3
+Newton (Swansea) 2 ,W01000824,7,7
+Oystermouth 1 ,W01000825,8,5
+Oystermouth 2 ,W01000826,5,5
+Oystermouth 3 ,W01000827,5,3
+Penclawdd 1 ,W01000828,5,5
+Penclawdd 2 ,W01000829,13,9
+Penderry 1 ,W01000830,42,21
+Penderry 2 ,W01000831,34,21
+Penderry 3 ,W01000832,41,27
+Penderry 4 ,W01000833,39,24
+Penderry 5 ,W01000834,33,16
+Penderry 6 ,W01000835,33,20
+Penderry 7 ,W01000836,29,16
+Penllergaer 1 ,W01000837,3,4
+Penllergaer 2 ,W01000838,27,16
+Pennard 1 ,W01000839,7,5
+Pennard 2 ,W01000840,5,4
+Penyrheol (Swansea) 1 ,W01000841,18,12
+Penyrheol (Swansea) 2 ,W01000842,11,7
+Penyrheol (Swansea) 3 ,W01000843,12,8
+Penyrheol (Swansea) 4 ,W01000844,26,20
+Pontardulais 1 ,W01000845,8,6
+Pontardulais 2 ,W01000846,17,12
+Pontardulais 3 ,W01000847,14,10
+Pontardulais 4 ,W01000848,28,15
+St. Thomas 1 ,W01000849,26,15
+St. Thomas 2 ,W01000850,21,12
+St. Thomas 3 ,W01000851,17,11
+St. Thomas 4 ,W01000852,18,12
+Sketty 1 ,W01000853,7,5
+Sketty 2 ,W01000854,5,5
+Sketty 3 ,W01000855,6,5
+Sketty 4 ,W01000856,29,22
+Sketty 5 ,W01000857,19,13
+Sketty 6 ,W01000858,5,4
+Sketty 7 ,W01000859,7,8
+Sketty 8 ,W01000860,3,3
+Sketty 9 ,W01000861,4,2
+Townhill 1 ,W01000862,43,24
+Townhill 2 ,W01000863,42,26
+Townhill 3 ,W01000864,42,23
+Townhill 4 ,W01000865,28,14
+Townhill 5 ,W01000866,44,24
+Townhill 6 ,W01000867,39,24
+Uplands 1 ,W01000868,5,4
+Uplands 2 ,W01000869,16,13
+Uplands 3 ,W01000870,7,5
+Uplands 4 ,W01000871,15,8
+Uplands 5 ,W01000872,6,4
+Uplands 6 ,W01000873,7,5
+Uplands 7 ,W01000874,6,3
+Uplands 8 ,W01000875,8,6
+Uplands 9 ,W01000876,4,2
+Upper Loughor 1 ,W01000877,8,7
+Upper Loughor 2 ,W01000878,11,8
+West Cross 1 ,W01000879,5,3
+West Cross 2 ,W01000880,7,6
+West Cross 3 ,W01000881,26,20
+West Cross 4 ,W01000882,24,16
+Castle 7 East ,W01001938,7,7
+Castle 2 North ,W01001955,39,33
+Killay 3 ,W01001956,5,3
+Castle 7 West ,W01001957,22,11
+Castle 2 South ,W01001958,11,8
+Aberavon 1 ,W01000883,6,7
+Aberavon 2 ,W01000884,30,21
+Aberavon 3 ,W01000885,27,19
+Aberavon 4 ,W01000886,37,26
+Aberdulais ,W01000887,17,12
+Allt-wen ,W01000888,13,8
+Baglan 1 ,W01000889,10,12
+Baglan 2 ,W01000890,4,6
+Baglan 3 ,W01000891,18,12
+Baglan 4 ,W01000892,11,8
+Blaengwrach ,W01000893,19,13
+Briton Ferry East 1 ,W01000894,15,13
+Briton Ferry East 2 ,W01000895,27,22
+Briton Ferry West 1 ,W01000896,39,26
+Briton Ferry West 2 ,W01000897,22,16
+Bryn and Cwmavon 1 ,W01000898,13,10
+Bryn and Cwmavon 2 ,W01000899,9,8
+Bryn and Cwmavon 3 ,W01000900,29,20
+Bryn and Cwmavon 4 ,W01000901,21,14
+Bryn-coch North 1 ,W01000902,9,9
+Bryn-coch North 2 ,W01000903,4,7
+Bryn-coch South 1 ,W01000904,5,5
+Bryn-coch South 2 ,W01000905,13,9
+Bryn-coch South 3 ,W01000906,11,8
+Bryn-coch South 4 ,W01000907,24,17
+Cadoxton ,W01000908,8,7
+Cimla 1 ,W01000909,17,12
+Cimla 2 ,W01000910,7,7
+Cimla 3 ,W01000911,6,6
+Coedffranc Central 1 ,W01000912,21,15
+Coedffranc Central 2 ,W01000913,16,13
+Coedffranc Central 3 ,W01000914,29,16
+Coedffranc North 1 ,W01000915,12,9
+Coedffranc North 2 ,W01000916,11,8
+Coedffranc West ,W01000917,8,7
+Crynant ,W01000918,13,10
+Cwmllynfell ,W01000919,13,11
+Cymmer (Neath Port Talbot) 1 ,W01000920,20,15
+Cymmer (Neath Port Talbot) 2 ,W01000921,38,27
+Dyffryn 1 ,W01000922,21,16
+Dyffryn 2 ,W01000923,8,8
+Glyncorrwg ,W01000924,25,18
+Glynneath 1 ,W01000925,24,15
+Glynneath 2 ,W01000926,15,10
+Godre'r graig ,W01000927,14,11
+Gwaun-Cae-Gurwen 1 ,W01000928,19,15
+Gwaun-Cae-Gurwen 2 ,W01000929,25,16
+Gwynfi ,W01000930,27,17
+Lower Brynamman ,W01000931,20,15
+Margam 1 ,W01000932,21,14
+Margam 2 ,W01000933,8,5
+Neath East 1 ,W01000934,31,23
+Neath East 2 ,W01000935,31,26
+Neath East 3 ,W01000936,30,19
+Neath East 4 ,W01000937,23,19
+Neath North 1 ,W01000938,11,9
+Neath North 2 ,W01000939,36,31
+Neath North 3 ,W01000940,30,19
+Neath South 1 ,W01000941,27,19
+Neath South 2 ,W01000942,28,21
+Neath South 3 ,W01000943,6,7
+Onllwyn ,W01000944,20,15
+Pelenna ,W01000945,19,14
+Pontardawe 1 ,W01000946,18,13
+Pontardawe 2 ,W01000947,22,14
+Pontardawe 3 ,W01000948,16,13
+Port Talbot 1 ,W01000949,13,10
+Port Talbot 2 ,W01000950,17,13
+Port Talbot 3 ,W01000951,24,18
+Port Talbot 4 ,W01000952,15,11
+Resolven 1 ,W01000953,20,14
+Resolven 2 ,W01000954,13,9
+Rhos 1 ,W01000955,12,9
+Rhos 2 ,W01000956,7,6
+Sandfields East 1 ,W01000957,34,23
+Sandfields East 2 ,W01000958,36,23
+Sandfields East 3 ,W01000959,14,11
+Sandfields East 4 ,W01000960,24,18
+Sandfields West 1 ,W01000961,26,16
+Sandfields West 2 ,W01000962,36,23
+Sandfields West 3 ,W01000963,34,20
+Sandfields West 4 ,W01000964,30,19
+Seven Sisters ,W01000965,19,14
+Tai-bach 1 ,W01000966,20,15
+Tai-bach 2 ,W01000967,28,21
+Tai-bach 3 ,W01000968,17,12
+Tonna 1 ,W01000969,7,6
+Tonna 2 ,W01000970,16,12
+Trebanos ,W01000971,15,11
+Ystalyfera 2 ,W01000973,24,17
+Ystalyfera 1 ,W01001900,23,16
+Aberkenfig ,W01000974,10,8
+Bettws (Bridgend) ,W01000975,32,19
+Blackmill 1 ,W01000976,25,18
+Blackmill 2 ,W01000977,26,15
+Blaengarw ,W01000978,19,12
+Brackla 1 ,W01000979,13,8
+Brackla 2 ,W01000980,15,11
+Brackla 3 ,W01000981,38,25
+Brackla 4 ,W01000982,14,8
+Brackla 5 ,W01000983,10,5
+Brackla 6 ,W01000984,13,6
+Brackla 7 ,W01000985,4,3
+Bryncethin ,W01000986,12,8
+Bryncoch ,W01000987,20,12
+Bryntirion Laleston and Merthyr Mawr 2 ,W01000989,8,4
+Bryntirion Laleston and Merthyr Mawr 3 ,W01000990,23,18
+Caerau (Bridgend) 1 ,W01000991,46,30
+Caerau (Bridgend) 2 ,W01000992,35,26
+Caerau (Bridgend) 3 ,W01000993,30,20
+Caerau (Bridgend) 4 ,W01000994,24,18
+Caerau (Bridgend) 5 ,W01000995,18,13
+Cefn Cribwr ,W01000996,15,12
+Cefn Glas ,W01000997,13,10
+Coity ,W01000998,6,3
+Cornelly 1 ,W01000999,22,14
+Cornelly 2 ,W01001000,13,9
+Cornelly 3 ,W01001001,20,13
+Cornelly 4 ,W01001002,28,17
+Coychurch Lower ,W01001003,7,6
+Felindre 1 ,W01001004,20,13
+Felindre 2 ,W01001005,9,6
+Hendre (Bridgend) 1 ,W01001006,5,5
+Hendre (Bridgend) 2 ,W01001007,17,9
+Litchard ,W01001008,5,5
+Llangeinor ,W01001009,15,10
+Llangewydd and Brynhyfryd 1 ,W01001010,24,17
+Llangewydd and Brynhyfryd 2 ,W01001011,10,7
+Llangynwyd 1 ,W01001012,8,6
+Llangynwyd 2 ,W01001013,18,14
+Maesteg East 1 ,W01001014,23,16
+Maesteg East 2 ,W01001015,24,17
+Maesteg East 3 ,W01001016,12,12
+Maesteg West 1 ,W01001017,13,9
+Maesteg West 2 ,W01001018,21,18
+Maesteg West 3 ,W01001019,26,17
+Maesteg West 4 ,W01001020,23,17
+Morfa 1 ,W01001021,21,15
+Morfa 2 ,W01001022,33,22
+Morfa 3 ,W01001023,23,19
+Nant-y-moel 1 ,W01001024,24,16
+Nant-y-moel 2 ,W01001025,17,12
+Newcastle 1 ,W01001026,23,12
+Newcastle 2 ,W01001027,12,8
+Newcastle 3 ,W01001028,12,9
+Newton (Bridgend) 1 ,W01001029,8,7
+Newton (Bridgend) 2 ,W01001030,11,10
+Nottage 1 ,W01001031,5,4
+Nottage 2 ,W01001032,9,5
+Ogmore Vale 1 ,W01001033,16,11
+Ogmore Vale 2 ,W01001034,23,18
+Oldcastle 1 ,W01001035,26,16
+Oldcastle 2 ,W01001036,7,5
+Oldcastle 3 ,W01001037,5,5
+Pendre ,W01001038,14,10
+Penprysg 1 ,W01001039,10,7
+Penprysg 2 ,W01001040,12,8
+Pen-y-fai ,W01001041,5,7
+Pontycymmer 1 ,W01001042,19,15
+Pontycymmer 2 ,W01001043,20,16
+Porthcawl East Central 1 ,W01001044,21,14
+Porthcawl East Central 2 ,W01001045,20,17
+Porthcawl West Central 1 ,W01001046,21,18
+Porthcawl West Central 2 ,W01001047,13,10
+Pyle 1 ,W01001048,11,7
+Pyle 2 ,W01001049,27,17
+Pyle 3 ,W01001050,23,16
+Pyle 4 ,W01001051,22,13
+Pyle 5 ,W01001052,27,18
+Rest Bay 1 ,W01001053,7,6
+Rest Bay 2 ,W01001054,6,3
+Sarn 1 ,W01001055,30,18
+Sarn 2 ,W01001056,16,10
+Ynysawdre 1 ,W01001057,22,15
+Ynysawdre 2 ,W01001058,11,8
+Bryntirion Laleston and Merthyr Mawr 1 ,W01001918,5,4
+Bryntirion Laleston and Merthyr Mawr 4 ,W01001919,4,3
+Bryntirion Laleston and Merthyr Mawr 5 ,W01001920,6,4
+Bryntirion Laleston and Merthyr Mawr 6 ,W01001921,13,7
+Baruc 1 ,W01001059,9,8
+Baruc 2 ,W01001060,5,4
+Baruc 3 ,W01001061,16,12
+Baruc 4 ,W01001062,10,7
+Buttrills 1 ,W01001063,17,10
+Buttrills 2 ,W01001064,28,21
+Buttrills 3 ,W01001065,17,8
+Buttrills 4 ,W01001066,19,12
+Cadoc 1 ,W01001067,32,19
+Cadoc 2 ,W01001068,16,10
+Cadoc 3 ,W01001069,28,19
+Cadoc 4 ,W01001070,26,19
+Cadoc 5 ,W01001071,19,12
+Cadoc 6 ,W01001072,7,4
+Castleland 1 ,W01001073,28,20
+Cornerswell 1 ,W01001075,7,5
+Cornerswell 2 ,W01001076,12,7
+Cornerswell 3 ,W01001077,14,7
+Cornerswell 4 ,W01001078,9,5
+Court 1 ,W01001079,24,16
+Court 2 ,W01001080,24,15
+Court 3 ,W01001081,34,19
+Cowbridge 1 ,W01001082,7,5
+Cowbridge 2 ,W01001083,2,1
+Cowbridge 3 ,W01001084,5,4
+Cowbridge 4 ,W01001085,3,3
+Dinas Powys 1 ,W01001086,5,3
+Dinas Powys 2 ,W01001087,6,4
+Dinas Powys 3 ,W01001088,18,12
+Dinas Powys 4 ,W01001089,5,4
+Dinas Powys 5 ,W01001090,4,3
+Dyfan 1 ,W01001091,6,4
+Dyfan 2 ,W01001092,18,12
+Dyfan 3 ,W01001093,24,16
+Gibbonsdown 1 ,W01001094,30,17
+Gibbonsdown 2 ,W01001095,38,21
+Gibbonsdown 3 ,W01001096,18,11
+Gibbonsdown 4 ,W01001097,32,16
+Illtyd 1 ,W01001098,5,5
+Illtyd 2 ,W01001099,23,12
+Illtyd 3 ,W01001100,7,5
+Illtyd 4 ,W01001101,17,11
+Illtyd 5 ,W01001102,16,10
+Illtyd 6 ,W01001103,6,4
+Llandough ,W01001104,7,5
+Llandow/Ewenny ,W01001105,5,3
+Llantwit Major 1 ,W01001106,6,4
+Llantwit Major 2 ,W01001107,8,6
+Llantwit Major 3 ,W01001108,10,7
+Llantwit Major 4 ,W01001109,11,7
+Llantwit Major 5 ,W01001110,5,3
+Llantwit Major 6 ,W01001111,20,12
+Llantwit Major 7 ,W01001112,6,3
+Peterston-super-Ely ,W01001113,4,3
+Plymouth (The Vale of Glamorgan) 1 ,W01001114,2,2
+Plymouth (The Vale of Glamorgan) 2 ,W01001115,8,5
+Plymouth (The Vale of Glamorgan) 3 ,W01001116,5,2
+Rhoose 1 ,W01001117,10,7
+Rhoose 2 ,W01001118,11,7
+Rhoose 3 ,W01001119,7,5
+Rhoose 4 ,W01001120,5,4
+St. Athan 1 ,W01001121,18,12
+St. Athan 2 ,W01001122,11,5
+St. Augustine's 1 ,W01001123,9,6
+St. Augustine's 2 ,W01001124,10,7
+St. Augustine's 3 ,W01001125,7,5
+St. Augustine's 4 ,W01001126,10,6
+St. Bride's Major 1 ,W01001127,5,4
+St. Bride's Major 2 ,W01001128,6,5
+Stanwell 1 ,W01001129,15,7
+Stanwell 2 ,W01001130,4,3
+Stanwell 3 ,W01001131,22,11
+Sully 1 ,W01001132,6,4
+Sully 2 ,W01001133,4,4
+Sully 3 ,W01001134,6,5
+Wenvoe 1 ,W01001135,4,3
+Wenvoe 2 ,W01001136,6,4
+Castleland 2G ,W01001910,24,16
+Castleland 2H ,W01001911,24,14
+Adamsdown 1 ,W01001694,28,12
+Adamsdown 2 ,W01001695,21,8
+Adamsdown 3 ,W01001696,37,20
+Adamsdown 4 ,W01001697,27,15
+Adamsdown 5 ,W01001698,29,16
+Butetown 1 ,W01001699,33,15
+Caerau (Cardiff) 1 ,W01001702,22,13
+Caerau (Cardiff) 2 ,W01001703,34,21
+Caerau (Cardiff) 3 ,W01001704,40,23
+Caerau (Cardiff) 4 ,W01001705,31,17
+Caerau (Cardiff) 5 ,W01001706,20,15
+Caerau (Cardiff) 6 ,W01001707,31,19
+Caerau (Cardiff) 7 ,W01001708,34,23
+Canton 1 ,W01001709,15,9
+Canton 2 ,W01001710,20,9
+Canton 3 ,W01001711,25,14
+Canton 4 ,W01001712,11,8
+Canton 5 ,W01001713,18,10
+Canton 6 ,W01001714,5,4
+Canton 7 ,W01001715,11,7
+Canton 8 ,W01001716,9,6
+Canton 9 ,W01001717,17,8
+Cathays 1 ,W01001718,8,3
+Cathays 2 ,W01001719,3,1
+Cathays 3 ,W01001720,6,2
+Cathays 4 ,W01001721,5,2
+Cathays 5 ,W01001722,6,3
+Cathays 6 ,W01001724,3,2
+Cathays 7 ,W01001725,4,2
+Cathays 8 ,W01001726,12,4
+Creigiau/St. Fagans 1 ,W01001727,5,5
+Creigiau/St. Fagans 2 ,W01001728,4,2
+Creigiau/St. Fagans 3 ,W01001729,6,4
+Cyncoed 1 ,W01001730,4,2
+Cyncoed 2 ,W01001731,7,4
+Cyncoed 3 ,W01001732,5,4
+Cyncoed 4 ,W01001733,4,3
+Cyncoed 5 ,W01001734,4,3
+Cyncoed 6 ,W01001735,6,3
+Cyncoed 7 ,W01001736,4,3
+Ely 1 ,W01001737,39,23
+Ely 2 ,W01001738,47,19
+Ely 3 ,W01001739,44,23
+Ely 4 ,W01001740,44,22
+Ely 5 ,W01001741,52,23
+Ely 6 ,W01001742,44,21
+Ely 7 ,W01001743,10,6
+Ely 8 ,W01001744,38,21
+Ely 9 ,W01001745,8,4
+Ely 10 ,W01001746,33,21
+Fairwater (Cardiff) 1 ,W01001747,12,7
+Fairwater (Cardiff) 2 ,W01001748,19,13
+Fairwater (Cardiff) 3 ,W01001749,23,13
+Fairwater (Cardiff) 4 ,W01001750,30,21
+Fairwater (Cardiff) 5 ,W01001751,37,20
+Fairwater (Cardiff) 6 ,W01001752,8,5
+Fairwater (Cardiff) 7 ,W01001753,34,20
+Fairwater (Cardiff) 8 ,W01001754,12,8
+Gabalfa 1 ,W01001755,6,4
+Gabalfa 2 ,W01001756,9,4
+Gabalfa 3 ,W01001757,10,4
+Gabalfa 4 ,W01001758,7,3
+Grangetown 1 ,W01001759,18,10
+Grangetown 2 ,W01001760,19,10
+Grangetown 3 ,W01001761,27,14
+Grangetown 4 ,W01001762,35,19
+Grangetown 5 ,W01001764,25,9
+Grangetown 6 ,W01001765,24,13
+Grangetown 7 ,W01001766,26,11
+Grangetown 8 ,W01001767,22,9
+Grangetown 9 ,W01001768,30,13
+Heath 1 ,W01001769,2,2
+Heath 2 ,W01001770,8,4
+Heath 3 ,W01001771,5,4
+Heath 4 ,W01001772,6,5
+Heath 5 ,W01001773,8,5
+Heath 6 ,W01001774,3,2
+Heath 7 ,W01001775,8,6
+Heath 8 ,W01001776,6,4
+Lisvane 1 ,W01001777,4,3
+Lisvane 2 ,W01001778,3,2
+Llandaff 1 ,W01001779,4,3
+Llandaff 2 ,W01001780,5,4
+Llandaff 3 ,W01001781,10,8
+Llandaff 4 ,W01001782,3,4
+Llandaff 5 ,W01001783,6,4
+Llandaff 6 ,W01001784,8,6
+Llandaff North 1 ,W01001785,35,19
+Llandaff North 2 ,W01001786,15,8
+Llandaff North 3 ,W01001787,22,13
+Llandaff North 4 ,W01001788,32,20
+Llandaff North 5 ,W01001789,9,7
+Llandaff North 6 ,W01001790,23,11
+Llanishen 1 ,W01001791,10,8
+Llanishen 2 ,W01001792,22,15
+Llanishen 3 ,W01001793,5,3
+Llanishen 4 ,W01001794,6,3
+Llanishen 5 ,W01001795,4,3
+Llanishen 6 ,W01001796,9,6
+Llanishen 7 ,W01001797,10,6
+Llanishen 8 ,W01001798,7,5
+Llanishen 9 ,W01001799,5,4
+Llanishen 10 ,W01001800,21,12
+Llanrumney 1 ,W01001802,19,13
+Llanrumney 2 ,W01001803,25,15
+Llanrumney 3 ,W01001804,25,12
+Llanrumney 4 ,W01001805,24,12
+Llanrumney 5 ,W01001806,13,9
+Llanrumney 6 ,W01001807,39,18
+Llanrumney 7 ,W01001808,37,18
+Pentwyn 1 ,W01001809,14,10
+Pentwyn 2 ,W01001810,31,14
+Pentwyn 3 ,W01001811,41,20
+Pentwyn 4 ,W01001812,24,10
+Pentwyn 5 ,W01001813,35,24
+Pentwyn 6 ,W01001814,15,9
+Pentwyn 7 ,W01001815,13,6
+Pentwyn 8 ,W01001816,25,13
+Pentwyn 9 ,W01001817,16,9
+Pentwyn 10 ,W01001818,17,7
+Pentyrch 1 ,W01001819,6,5
+Pentyrch 2 ,W01001820,9,6
+Penylan 1 ,W01001821,7,4
+Penylan 2 ,W01001822,13,7
+Penylan 3 ,W01001823,3,3
+Penylan 4 ,W01001824,11,9
+Penylan 5 ,W01001825,12,10
+Penylan 6 ,W01001826,5,4
+Penylan 7 ,W01001827,6,3
+Penylan 8 ,W01001828,6,4
+Plasnewydd 1 ,W01001829,17,6
+Plasnewydd 2 ,W01001830,21,15
+Plasnewydd 3 ,W01001831,15,7
+Plasnewydd 4 ,W01001832,11,5
+Plasnewydd 5 ,W01001833,18,13
+Plasnewydd 6 ,W01001834,18,10
+Plasnewydd 7 ,W01001835,32,26
+Plasnewydd 8 ,W01001836,10,5
+Plasnewydd 9 ,W01001837,13,6
+Plasnewydd 10 ,W01001838,10,5
+Plasnewydd 11 ,W01001839,13,5
+Pontprennau/Old St. Mellons 1 ,W01001840,13,9
+Pontprennau/Old St. Mellons 2 ,W01001841,9,5
+Pontprennau/Old St. Mellons 3 ,W01001842,7,3
+Pontprennau/Old St. Mellons 4 ,W01001843,4,3
+Pontprennau/Old St. Mellons 5 ,W01001844,10,5
+Radyr & Morganstown 1 ,W01001846,5,3
+Radyr & Morganstown 2 ,W01001847,3,3
+Rhiwbina 1 ,W01001848,5,4
+Rhiwbina 2 ,W01001849,5,4
+Rhiwbina 3 ,W01001850,2,2
+Rhiwbina 4 ,W01001851,5,5
+Rhiwbina 5 ,W01001852,3,3
+Rhiwbina 6 ,W01001853,4,4
+Rhiwbina 7 ,W01001854,6,4
+Riverside 1 ,W01001855,34,14
+Riverside 2 ,W01001856,28,18
+Riverside 3 ,W01001857,34,21
+Riverside 4 ,W01001858,10,6
+Riverside 5 ,W01001859,10,6
+Riverside 6 ,W01001860,10,5
+Riverside 7 ,W01001861,9,5
+Riverside 8 ,W01001862,21,11
+Rumney 1 ,W01001863,16,9
+Rumney 2 ,W01001864,9,5
+Rumney 3 ,W01001865,10,5
+Rumney 4 ,W01001866,27,17
+Rumney 5 ,W01001867,34,16
+Rumney 6 ,W01001868,26,14
+Splott 1 ,W01001869,21,11
+Splott 2 ,W01001870,21,9
+Splott 3 ,W01001871,40,20
+Splott 4 ,W01001872,26,13
+Splott 5 ,W01001873,32,17
+Splott 6 ,W01001874,42,25
+Splott 7 ,W01001875,22,11
+Splott 8 ,W01001876,36,21
+Trowbridge 1 ,W01001877,10,6
+Trowbridge 2 ,W01001878,17,9
+Trowbridge 3 ,W01001879,31,17
+Trowbridge 4 ,W01001880,40,19
+Trowbridge 5 ,W01001881,34,19
+Trowbridge 6 ,W01001882,12,6
+Trowbridge 7 ,W01001883,33,20
+Trowbridge 8 ,W01001884,49,23
+Trowbridge 9 ,W01001885,26,12
+Trowbridge 10 ,W01001886,34,20
+Whitchurch and Tongwynlais 1 ,W01001887,3,2
+Whitchurch and Tongwynlais 2 ,W01001888,12,7
+Whitchurch and Tongwynlais 3 ,W01001889,11,10
+Whitchurch and Tongwynlais 4 ,W01001890,5,4
+Whitchurch and Tongwynlais 5 ,W01001891,13,9
+Whitchurch and Tongwynlais 6 ,W01001892,3,3
+Whitchurch and Tongwynlais 7 ,W01001893,13,8
+Whitchurch and Tongwynlais 8 ,W01001894,5,4
+Whitchurch and Tongwynlais 9 ,W01001895,22,23
+Whitchurch and Tongwynlais 10 ,W01001896,4,3
+Cathays 9 ,W01001922,3,1
+Cathays 10 ,W01001939,2,2
+Butetown 2 ,W01001940,4,2
+Cathays 11 ,W01001941,1,1
+Butetown 3 ,W01001942,26,15
+Butetown 4 ,W01001943,6,3
+Butetown 5 ,W01001944,6,2
+Grangetown 10 ,W01001945,3,2
+Grangetown 11 ,W01001946,25,13
+Grangetown 12 ,W01001947,4,2
+Radyr & Morganstown 3 ,W01001948,4,1
+Llanishen 11 ,W01001949,11,5
+Butetown 6 ,W01001950,7,2
+Butetown 7 ,W01001951,7,4
+Butetown 8 ,W01001952,17,14
+Llanishen 12 ,W01001953,13,8
+Radyr & Morganstown 4 ,W01001954,5,6
+Aberaman North 1 ,W01001137,24,16
+Aberaman North 2 ,W01001138,30,20
+Aberaman North 3 ,W01001139,17,11
+Aberaman South 1 ,W01001140,22,17
+Aberaman South 2 ,W01001141,29,16
+Aberaman South 3 ,W01001142,27,18
+Abercynon 1 ,W01001143,14,9
+Abercynon 2 ,W01001144,39,24
+Abercynon 3 ,W01001145,21,13
+Abercynon 4 ,W01001146,11,10
+Aberdare East 1 ,W01001147,14,11
+Aberdare East 2 ,W01001148,18,13
+Aberdare East 3 ,W01001149,17,13
+Aberdare East 4 ,W01001150,24,17
+Aberdare West/Llwydcoed 1 ,W01001151,9,9
+Aberdare West/Llwydcoed 2 ,W01001152,11,9
+Aberdare West/Llwydcoed 3 ,W01001153,25,17
+Aberdare West/Llwydcoed 4 ,W01001154,22,17
+Aberdare West/Llwydcoed 5 ,W01001155,20,15
+Aberdare West/Llwydcoed 6 ,W01001156,4,5
+Beddau 1 ,W01001157,8,7
+Beddau 2 ,W01001158,19,14
+Beddau 3 ,W01001159,8,6
+Brynna 1 ,W01001160,7,5
+Brynna 2 ,W01001161,11,7
+Church Village 1 ,W01001162,24,14
+Cilfynydd 1 ,W01001164,17,12
+Cilfynydd 2 ,W01001165,14,12
+Cwm Clydach 1 ,W01001166,33,18
+Cwm Clydach 2 ,W01001167,19,13
+Cwmbach 1 ,W01001168,19,13
+Cwmbach 2 ,W01001169,25,18
+Cwmbach 3 ,W01001170,6,7
+Cymmer (Rhondda Cynon Taf) 1 ,W01001171,17,11
+Cymmer (Rhondda Cynon Taf) 2 ,W01001172,15,12
+Cymmer (Rhondda Cynon Taf) 3 ,W01001173,33,22
+Cymmer (Rhondda Cynon Taf) 4 ,W01001174,35,23
+Ferndale 1 ,W01001175,19,14
+Ferndale 2 ,W01001176,20,12
+Ferndale 3 ,W01001177,21,18
+Gilfach Goch 1 ,W01001178,17,12
+Gilfach Goch 2 ,W01001179,28,20
+Glyncoch 1 ,W01001180,36,25
+Glyncoch 2 ,W01001181,22,16
+Graig (Rhondda Cynon Taf) 1 ,W01001182,17,10
+Graig (Rhondda Cynon Taf) 2 ,W01001183,23,18
+Hawthorn 1 ,W01001184,12,8
+Hawthorn 2 ,W01001185,21,16
+Hirwaun 1 ,W01001186,15,11
+Hirwaun 2 ,W01001187,17,14
+Hirwaun 3 ,W01001188,32,20
+Llanharan 1 ,W01001189,20,13
+Llanharan 2 ,W01001190,6,4
+Llanharry 1 ,W01001191,7,5
+Llanharry 2 ,W01001192,29,18
+Llantrisant Town 1 ,W01001193,6,4
+Llantrisant Town 2 ,W01001194,4,3
+Llantrisant Town 3 ,W01001195,13,9
+Llantwit Fardre 1 ,W01001196,7,6
+Llantwit Fardre 2 ,W01001197,3,3
+Llantwit Fardre 3 ,W01001198,8,6
+Llantwit Fardre 4 ,W01001199,8,5
+Llwyn-y-pia 1 ,W01001200,19,14
+Llwyn-y-pia 2 ,W01001201,31,21
+Maerdy 1 ,W01001202,31,24
+Maerdy 2 ,W01001203,40,26
+Mountain Ash East 1 ,W01001204,14,9
+Mountain Ash East 2 ,W01001205,19,18
+Mountain Ash West 1 ,W01001206,21,15
+Mountain Ash West 2 ,W01001207,36,20
+Mountain Ash West 3 ,W01001208,23,21
+Penrhiwceiber 1 ,W01001209,45,27
+Penrhiwceiber 2 ,W01001210,23,19
+Penrhiwceiber 3 ,W01001211,24,15
+Penrhiwceiber 4 ,W01001212,26,17
+Pentre 1 ,W01001213,18,14
+Pentre 2 ,W01001214,10,7
+Pentre 3 ,W01001215,29,25
+Pentre 4 ,W01001216,21,14
+Pen-y-graig 1 ,W01001217,27,19
+Pen-y-graig 2 ,W01001218,18,13
+Pen-y-graig 3 ,W01001219,31,22
+Pen-y-graig 4 ,W01001220,17,12
+Pen-y-waun 1 ,W01001221,33,23
+Pen-y-waun 2 ,W01001222,42,25
+Pont-y-clun 1 ,W01001223,5,4
+Pont-y-clun 2 ,W01001224,2,2
+Pont-y-clun 3 ,W01001225,3,2
+Pont-y-clun 4 ,W01001226,15,9
+Pontypridd Town 1 ,W01001227,9,9
+Pontypridd Town 2 ,W01001228,12,10
+Porth 1 ,W01001229,16,12
+Porth 2 ,W01001230,12,9
+Porth 3 ,W01001231,22,14
+Porth 4 ,W01001232,20,16
+Rhigos ,W01001233,13,11
+Rhondda 1 ,W01001234,15,11
+Rhondda 2 ,W01001235,25,12
+Rhondda 3 ,W01001236,10,7
+Rhydfelen Central / Llan 1 ,W01001237,28,16
+Rhydfelen Central / Llan 2 ,W01001238,41,25
+Rhydfelen Central / Llan 3 ,W01001239,31,21
+Taffs Well 1 ,W01001240,9,7
+Taffs Well 2 ,W01001241,13,8
+Talbot Green 1 ,W01001242,7,8
+Talbot Green 2 ,W01001243,22,18
+Ton-teg 1 ,W01001244,8,6
+Ton-teg 2 ,W01001245,5,6
+Ton-teg 3 ,W01001246,12,10
+Tonypandy 1 ,W01001247,22,15
+Tonypandy 2 ,W01001248,18,12
+Tonyrefail East 1 ,W01001249,21,13
+Tonyrefail East 2 ,W01001250,13,10
+Tonyrefail East 3 ,W01001251,35,24
+Tonyrefail East 4 ,W01001252,7,6
+Tonyrefail West 1 ,W01001253,19,13
+Tonyrefail West 3 ,W01001255,28,19
+Trallwng 1 ,W01001256,18,10
+Trallwng 2 ,W01001257,10,10
+Trallwng 3 ,W01001258,18,12
+Trealaw 1 ,W01001259,20,14
+Trealaw 2 ,W01001260,32,22
+Trealaw 3 ,W01001261,24,16
+Treforest 1 ,W01001262,15,8
+Treforest 2 ,W01001263,9,6
+Treforest 3 ,W01001264,5,3
+Treherbert 1 ,W01001265,20,16
+Treherbert 2 ,W01001266,33,24
+Treherbert 3 ,W01001267,28,19
+Treherbert 4 ,W01001268,25,17
+Treorchy 1 ,W01001269,16,12
+Treorchy 2 ,W01001270,18,12
+Treorchy 3 ,W01001271,22,16
+Treorchy 4 ,W01001272,21,16
+Treorchy 5 ,W01001273,17,13
+Tylorstown 1 ,W01001274,47,29
+Tylorstown 2 ,W01001275,26,18
+Tylorstown 3 ,W01001276,33,23
+Tyn-y-nant 1 ,W01001277,6,5
+Tyn-y-nant 2 ,W01001278,18,10
+Tyn-y-nant 3 ,W01001279,31,20
+Ynyshir 1 ,W01001280,31,22
+Ynyshir 2 ,W01001281,15,11
+Ynysybwl 1 ,W01001282,24,16
+Ynysybwl 2 ,W01001283,16,11
+Ynysybwl 3 ,W01001284,6,6
+Ystrad 1 ,W01001285,16,13
+Ystrad 2 ,W01001286,20,12
+Ystrad 3 ,W01001287,24,14
+Ystrad 4 ,W01001288,31,24
+Tonyrefail West 2 ,W01001914,6,4
+Church Village 2 ,W01001915,4,4
+Church Village 3 ,W01001916,3,2
+Tonyrefail West 4 ,W01001917,13,11
+Bedlinog 1 ,W01001289,17,14
+Bedlinog 2 ,W01001290,18,13
+Cyfarthfa 1 ,W01001291,16,9
+Cyfarthfa 2 ,W01001292,35,25
+Cyfarthfa 3 ,W01001293,19,14
+Cyfarthfa 4 ,W01001294,4,5
+Dowlais 1 ,W01001295,27,19
+Dowlais 2 ,W01001296,14,10
+Dowlais 3 ,W01001297,15,12
+Dowlais 4 ,W01001298,22,16
+Gurnos 1 ,W01001299,37,25
+Gurnos 2 ,W01001300,34,22
+Gurnos 3 ,W01001301,32,19
+Merthyr Vale 1 ,W01001302,21,13
+Merthyr Vale 2 ,W01001303,35,25
+Merthyr Vale 3 ,W01001304,13,10
+Park 1 ,W01001305,14,13
+Park 2 ,W01001306,11,9
+Park 3 ,W01001307,31,20
+Penydarren 1 ,W01001308,46,25
+Penydarren 2 ,W01001309,28,17
+Penydarren 3 ,W01001310,13,10
+Penydarren 4 ,W01001311,16,10
+Plymouth (Merthyr Tydfil) 1 ,W01001312,21,16
+Plymouth (Merthyr Tydfil) 2 ,W01001313,17,14
+Plymouth (Merthyr Tydfil) 3 ,W01001314,15,11
+Town 1 ,W01001315,19,17
+Town 2 ,W01001316,10,7
+Town 3 ,W01001317,22,14
+Town 4 ,W01001318,11,10
+Treharris 1 ,W01001319,6,5
+Treharris 2 ,W01001320,16,15
+Treharris 3 ,W01001321,19,13
+Treharris 4 ,W01001322,18,14
+Vaynor 2 ,W01001324,14,12
+Vaynor 1 ,W01001898,19,13
+Aberbargoed 1 ,W01001325,23,17
+Aberbargoed 2 ,W01001326,31,20
+Abercarn 1 ,W01001327,11,8
+Abercarn 2 ,W01001328,19,13
+Abercarn 3 ,W01001329,16,10
+Aber Valley 1 ,W01001330,22,11
+Aber Valley 2 ,W01001331,21,13
+Aber Valley 3 ,W01001332,27,16
+Aber Valley 4 ,W01001333,25,16
+Argoed (Caerphilly) 1 ,W01001334,31,19
+Argoed (Caerphilly) 2 ,W01001335,14,9
+Bargoed 1 ,W01001336,19,16
+Bargoed 2 ,W01001337,18,13
+Bargoed 3 ,W01001338,19,15
+Bargoed 4 ,W01001339,43,27
+Bedwas Trethomas and Machen 1 ,W01001340,7,5
+Bedwas Trethomas and Machen 2 ,W01001341,29,18
+Bedwas Trethomas and Machen 3 ,W01001342,7,4
+Bedwas Trethomas and Machen 4 ,W01001343,9,6
+Bedwas Trethomas and Machen 5 ,W01001344,14,10
+Bedwas Trethomas and Machen 6 ,W01001345,43,24
+Bedwas Trethomas and Machen 7 ,W01001346,18,11
+Blackwood 1 ,W01001347,14,10
+Blackwood 2 ,W01001348,26,16
+Blackwood 3 ,W01001349,7,6
+Blackwood 4 ,W01001350,14,10
+Blackwood 5 ,W01001351,7,6
+Cefn Fforest 1 ,W01001352,24,15
+Cefn Fforest 2 ,W01001353,23,18
+Crosskeys 1 ,W01001354,12,9
+Crosskeys 2 ,W01001355,19,13
+Crumlin 1 ,W01001356,7,5
+Crumlin 2 ,W01001357,9,6
+Crumlin 3 ,W01001358,26,18
+Crumlin 4 ,W01001359,13,11
+Darren Valley 1 ,W01001360,14,10
+Darren Valley 2 ,W01001361,25,22
+Gilfach ,W01001362,20,18
+Hengoed (Caerphilly) 1 ,W01001363,18,11
+Hengoed (Caerphilly) 2 ,W01001364,31,20
+Hengoed (Caerphilly) 3 ,W01001365,18,14
+Llanbradach 1 ,W01001366,12,10
+Llanbradach 2 ,W01001367,14,9
+Llanbradach 3 ,W01001368,25,14
+Maesycwmmer ,W01001369,13,9
+Morgan Jones 1 ,W01001370,13,8
+Morgan Jones 2 ,W01001371,26,16
+Morgan Jones 3 ,W01001372,11,8
+Morgan Jones 4 ,W01001373,13,9
+Moriah 1 ,W01001374,21,16
+Moriah 2 ,W01001375,24,21
+Moriah 3 ,W01001376,32,24
+Nelson 1 ,W01001377,12,10
+Nelson 2 ,W01001378,23,13
+Nelson 3 ,W01001379,13,8
+Newbridge 1 ,W01001380,11,8
+Newbridge 2 ,W01001381,28,18
+Newbridge 3 ,W01001382,13,10
+Newbridge 4 ,W01001383,17,10
+New Tredegar 1 ,W01001384,17,13
+New Tredegar 2 ,W01001385,25,17
+New Tredegar 3 ,W01001386,36,22
+Pengam 1 ,W01001387,21,14
+Pengam 2 ,W01001388,26,16
+Pengam 3 ,W01001389,15,11
+Penmaen 1 ,W01001390,6,6
+Penmaen 2 ,W01001391,16,10
+Penmaen 3 ,W01001392,8,8
+Penyrheol (Caerphilly) 1 ,W01001393,22,17
+Penyrheol (Caerphilly) 2 ,W01001394,4,4
+Penyrheol (Caerphilly) 3 ,W01001395,22,12
+Penyrheol (Caerphilly) 4 ,W01001396,27,18
+Penyrheol (Caerphilly) 5 ,W01001397,10,9
+Penyrheol (Caerphilly) 6 ,W01001398,8,5
+Penyrheol (Caerphilly) 7 ,W01001399,12,8
+Penyrheol (Caerphilly) 8 ,W01001400,36,21
+Pontllanfraith 1 ,W01001401,18,14
+Pontllanfraith 2 ,W01001402,23,16
+Pontllanfraith 3 ,W01001403,15,10
+Pontllanfraith 4 ,W01001404,5,6
+Pontllanfraith 5 ,W01001405,23,13
+Pontlottyn ,W01001406,24,19
+Risca East 1 ,W01001407,11,8
+Risca East 2 ,W01001408,23,12
+Risca East 3 ,W01001409,11,8
+Risca East 4 ,W01001410,19,15
+Risca West 1 ,W01001411,16,13
+Risca West 2 ,W01001412,15,12
+Risca West 3 ,W01001413,18,11
+St. Cattwg 1 ,W01001414,26,17
+St. Cattwg 2 ,W01001415,15,14
+St. Cattwg 3 ,W01001416,14,12
+St. Cattwg 4 ,W01001417,7,5
+St. Cattwg 5 ,W01001418,24,15
+St. James 1 ,W01001419,11,7
+St. James 2 ,W01001420,9,7
+St. James 3 ,W01001421,47,34
+St. James 4 ,W01001422,33,22
+St. Martins 1 ,W01001423,5,5
+St. Martins 2 ,W01001424,18,9
+St. Martins 3 ,W01001425,10,7
+St. Martins 4 ,W01001426,6,6
+St. Martins 5 ,W01001427,4,3
+Twyn Carno 1 ,W01001428,43,31
+Twyn Carno 2 ,W01001429,21,17
+Ynysddu 1 ,W01001430,15,9
+Ynysddu 2 ,W01001431,12,10
+Ystrad Mynach 1 ,W01001432,12,8
+Ystrad Mynach 2 ,W01001433,16,12
+Ystrad Mynach 3 ,W01001434,4,5
+Abertillery 1 ,W01001435,17,13
+Abertillery 2 ,W01001436,22,19
+Abertillery 3 ,W01001437,13,11
+Badminton 1 ,W01001438,20,14
+Badminton 2 ,W01001439,11,8
+Beaufort 1 ,W01001440,21,15
+Beaufort 2 ,W01001441,26,17
+Beaufort 3 ,W01001442,9,7
+Blaina 1 ,W01001443,21,18
+Blaina 2 ,W01001444,20,14
+Blaina 3 ,W01001445,16,13
+Brynmawr 1 ,W01001446,14,10
+Brynmawr 2 ,W01001447,25,16
+Brynmawr 3 ,W01001448,20,17
+Brynmawr 4 ,W01001449,20,16
+Cwm 1 ,W01001450,18,13
+Cwm 2 ,W01001451,25,17
+Cwm 3 ,W01001452,9,7
+Cwmtillery 1 ,W01001453,28,21
+Cwmtillery 2 ,W01001454,20,15
+Cwmtillery 3 ,W01001455,20,15
+Ebbw Vale North 1 ,W01001456,24,17
+Ebbw Vale North 2 ,W01001457,35,21
+Ebbw Vale North 3 ,W01001458,14,10
+Ebbw Vale South 1 ,W01001459,32,20
+Ebbw Vale South 2 ,W01001460,18,14
+Ebbw Vale South 3 ,W01001461,21,15
+Georgetown 1 ,W01001462,15,13
+Georgetown 2 ,W01001463,12,10
+Llanhilleth 1 ,W01001464,28,21
+Llanhilleth 2 ,W01001465,27,19
+Llanhilleth 3 ,W01001466,23,18
+Nantyglo 1 ,W01001467,28,15
+Nantyglo 2 ,W01001468,22,18
+Nantyglo 3 ,W01001469,34,20
+Rassau 1 ,W01001470,11,9
+Rassau 2 ,W01001471,29,17
+Sirhowy 1 ,W01001472,11,10
+Sirhowy 2 ,W01001473,35,23
+Sirhowy 3 ,W01001474,21,16
+Sirhowy 4 ,W01001475,12,11
+Six Bells 1 ,W01001476,25,18
+Six Bells 2 ,W01001477,19,11
+Tredegar Central and West 1 ,W01001478,14,10
+Tredegar Central and West 2 ,W01001479,40,29
+Tredegar Central and West 3 ,W01001480,28,21
+Tredegar Central and West 4 ,W01001481,30,21
+Abersychan 1 ,W01001482,24,15
+Abersychan 2 ,W01001483,31,19
+Abersychan 3 ,W01001484,13,9
+Abersychan 4 ,W01001485,25,18
+Abersychan 5 ,W01001486,16,12
+Blaenavon 1 ,W01001487,20,13
+Blaenavon 2 ,W01001488,27,18
+Blaenavon 3 ,W01001489,19,14
+Blaenavon 4 ,W01001490,17,9
+Brynwern ,W01001491,22,15
+Coed Eva ,W01001492,14,8
+Croesyceiliog North 1 ,W01001493,16,11
+Croesyceiliog North 2 ,W01001494,9,6
+Croesyceiliog South ,W01001495,11,7
+Cwmyniscoy ,W01001496,23,16
+Fairwater (Torfaen) 1 ,W01001497,22,14
+Fairwater (Torfaen) 2 ,W01001498,27,15
+Fairwater (Torfaen) 3 ,W01001499,13,9
+Fairwater (Torfaen) 4 ,W01001500,5,5
+Greenmeadow 1 ,W01001501,28,17
+Greenmeadow 2 ,W01001502,8,5
+Greenmeadow 3 ,W01001503,28,15
+Llantarnam 1 ,W01001504,13,9
+Llantarnam 2 ,W01001505,8,7
+Llantarnam 3 ,W01001506,25,21
+Llanyrafon North ,W01001507,12,8
+Llanyrafon South 1 ,W01001508,6,8
+Llanyrafon South 2 ,W01001509,3,3
+New Inn 1 ,W01001510,14,9
+New Inn 2 ,W01001511,14,9
+New Inn 3 ,W01001512,3,3
+New Inn 4 ,W01001513,4,5
+Panteg 1 ,W01001514,7,6
+Panteg 2 ,W01001515,11,7
+Panteg 3 ,W01001516,21,14
+Panteg 4 ,W01001517,6,4
+Panteg 5 ,W01001518,7,6
+Pontnewydd 1 ,W01001519,31,24
+Pontnewydd 2 ,W01001520,13,8
+Pontnewydd 3 ,W01001521,18,12
+Pontnewydd 4 ,W01001522,19,14
+Pontnewynydd ,W01001523,17,11
+Pontypool ,W01001524,18,16
+St. Cadocs and Penygarn ,W01001525,26,15
+St. Dials 1 ,W01001526,25,16
+St. Dials 2 ,W01001527,23,15
+St. Dials 3 ,W01001528,16,12
+Snatchwood ,W01001529,22,17
+Trevethin 1 ,W01001530,39,23
+Trevethin 2 ,W01001531,23,15
+Two Locks 1 ,W01001532,25,15
+Two Locks 2 ,W01001533,4,4
+Two Locks 3 ,W01001534,14,10
+Two Locks 4 ,W01001535,12,8
+Upper Cwmbran 1 ,W01001536,32,18
+Upper Cwmbran 2 ,W01001537,8,6
+Upper Cwmbran 3 ,W01001538,30,18
+Upper Cwmbran 4 ,W01001539,23,13
+Wainfelin 1 ,W01001540,11,9
+Wainfelin 2 ,W01001541,19,11
+Caerwent ,W01001542,7,4
+Caldicot Castle 1 ,W01001543,6,4
+Cantref 1 ,W01001545,6,7
+Cantref 2 ,W01001546,28,15
+Crucorney ,W01001548,6,5
+Devauden ,W01001549,4,4
+Dewstow & Green Lane 2 ,W01001551,16,10
+Dixton with Osbaston ,W01001552,2,2
+Drybridge 1 ,W01001553,11,7
+Drybridge 2 ,W01001554,8,6
+Goetre Fawr 1 ,W01001555,4,4
+Goetre Fawr 2 ,W01001556,9,8
+Grofield ,W01001557,15,12
+Lansdown ,W01001558,20,14
+Larkfield ,W01001559,9,7
+Llanbadoc ,W01001560,3,3
+Llanelly Hill 1 ,W01001561,5,5
+Llanelly Hill 2 ,W01001562,12,10
+Llanelly Hill 3 ,W01001563,14,7
+Castle & Llanfoist Fawr ,W01001564,11,8
+Llangybi Fawr ,W01001565,6,4
+Llanover 1 ,W01001566,10,15
+Llanover 2 ,W01001567,10,8
+Llantilio Crossenny ,W01001568,6,3
+Llanwenarth Ultra ,W01001569,9,7
+Mardy 2 ,W01001571,9,9
+Mill 1 ,W01001572,8,7
+Mill 2 ,W01001573,6,3
+Mill 3 ,W01001574,6,4
+Mitchel Troy ,W01001575,7,2
+Overmonnow 1 ,W01001576,16,8
+Overmonnow 2 ,W01001577,23,16
+Portskewett ,W01001578,6,5
+Priory 1 ,W01001579,7,7
+Priory 2 ,W01001580,14,11
+Raglan ,W01001581,7,5
+Rogiet ,W01001582,10,6
+St. Arvans ,W01001583,6,4
+St. Christopher's ,W01001584,13,8
+St. Kingsmark 1 ,W01001585,2,2
+St. Kingsmark 2 ,W01001586,6,5
+St. Mary's ,W01001587,13,11
+Severn 1 ,W01001588,6,6
+Severn 2 ,W01001589,17,11
+Shirenewton ,W01001590,4,2
+The Elms ,W01001591,3,3
+Thornwell 1 ,W01001592,25,12
+Thornwell 2 ,W01001593,15,8
+Trellech United 1 ,W01001594,9,5
+Trellech United 2 ,W01001595,3,3
+Usk 1 ,W01001596,10,5
+Usk 2 ,W01001597,5,3
+West End ,W01001598,18,11
+Wyesham ,W01001599,14,7
+Dewstow ,W01001908,15,9
+Croesonen ,W01001909,19,14
+Allt-yr-yn 1 ,W01001600,5,3
+Allt-yr-yn 2 ,W01001601,32,18
+Allt-yr-yn 3 ,W01001602,7,4
+Allt-yr-yn 4 ,W01001603,15,12
+Allt-yr-yn 5 ,W01001604,6,6
+Allt-yr-yn 6 ,W01001605,20,15
+Alway 1 ,W01001606,7,6
+Alway 2 ,W01001607,38,17
+Alway 3 ,W01001608,9,7
+Alway 4 ,W01001609,31,19
+Alway 5 ,W01001610,24,11
+Alway 6 ,W01001611,18,10
+Beechwood 1 ,W01001612,14,10
+Beechwood 2 ,W01001613,12,7
+Beechwood 3 ,W01001614,31,20
+Beechwood 4 ,W01001615,16,8
+Beechwood 5 ,W01001616,9,7
+Bettws (Newport) 1 ,W01001617,40,28
+Bettws (Newport) 2 ,W01001618,25,19
+Bettws (Newport) 3 ,W01001619,36,25
+Bettws (Newport) 4 ,W01001620,24,15
+Bettws (Newport) 5 ,W01001621,30,20
+Bettws (Newport) 6 ,W01001622,16,11
+Caerleon 1 ,W01001623,8,6
+Caerleon 2 ,W01001624,4,2
+Caerleon 3 ,W01001625,8,6
+Caerleon 4 ,W01001626,11,10
+Caerleon 5 ,W01001627,5,4
+Caerleon 6 ,W01001628,25,16
+Gaer 1 ,W01001629,12,10
+Gaer 2 ,W01001630,28,19
+Gaer 3 ,W01001631,9,6
+Gaer 4 ,W01001632,21,12
+Gaer 5 ,W01001633,33,15
+Gaer 6 ,W01001634,18,11
+Graig (Newport) 1 ,W01001635,6,7
+Graig (Newport) 2 ,W01001636,5,2
+Graig (Newport) 3 ,W01001637,9,5
+Graig (Newport) 4 ,W01001638,4,2
+Langstone 1 ,W01001639,6,4
+Langstone 2 ,W01001640,4,4
+Langstone 3 ,W01001641,4,5
+Liswerry 1 ,W01001642,24,13
+Liswerry 2 ,W01001643,31,15
+Liswerry 3 ,W01001644,15,6
+Liswerry 4 ,W01001645,19,9
+Liswerry 5 ,W01001646,29,13
+Liswerry 6 ,W01001647,14,8
+Liswerry 7 ,W01001648,14,9
+Llanwern 1 ,W01001649,10,8
+Llanwern 2 ,W01001650,19,11
+Malpas 1 ,W01001651,5,5
+Malpas 2 ,W01001652,37,22
+Malpas 3 ,W01001653,6,5
+Malpas 4 ,W01001654,9,7
+Malpas 5 ,W01001655,6,4
+Marshfield 2 ,W01001657,4,2
+Marshfield 3 ,W01001658,8,5
+Pillgwenlly 1 ,W01001659,40,22
+Pillgwenlly 2 ,W01001660,27,12
+Pillgwenlly 3 ,W01001661,33,16
+Pillgwenlly 4 ,W01001662,44,28
+Ringland 1 ,W01001663,28,11
+Ringland 2 ,W01001664,30,18
+Ringland 3 ,W01001665,21,10
+Ringland 4 ,W01001666,31,18
+Ringland 5 ,W01001667,35,19
+Ringland 6 ,W01001668,33,16
+Rogerstone 1 ,W01001669,2,3
+Rogerstone 2 ,W01001670,5,3
+Rogerstone 3 ,W01001671,18,12
+Rogerstone 4 ,W01001672,12,7
+Rogerstone 5 ,W01001673,4,4
+Rogerstone 6 ,W01001674,14,9
+St. Julians 1 ,W01001675,13,9
+St. Julians 2 ,W01001676,19,13
+St. Julians 3 ,W01001677,10,5
+St. Julians 4 ,W01001678,23,16
+St. Julians 5 ,W01001679,8,5
+St. Julians 6 ,W01001680,15,7
+Shaftesbury 1 ,W01001681,34,17
+Shaftesbury 2 ,W01001682,23,12
+Shaftesbury 3 ,W01001683,13,7
+Shaftesbury 4 ,W01001684,12,8
+Stow Hill 1 ,W01001685,24,15
+Stow Hill 2 ,W01001686,17,10
+Stow Hill 3 ,W01001687,27,21
+Tredegar Park 1 ,W01001688,18,10
+Tredegar Park 2 ,W01001689,39,22
+Victoria 1 ,W01001690,24,12
+Victoria 2 ,W01001691,29,17
+Victoria 3 ,W01001692,28,14
+Victoria 4 ,W01001693,28,17
+Marshfield 4 ,W01001912,7,5
+Marshfield 5 ,W01001913,6,3

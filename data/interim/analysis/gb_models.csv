@@ -1,0 +1,4 @@
+Nation,Intercept,Income score,Employment score,r2,residuals SD
+England,0.51,1.09,0.72,0.94,3.63
+Scotland,0.28,1.03,0.92,0.97,2.82
+Wales,-3.73,1.24,0.53,0.94,3.87
