@@ -151,7 +151,9 @@ def create_wimd2019():
     )
 
     df = pd.read_csv(origin)
-    indicators = pd.read_csv(Path(raw_data, "country_indexes", "wimd2019", "indicators.csv"))
+    indicators = pd.read_csv(
+        Path(raw_data, "country_indexes", "wimd2019", "indicators.csv")
+    )
     indicators = indicators[["lsoa", "indicator_income", "indicator_employment"]]
     df = pd.merge(df, indicators, on="lsoa")
     df.to_csv(destination, index=False)
