@@ -1,0 +1,1036 @@
+
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput celltag_injected-parameters">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Composite-2020-UK-Index-of-Multiple-Deprivation">Composite 2020 UK Index of Multiple Deprivation</h1><p>This repository uses methodology from a paper by <a href="https://bmjopen.bmj.com/content/6/11/e012750">Gary A Abel, Matthew E Barclay, and Rupert A Payne</a> to create a composite measure of multiple deprivation across the UK.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Using-this-dataset">Using this dataset</h2><p>There are two sets of files depending if you want a GB or UK index (methodological differences explained below). For each set (<code>uk_index</code> and <code>gb_index</code> folders), there is a different file for each nation. In each case, the measures of deprivation in the other nations has been integrated into the base scores for that nation.</p>
+<p>When in a dataset for a particular nation (for instance, <code>uk_index/UK_IMD_E.csv</code>), the rank order of the original deprivation index is preserved, but it is not for other countries (explained more below).</p>
+<p>The composite labels vary by national dataset, but the key columns in the UK England dataset are:</p>
+<ul>
+<li><code>lsoa</code> - The code for the LSOA/Datazone/SOA</li>
+<li><code>original_decile</code> - the original decile in the four different IMD datasets. </li>
+<li><code>overall_local_score</code> - the original deprivation score in the four different IMD datasets. </li>
+<li><code>UK_IMD_E_score</code> - the transformed deprivation score into the combined index. This will be the same as the original for the base country. </li>
+<li><code>E_expanded_decile</code> - the English deciles, with scores for other nations fitted into the same devisions as the original deciles. </li>
+<li><code>UK_IMD_E_pop_decile</code> - A new set of deciles for the whole dataset, so that 10% of the population is in each decile (there will be an uneven number of areas). </li>
+<li><code>UK_IMD_E_pop_quintile</code> - A new set of quintiles for the whole dataset, so that 20% of the population is in each quintile (there will be an uneven number of areas). </li>
+</ul>
+<h3 id="Example-usage-of-different-kinds-of-deciles">Example usage of different kinds of deciles</h3><p>Given the theoretical basis for national metrics is more sound than the composite index, you should chose the base that better reflects the majority of your data.</p>
+<p>If your analysis runs across the whole country, you would use <code>uk_index\UK_IMD_E.csv</code> (as the majority of data is English), and use the <code>UK_IMD_E_pop_decile</code> column to break the country in ten deciles by population. If a variable is evenly spread amount different levels of deprivation across the whole country, aggregating by this decile type should return a similar value for all deciles.</p>
+<p>If you wanted to base the analysis in SIMD, but include a few compariable English examples on the other side of the border, you would use <code>uk_index\UK_IMD_S.csv</code> and the <code>S_expanded_decile</code> column. This will reflect the ordering and deciles of the original SIMD dataset, but put areas in other nations into Scottish deciles. Overall, this set of deciles is uneven because extra areas are being squeezed into the divisions made on the basis of national data.</p>
+<p>In many cases, the two kinds of deciles are similar if based in English data (only 11% of areas have disagreements between the two kinds of deciles). If unsure, think about how you would explain what is happening in your analysis (e.g. if conceptually exploring <code>UK deprivation</code>, it is best to stick to the population deciles).</p>
+<h3 id="How-would-I-map-this-data---what-variable-should-I-use?">How would I map this data - what variable should I use?</h3><p>There is no single answer to this question. There are four files that cover the whole UK at the small area level (<code>UK_IMD_E.csv</code>, <code>UK_IMD_N.csv</code>, <code>UK_IMD_S.csv</code>, <code>UK_IMD_W.csv</code>), each of which is slightly different. If you are an England-based researcher, for example, and you want to map the whole UK in a comparable way so that you can meaningfully compare patterns of deprivation in East London with patterns of deprivation in the Scottish Highlands, then you would use the <code>UK_IMD_E.csv</code> file and make a map using the <code>UK_IMD_E_pop_decile</code> column in this dataset. This would create a map that puts every LSOA/SOA/DZ in the UK into one of ten deciles (1 = most deprived, 10 = least deprived) so that an equal number of people are in each decile (n.b. this means that there won't be an equal number of small areas in each decile because populations vary by LSOA/SOA/DZ).</p>
+<p>Our advice for anyone making a UK deprivation map would be to use the base UK_IMD file that makes most sense to them from an end user point of view. If you primarily work with SIMD data and want to see how the decile position of a data zone in Scotland might compare to an SOA in Northern Ireland or a LSOA in England and Wales, then the UK_IMD_S.csv would likely be most meaningful.</p>
+<p><a href="https://twitter.com/undertheraedar">Alasdair Rae</a> has created <a href="https://drive.google.com/drive/folders/1L-C-Ym7VTwRhIRDQUMHPxFvOznMrKfy3">a single shapefile</a> that covers the different sets of small area that will be helpful in cross-border mapping.</p>
+<h3 id="Interpreting-scores,-ranks,-deciles-and-quintiles">Interpreting scores, ranks, deciles and quintiles</h3><p>For users new to indexes of deprivation it is not always clear which direction is "worse". This set of indexes follows the general convention that:</p>
+<ul>
+<li>Higher scores show 'worse' deprivation. The most deprived area is the one with the highest score.</li>
+<li>For ranks this flips around, Rank 1 is the most deprived area. </li>
+<li>Deciles and Quintiles follow ranks. Decile 1 and Quintile 1 are the most deprived decile and quintile respectively. </li>
+</ul>
+<p>So if plotting a column graph of deprivation deciles from 1-10, the most deprived decile is on the far left. This may differ from the initiative sense that in a measure of deprivation higher numbers mean more deprivation, but this maintains consistency with how deciles are generated by the individual indexes.</p>
+<p>Explored in more detail below, but we do not recommend relying too much on raw score in this dataset as the theoretical basis for precise rankings is less robust. The exception to this is the <code>employment</code> score in the UK indexes, and the <code>employment</code> and <code>income</code> scores in the GB indexes, as these are based on similar underlying indicators.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="What-are-the-indexes-of-multiple-deprivation?">What are the indexes of multiple deprivation?</h2><p>For each nation in the UK, the relevant statistics authority has created a ranking of multiple deprivation that ranks small census areas (LSOAs in England/Wales, DZs in Scotland and SOA in Northern Ireland). There is no equivalent ranking of areas across the entire UK.</p>
+<p>These indexes are independent and cannot be directly compared. These measures are not directly comparable because the underlying indicators and the method used to combine them are different in each case. Additionally data is collected at different times for each index. It is not directly possible to take a DataZone from Scotland and see where it would fit inside the deprivation measure in England.</p>
+<p>However, Abel and colleagues suggests you can fudge this a bit to create a combined index that gives useful results. This repository uses this approach to create an updated index with the national indexes avaliable in Feburary 2021.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Method">Method</h2><p>The method described by the <a href="https://bmjopen.bmj.com/content/6/11/e012750">Abel and colleagues paper</a> depends on the fact that the two domains of deprivation (Income and Employment) were roughly comparable between nations at the time they wrote the paper. Both domains used a single equivalent indicator, meaning the domain score expressed a real comparable value.</p>
+<p>Given the overall IMD score, the income score and the employment score, the residuals of a linear regression will leave a lump of 'other' deprivation data that goes beyond the general effect of income/employment. Using the equivalent regression model for a different nation, the income, employment and lump deprivation can be recombined to produce a score that can be compared between nations, or fit into a single index. This looks like the following in practice:</p>
+<pre><code>restandardized_residuals &lt;- (source_residuals/stdev(source_residuals)) * stdev(target_residuals)
+overall_score &lt;- target_income_coefficent*source_income_score + target_employment_coefficent*source_employment_score + restandardized_residuals</code></pre>
+<p>Unfortunately, Northern Ireland's 2017 Multiple Deprivation Measure deviates from the approach other nations use in their income domain, and so the NIMDM2017 Income measure is no longer directly comparable. 
+For the 2020 data, only the employment score is used in the model. This represents a slight loss of information, but as Income and Employment scores are generally correlated this still explains most of the variance (see tables below). A seperate 'GB' ranking for England, Wales and Scotland uses both options.</p>
+<p>To account for the different sizes of small area units in different nations (Scottish DataZones contain less people than LSOAs), the deciles and quintiles provided are based on deciles and quintiles of the overall population rather the rank. This means that some deciles have more 'areas' than others, but if you sampled a random pool of the population, you should have even an even division.</p>
+<h2 id="How-is-this-getting-over-the-fundamental-issue-the-indexes-aren't-comparable?">How is this getting over the fundamental issue the indexes aren't comparable?</h2><p>This is a good question, and the answer is it does assume that actually the scores are roughtly compariable when you bundle them all up. As the <a href="https://bmjopen.bmj.com/content/6/11/e012750">original paper</a> put it <em>"[o]ur approach treated all standardised residuals as equivalent between the constituent nations, allowing us to create consistent UK-wide estimates of relative deprivation"</em>. If you think this is reasonable, the rest works fine.</p>
+<h3 id="Why-would-it-not-be-reasonable?">Why would it not be reasonable?</h3><p>As expressed in various ways in the accompaning material to the indexes, there are reasons not to treat indexes are comparable that this method does not avoid:</p>
+<ul>
+<li>This lump of 'other' deprivation is not measuring the same thing in different indexes. Different indicators are combined in different ways in each nation to create the overall score.</li>
+<li>Different nations have different problems the indexes that are deliberately tuned to address (through including specific forms of deprivation that other nations do not), or this arises implicitly from the different results of the principal component analysis (PCA) in different national datasets.</li>
+<li>If one nation has a higher rate of one form of deprivation (for instance, if one generally has higher health deprivation), areas that would considered highly deprived in another context would be rescaled as less deprived. </li>
+<li>In general, the lump is difficult to examine exactly why one area is rated as more deprived as another. While within each national index you can explore domains to understand why one area is ranked above another, this just is not possible to compare in the same way between the lumps. </li>
+</ul>
+<h3 id="Why-is-it-probably-OK-anyway?">Why is it probably OK anyway?</h3><p>Against this, there are a few reasons to think the scale of the problem is manageable:</p>
+<ul>
+<li>While the employment score is generally only around a quarter of the total contribution to the overall IMD score, many other measures of deprivation are correlated with it, meaning that the features it measures (where there are comparable measures between nations) explain much more than a quarter of the variation (see models below).</li>
+<li>The remainder 'non-employment' lump in all indexes is comparing <em>similar</em> if not identical indicators of income, health, education and crime.</li>
+<li>Domain scores are combined using an exponential distribution. A high deprivation score on any domain contained within the lump is likely to be expressed in a high 'other' score. A clear signal of 'some form of high deprivation' should emerge from the 'other' data. This helps address some (but not all) of the issues from different scales of the data. </li>
+</ul>
+<h2 id="When-would-I-want-to-use-the-composite-index?">When would I want to use the composite index?</h2><p>For some uses the combined index is probably fine. It should not be used in a public ranking of places as it is unclear if a Scottish Datazone being ranked one level about a Welsh LSOA is theoretically valid or how to explain why it is happening. However, if breaking the result into deciles or mapping against other variables, this reintroduces sufficent fuzziness to that the results are likely to be reasonable. Given the concept of multiple deprivation is already a little fuzzy, in situations where the complete English index is used as a variable it is likely to be fine to use the expanded index.</p>
+<p>For instance, our use case is trying to avoid throwing away data generated by service users from non-English nations when analysing patterns of deprivation against specific usage. A fuzzy measure is fine for this.</p>
+<h2 id="Why-not-just-build-a-proper-UK-index?">Why not just build a proper UK index?</h2><p>There are some practical issues where the statistics are generated by different statistics authorities, but the broader issue is that designing an index requires designing towards the needs of a user-base.  National indexes of multiple deprivation have a set of use cases within local and national governments and the design of the indexes is geared towards that. A combined index has less usefulness locally because it is not tuned towards the specific conceptions of deprivation in each nation. It is annoying from a comparative perspective that the NIMDM2017 changed their measure of Income, but it also creates a better tool for needs in Northern Ireland.</p>
+<p>A combined index <em>is</em> useful for researchers or organisations running services across the UK, but all of these are likely to have slightly different needs of it. It is likely that getting much beyond this fuzzy measure, the answer is for organisations to construct measures that more precisely deal with the issue at hand. For instance, evaluating access to online services suggests measures of internet access, but this is currently not included in the English index, and is only a small component of others.</p>
+<p>Basically: the slightly dodgy composite ranking is probably fine for most purposes, and going beyond it suggests a bigger think about what needs to be measured.</p>
+<h2 id="What-options-are-available">What options are available</h2><p>For the UK (England, Scotland, Wales and Northern Ireland), there are versions of the overall ranking using each national model as a base. <code>uk_index\UK_IMD_E.csv</code> contains all four nations rebased onto the English model. Generally you should use the base of the country where the majority of your data is from (see rank integrity below). Chances are this is England, but the other indexes are included for other use case.</p>
+<p>If only using data from England, Scotland or Wales, there is a separate GB index that uses both of the comparable Income and Employment domains to create rankings.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Data-analysis">Data analysis</h2><h3 id="Regression-models">Regression models</h3><p>In all cases, the r² shows majority of the variation in the IMD score is explained using the employment score alone. GB models gain a little more usefulness through including the comparable Income score.</p>
+<h4 id="UK-models">UK models</h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<style type="text/css">
+</style>
+<table id="T_65cc5">
+<thead>
+<tr>
+<th class="col_heading level0 col0" id="T_65cc5_level0_col0">Nation</th>
+<th class="col_heading level0 col1" id="T_65cc5_level0_col1">Intercept</th>
+<th class="col_heading level0 col2" id="T_65cc5_level0_col2">Employment score</th>
+<th class="col_heading level0 col3" id="T_65cc5_level0_col3">r²</th>
+<th class="col_heading level0 col4" id="T_65cc5_level0_col4">Residuals SD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="data row0 col0" id="T_65cc5_row0_col0">England</td>
+<td class="data row0 col1" id="T_65cc5_row0_col1">0.06</td>
+<td class="data row0 col2" id="T_65cc5_row0_col2">2.16</td>
+<td class="data row0 col3" id="T_65cc5_row0_col3">0.90</td>
+<td class="data row0 col4" id="T_65cc5_row0_col4">4.74</td>
+</tr>
+<tr>
+<td class="data row1 col0" id="T_65cc5_row1_col0">Scotland</td>
+<td class="data row1 col1" id="T_65cc5_row1_col1">0.11</td>
+<td class="data row1 col2" id="T_65cc5_row1_col2">2.26</td>
+<td class="data row1 col3" id="T_65cc5_row1_col3">0.94</td>
+<td class="data row1 col4" id="T_65cc5_row1_col4">3.90</td>
+</tr>
+<tr>
+<td class="data row2 col0" id="T_65cc5_row2_col0">Wales</td>
+<td class="data row2 col1" id="T_65cc5_row2_col1">-3.49</td>
+<td class="data row2 col2" id="T_65cc5_row2_col2">2.40</td>
+<td class="data row2 col3" id="T_65cc5_row2_col3">0.87</td>
+<td class="data row2 col4" id="T_65cc5_row2_col4">5.54</td>
+</tr>
+<tr>
+<td class="data row3 col0" id="T_65cc5_row3_col0">Northern Ireland</td>
+<td class="data row3 col1" id="T_65cc5_row3_col1">-7.84</td>
+<td class="data row3 col2" id="T_65cc5_row3_col2">1.40</td>
+<td class="data row3 col3" id="T_65cc5_row3_col3">0.88</td>
+<td class="data row3 col4" id="T_65cc5_row3_col4">5.11</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="GB-Models">GB Models</h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<style type="text/css">
+</style>
+<table id="T_94236">
+<thead>
+<tr>
+<th class="col_heading level0 col0" id="T_94236_level0_col0">Nation</th>
+<th class="col_heading level0 col1" id="T_94236_level0_col1">Intercept</th>
+<th class="col_heading level0 col2" id="T_94236_level0_col2">Income score</th>
+<th class="col_heading level0 col3" id="T_94236_level0_col3">Employment score</th>
+<th class="col_heading level0 col4" id="T_94236_level0_col4">r²</th>
+<th class="col_heading level0 col5" id="T_94236_level0_col5">Residuals SD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="data row0 col0" id="T_94236_row0_col0">England</td>
+<td class="data row0 col1" id="T_94236_row0_col1">0.51</td>
+<td class="data row0 col2" id="T_94236_row0_col2">1.09</td>
+<td class="data row0 col3" id="T_94236_row0_col3">0.72</td>
+<td class="data row0 col4" id="T_94236_row0_col4">0.94</td>
+<td class="data row0 col5" id="T_94236_row0_col5">3.63</td>
+</tr>
+<tr>
+<td class="data row1 col0" id="T_94236_row1_col0">Scotland</td>
+<td class="data row1 col1" id="T_94236_row1_col1">0.28</td>
+<td class="data row1 col2" id="T_94236_row1_col2">1.03</td>
+<td class="data row1 col3" id="T_94236_row1_col3">0.92</td>
+<td class="data row1 col4" id="T_94236_row1_col4">0.97</td>
+<td class="data row1 col5" id="T_94236_row1_col5">2.82</td>
+</tr>
+<tr>
+<td class="data row2 col0" id="T_94236_row2_col0">Wales</td>
+<td class="data row2 col1" id="T_94236_row2_col1">-3.73</td>
+<td class="data row2 col2" id="T_94236_row2_col2">1.24</td>
+<td class="data row2 col3" id="T_94236_row2_col3">0.53</td>
+<td class="data row2 col4" id="T_94236_row2_col4">0.94</td>
+<td class="data row2 col5" id="T_94236_row2_col5">3.87</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Rank-intergrity-is-not-preserved">Rank intergrity is not preserved</h3><p>National subsets of the overall indexes are not identical to the original indexes. Adjusting the impact of the employment (and in the GB index, income) to match the target index and scaling the remaining residuals affects the order within nation scores as well as their placement in the overall scores. This affects almost all rankings to some degree in transposed indexes. The following tables show the differences in rank when a nation's dataset is ordered by the local IMD score and the overall IMD score of a composite index.</p>
+<p>This is why a dataset that is mostly Scottish data should use the Scotland based version, as the theoretical basis of the majority of the rankings is clearer.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="UK-rank-displacement-(England-based)">UK rank displacement (England based)</h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<style type="text/css">
+</style>
+<table id="T_4218a">
+<thead>
+<tr>
+<th class="col_heading level0 col0" id="T_4218a_level0_col0"></th>
+<th class="col_heading level0 col1" id="T_4218a_level0_col1">Northern Ireland</th>
+<th class="col_heading level0 col2" id="T_4218a_level0_col2">Scotland</th>
+<th class="col_heading level0 col3" id="T_4218a_level0_col3">Wales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="data row0 col0" id="T_4218a_row0_col0">count</td>
+<td class="data row0 col1" id="T_4218a_row0_col1">869.00</td>
+<td class="data row0 col2" id="T_4218a_row0_col2">6945.00</td>
+<td class="data row0 col3" id="T_4218a_row0_col3">1845.00</td>
+</tr>
+<tr>
+<td class="data row1 col0" id="T_4218a_row1_col0">mean</td>
+<td class="data row1 col1" id="T_4218a_row1_col1">29.58</td>
+<td class="data row1 col2" id="T_4218a_row1_col2">108.93</td>
+<td class="data row1 col3" id="T_4218a_row1_col3">8.61</td>
+</tr>
+<tr>
+<td class="data row2 col0" id="T_4218a_row2_col0">std</td>
+<td class="data row2 col1" id="T_4218a_row2_col1">26.72</td>
+<td class="data row2 col2" id="T_4218a_row2_col2">102.22</td>
+<td class="data row2 col3" id="T_4218a_row2_col3">8.03</td>
+</tr>
+<tr>
+<td class="data row3 col0" id="T_4218a_row3_col0">min</td>
+<td class="data row3 col1" id="T_4218a_row3_col1">1.00</td>
+<td class="data row3 col2" id="T_4218a_row3_col2">1.00</td>
+<td class="data row3 col3" id="T_4218a_row3_col3">0.50</td>
+</tr>
+<tr>
+<td class="data row4 col0" id="T_4218a_row4_col0">25%</td>
+<td class="data row4 col1" id="T_4218a_row4_col1">9.00</td>
+<td class="data row4 col2" id="T_4218a_row4_col2">31.00</td>
+<td class="data row4 col3" id="T_4218a_row4_col3">2.50</td>
+</tr>
+<tr>
+<td class="data row5 col0" id="T_4218a_row5_col0">50%</td>
+<td class="data row5 col1" id="T_4218a_row5_col1">23.00</td>
+<td class="data row5 col2" id="T_4218a_row5_col2">81.00</td>
+<td class="data row5 col3" id="T_4218a_row5_col3">6.00</td>
+</tr>
+<tr>
+<td class="data row6 col0" id="T_4218a_row6_col0">75%</td>
+<td class="data row6 col1" id="T_4218a_row6_col1">42.00</td>
+<td class="data row6 col2" id="T_4218a_row6_col2">154.00</td>
+<td class="data row6 col3" id="T_4218a_row6_col3">12.00</td>
+</tr>
+<tr>
+<td class="data row7 col0" id="T_4218a_row7_col0">max</td>
+<td class="data row7 col1" id="T_4218a_row7_col1">216.00</td>
+<td class="data row7 col2" id="T_4218a_row7_col2">819.00</td>
+<td class="data row7 col3" id="T_4218a_row7_col3">57.00</td>
+</tr>
+<tr>
+<td class="data row8 col0" id="T_4218a_row8_col0">% of total</td>
+<td class="data row8 col1" id="T_4218a_row8_col1">97.60</td>
+<td class="data row8 col2" id="T_4218a_row8_col2">99.60</td>
+<td class="data row8 col3" id="T_4218a_row8_col3">96.60</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="GB-rank-displacement-(England-based)">GB rank displacement (England based)</h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<style type="text/css">
+</style>
+<table id="T_3ae8a">
+<thead>
+<tr>
+<th class="col_heading level0 col0" id="T_3ae8a_level0_col0"></th>
+<th class="col_heading level0 col1" id="T_3ae8a_level0_col1">Scotland</th>
+<th class="col_heading level0 col2" id="T_3ae8a_level0_col2">Wales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="data row0 col0" id="T_3ae8a_row0_col0">count</td>
+<td class="data row0 col1" id="T_3ae8a_row0_col1">6953.00</td>
+<td class="data row0 col2" id="T_3ae8a_row0_col2">1876.00</td>
+</tr>
+<tr>
+<td class="data row1 col0" id="T_3ae8a_row1_col0">mean</td>
+<td class="data row1 col1" id="T_3ae8a_row1_col1">117.22</td>
+<td class="data row1 col2" id="T_3ae8a_row1_col2">13.12</td>
+</tr>
+<tr>
+<td class="data row2 col0" id="T_3ae8a_row2_col0">std</td>
+<td class="data row2 col1" id="T_3ae8a_row2_col1">113.24</td>
+<td class="data row2 col2" id="T_3ae8a_row2_col2">11.46</td>
+</tr>
+<tr>
+<td class="data row3 col0" id="T_3ae8a_row3_col0">min</td>
+<td class="data row3 col1" id="T_3ae8a_row3_col1">1.00</td>
+<td class="data row3 col2" id="T_3ae8a_row3_col2">0.50</td>
+</tr>
+<tr>
+<td class="data row4 col0" id="T_3ae8a_row4_col0">25%</td>
+<td class="data row4 col1" id="T_3ae8a_row4_col1">31.00</td>
+<td class="data row4 col2" id="T_3ae8a_row4_col2">4.00</td>
+</tr>
+<tr>
+<td class="data row5 col0" id="T_3ae8a_row5_col0">50%</td>
+<td class="data row5 col1" id="T_3ae8a_row5_col1">81.00</td>
+<td class="data row5 col2" id="T_3ae8a_row5_col2">9.50</td>
+</tr>
+<tr>
+<td class="data row6 col0" id="T_3ae8a_row6_col0">75%</td>
+<td class="data row6 col1" id="T_3ae8a_row6_col1">170.00</td>
+<td class="data row6 col2" id="T_3ae8a_row6_col2">19.50</td>
+</tr>
+<tr>
+<td class="data row7 col0" id="T_3ae8a_row7_col0">max</td>
+<td class="data row7 col1" id="T_3ae8a_row7_col1">1037.00</td>
+<td class="data row7 col2" id="T_3ae8a_row7_col2">69.50</td>
+</tr>
+<tr>
+<td class="data row8 col0" id="T_3ae8a_row8_col0">% of total</td>
+<td class="data row8 col1" id="T_3ae8a_row8_col1">99.70</td>
+<td class="data row8 col2" id="T_3ae8a_row8_col2">98.30</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Deprivation-distribution">Deprivation distribution</h3><p>The following table and graph show the distribution of the population by nation and UK IMD decile (England model):</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<style type="text/css">
+</style>
+<table id="T_965d6">
+<thead>
+<tr>
+<th class="col_heading level0 col0" id="T_965d6_level0_col0">IMD Decile distribution</th>
+<th class="col_heading level0 col1" id="T_965d6_level0_col1">E</th>
+<th class="col_heading level0 col2" id="T_965d6_level0_col2">N</th>
+<th class="col_heading level0 col3" id="T_965d6_level0_col3">S</th>
+<th class="col_heading level0 col4" id="T_965d6_level0_col4">W</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="data row0 col0" id="T_965d6_row0_col0">1</td>
+<td class="data row0 col1" id="T_965d6_row0_col1">9%</td>
+<td class="data row0 col2" id="T_965d6_row0_col2">41%</td>
+<td class="data row0 col3" id="T_965d6_row0_col3">9%</td>
+<td class="data row0 col4" id="T_965d6_row0_col4">8%</td>
+</tr>
+<tr>
+<td class="data row1 col0" id="T_965d6_row1_col0">2</td>
+<td class="data row1 col1" id="T_965d6_row1_col1">10%</td>
+<td class="data row1 col2" id="T_965d6_row1_col2">23%</td>
+<td class="data row1 col3" id="T_965d6_row1_col3">9%</td>
+<td class="data row1 col4" id="T_965d6_row1_col4">10%</td>
+</tr>
+<tr>
+<td class="data row2 col0" id="T_965d6_row2_col0">3</td>
+<td class="data row2 col1" id="T_965d6_row2_col1">10%</td>
+<td class="data row2 col2" id="T_965d6_row2_col2">16%</td>
+<td class="data row2 col3" id="T_965d6_row2_col3">8%</td>
+<td class="data row2 col4" id="T_965d6_row2_col4">10%</td>
+</tr>
+<tr>
+<td class="data row3 col0" id="T_965d6_row3_col0">4</td>
+<td class="data row3 col1" id="T_965d6_row3_col1">10%</td>
+<td class="data row3 col2" id="T_965d6_row3_col2">10%</td>
+<td class="data row3 col3" id="T_965d6_row3_col3">8%</td>
+<td class="data row3 col4" id="T_965d6_row3_col4">12%</td>
+</tr>
+<tr>
+<td class="data row4 col0" id="T_965d6_row4_col0">5</td>
+<td class="data row4 col1" id="T_965d6_row4_col1">10%</td>
+<td class="data row4 col2" id="T_965d6_row4_col2">7%</td>
+<td class="data row4 col3" id="T_965d6_row4_col3">9%</td>
+<td class="data row4 col4" id="T_965d6_row4_col4">13%</td>
+</tr>
+<tr>
+<td class="data row5 col0" id="T_965d6_row5_col0">6</td>
+<td class="data row5 col1" id="T_965d6_row5_col1">10%</td>
+<td class="data row5 col2" id="T_965d6_row5_col2">2%</td>
+<td class="data row5 col3" id="T_965d6_row5_col3">11%</td>
+<td class="data row5 col4" id="T_965d6_row5_col4">14%</td>
+</tr>
+<tr>
+<td class="data row6 col0" id="T_965d6_row6_col0">7</td>
+<td class="data row6 col1" id="T_965d6_row6_col1">10%</td>
+<td class="data row6 col2" id="T_965d6_row6_col2">0%</td>
+<td class="data row6 col3" id="T_965d6_row6_col3">11%</td>
+<td class="data row6 col4" id="T_965d6_row6_col4">11%</td>
+</tr>
+<tr>
+<td class="data row7 col0" id="T_965d6_row7_col0">8</td>
+<td class="data row7 col1" id="T_965d6_row7_col1">10%</td>
+<td class="data row7 col2" id="T_965d6_row7_col2">0%</td>
+<td class="data row7 col3" id="T_965d6_row7_col3">11%</td>
+<td class="data row7 col4" id="T_965d6_row7_col4">10%</td>
+</tr>
+<tr>
+<td class="data row8 col0" id="T_965d6_row8_col0">9</td>
+<td class="data row8 col1" id="T_965d6_row8_col1">10%</td>
+<td class="data row8 col2" id="T_965d6_row8_col2">0%</td>
+<td class="data row8 col3" id="T_965d6_row8_col3">11%</td>
+<td class="data row8 col4" id="T_965d6_row8_col4">9%</td>
+</tr>
+<tr>
+<td class="data row9 col0" id="T_965d6_row9_col0">10</td>
+<td class="data row9 col1" id="T_965d6_row9_col1">10%</td>
+<td class="data row9 col2" id="T_965d6_row9_col2">0%</td>
+<td class="data row9 col3" id="T_965d6_row9_col3">15%</td>
+<td class="data row9 col4" id="T_965d6_row9_col4">3%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-RenderedImage jp-OutputArea-output jp-OutputArea-executeResult">
+<img class="" src="_notebook_resources/methodology_and_analysis_readme_17_0.png"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="National-composition-of-each-decile">National composition of each decile</h1>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html">
+<style type="text/css">
+</style>
+<table id="T_8a81b">
+<thead>
+<tr>
+<th class="col_heading level0 col0" id="T_8a81b_level0_col0">nation</th>
+<th class="col_heading level0 col1" id="T_8a81b_level0_col1">1</th>
+<th class="col_heading level0 col2" id="T_8a81b_level0_col2">2</th>
+<th class="col_heading level0 col3" id="T_8a81b_level0_col3">3</th>
+<th class="col_heading level0 col4" id="T_8a81b_level0_col4">4</th>
+<th class="col_heading level0 col5" id="T_8a81b_level0_col5">5</th>
+<th class="col_heading level0 col6" id="T_8a81b_level0_col6">6</th>
+<th class="col_heading level0 col7" id="T_8a81b_level0_col7">7</th>
+<th class="col_heading level0 col8" id="T_8a81b_level0_col8">8</th>
+<th class="col_heading level0 col9" id="T_8a81b_level0_col9">9</th>
+<th class="col_heading level0 col10" id="T_8a81b_level0_col10">10</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="data row0 col0" id="T_8a81b_row0_col0">England</td>
+<td class="data row0 col1" id="T_8a81b_row0_col1">77%</td>
+<td class="data row0 col2" id="T_8a81b_row0_col2">82%</td>
+<td class="data row0 col3" id="T_8a81b_row0_col3">84%</td>
+<td class="data row0 col4" id="T_8a81b_row0_col4">85%</td>
+<td class="data row0 col5" id="T_8a81b_row0_col5">85%</td>
+<td class="data row0 col6" id="T_8a81b_row0_col6">84%</td>
+<td class="data row0 col7" id="T_8a81b_row0_col7">86%</td>
+<td class="data row0 col8" id="T_8a81b_row0_col8">87%</td>
+<td class="data row0 col9" id="T_8a81b_row0_col9">87%</td>
+<td class="data row0 col10" id="T_8a81b_row0_col10">86%</td>
+</tr>
+<tr>
+<td class="data row1 col0" id="T_8a81b_row1_col0">Northern Ireland</td>
+<td class="data row1 col1" id="T_8a81b_row1_col1">11%</td>
+<td class="data row1 col2" id="T_8a81b_row1_col2">7%</td>
+<td class="data row1 col3" id="T_8a81b_row1_col3">5%</td>
+<td class="data row1 col4" id="T_8a81b_row1_col4">3%</td>
+<td class="data row1 col5" id="T_8a81b_row1_col5">2%</td>
+<td class="data row1 col6" id="T_8a81b_row1_col6">1%</td>
+<td class="data row1 col7" id="T_8a81b_row1_col7">0%</td>
+<td class="data row1 col8" id="T_8a81b_row1_col8">0%</td>
+<td class="data row1 col9" id="T_8a81b_row1_col9">0%</td>
+<td class="data row1 col10" id="T_8a81b_row1_col10">0%</td>
+</tr>
+<tr>
+<td class="data row2 col0" id="T_8a81b_row2_col0">Scotland</td>
+<td class="data row2 col1" id="T_8a81b_row2_col1">7%</td>
+<td class="data row2 col2" id="T_8a81b_row2_col2">7%</td>
+<td class="data row2 col3" id="T_8a81b_row2_col3">6%</td>
+<td class="data row2 col4" id="T_8a81b_row2_col4">6%</td>
+<td class="data row2 col5" id="T_8a81b_row2_col5">7%</td>
+<td class="data row2 col6" id="T_8a81b_row2_col6">9%</td>
+<td class="data row2 col7" id="T_8a81b_row2_col7">9%</td>
+<td class="data row2 col8" id="T_8a81b_row2_col8">9%</td>
+<td class="data row2 col9" id="T_8a81b_row2_col9">9%</td>
+<td class="data row2 col10" id="T_8a81b_row2_col10">12%</td>
+</tr>
+<tr>
+<td class="data row3 col0" id="T_8a81b_row3_col0">Wales</td>
+<td class="data row3 col1" id="T_8a81b_row3_col1">4%</td>
+<td class="data row3 col2" id="T_8a81b_row3_col2">5%</td>
+<td class="data row3 col3" id="T_8a81b_row3_col3">5%</td>
+<td class="data row3 col4" id="T_8a81b_row3_col4">6%</td>
+<td class="data row3 col5" id="T_8a81b_row3_col5">6%</td>
+<td class="data row3 col6" id="T_8a81b_row3_col6">7%</td>
+<td class="data row3 col7" id="T_8a81b_row3_col7">5%</td>
+<td class="data row3 col8" id="T_8a81b_row3_col8">5%</td>
+<td class="data row3 col9" id="T_8a81b_row3_col9">4%</td>
+<td class="data row3 col10" id="T_8a81b_row3_col10">1%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-RenderedImage jp-OutputArea-output jp-OutputArea-executeResult">
+<img class="" src="_notebook_resources/methodology_and_analysis_readme_19_1.png"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>As in the original paper, England and Scotland have a similar distribution, Wales is on average slightly more deprived, and Northern Ireland is mostly contained in the bottom half of the overall deprivation scale. For comparsion to the previous model, 37% of NI population were in the bottom overall quintile compared to 27% in this model.</p>
+<p>The GB distribution (generated using Income and Employment) is similar to the UK distributions:</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<style type="text/css">
+</style>
+<table id="T_cff91">
+<thead>
+<tr>
+<th class="col_heading level0 col0" id="T_cff91_level0_col0">IMD Decile distribution</th>
+<th class="col_heading level0 col1" id="T_cff91_level0_col1">E</th>
+<th class="col_heading level0 col2" id="T_cff91_level0_col2">S</th>
+<th class="col_heading level0 col3" id="T_cff91_level0_col3">W</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="data row0 col0" id="T_cff91_row0_col0">1</td>
+<td class="data row0 col1" id="T_cff91_row0_col1">10%</td>
+<td class="data row0 col2" id="T_cff91_row0_col2">10%</td>
+<td class="data row0 col3" id="T_cff91_row0_col3">12%</td>
+</tr>
+<tr>
+<td class="data row1 col0" id="T_cff91_row1_col0">2</td>
+<td class="data row1 col1" id="T_cff91_row1_col1">10%</td>
+<td class="data row1 col2" id="T_cff91_row1_col2">9%</td>
+<td class="data row1 col3" id="T_cff91_row1_col3">12%</td>
+</tr>
+<tr>
+<td class="data row2 col0" id="T_cff91_row2_col0">3</td>
+<td class="data row2 col1" id="T_cff91_row2_col1">10%</td>
+<td class="data row2 col2" id="T_cff91_row2_col2">8%</td>
+<td class="data row2 col3" id="T_cff91_row2_col3">12%</td>
+</tr>
+<tr>
+<td class="data row3 col0" id="T_cff91_row3_col0">4</td>
+<td class="data row3 col1" id="T_cff91_row3_col1">10%</td>
+<td class="data row3 col2" id="T_cff91_row3_col2">8%</td>
+<td class="data row3 col3" id="T_cff91_row3_col3">13%</td>
+</tr>
+<tr>
+<td class="data row4 col0" id="T_cff91_row4_col0">5</td>
+<td class="data row4 col1" id="T_cff91_row4_col1">10%</td>
+<td class="data row4 col2" id="T_cff91_row4_col2">9%</td>
+<td class="data row4 col3" id="T_cff91_row4_col3">13%</td>
+</tr>
+<tr>
+<td class="data row5 col0" id="T_cff91_row5_col0">6</td>
+<td class="data row5 col1" id="T_cff91_row5_col1">10%</td>
+<td class="data row5 col2" id="T_cff91_row5_col2">11%</td>
+<td class="data row5 col3" id="T_cff91_row5_col3">12%</td>
+</tr>
+<tr>
+<td class="data row6 col0" id="T_cff91_row6_col0">7</td>
+<td class="data row6 col1" id="T_cff91_row6_col1">10%</td>
+<td class="data row6 col2" id="T_cff91_row6_col2">11%</td>
+<td class="data row6 col3" id="T_cff91_row6_col3">10%</td>
+</tr>
+<tr>
+<td class="data row7 col0" id="T_cff91_row7_col0">8</td>
+<td class="data row7 col1" id="T_cff91_row7_col1">10%</td>
+<td class="data row7 col2" id="T_cff91_row7_col2">10%</td>
+<td class="data row7 col3" id="T_cff91_row7_col3">8%</td>
+</tr>
+<tr>
+<td class="data row8 col0" id="T_cff91_row8_col0">9</td>
+<td class="data row8 col1" id="T_cff91_row8_col1">10%</td>
+<td class="data row8 col2" id="T_cff91_row8_col2">11%</td>
+<td class="data row8 col3" id="T_cff91_row8_col3">7%</td>
+</tr>
+<tr>
+<td class="data row9 col0" id="T_cff91_row9_col0">10</td>
+<td class="data row9 col1" id="T_cff91_row9_col1">10%</td>
+<td class="data row9 col2" id="T_cff91_row9_col2">14%</td>
+<td class="data row9 col3" id="T_cff91_row9_col3">1%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>The concentration of NI SOA in the lower deciles in the UK model means less of other nations appear in this decile. When comparing datasets without NI data, using the GB index will present a cleaner picture between deciles. Although if part of the overall picture is <em>"we don't have data/have good takeup of services in a part of the UK that is on average more deprived"</em>, the UK index may still be appropriate.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Comparison-of-different-national-base-population-deciles">Comparison of different national base population deciles</h3><p>The different processes for different national base files change rankings to the extent that decile divisions are noticeably different between the different files. The table below shows that while there is a high (96%) agreement between the England and Wales deciles, the Wales and Northern Ireland dataset only agree in 65% of cases. This reinforces the need for choosing a base dataset that best reflects the largest set of your data, where the rankings are most theoretically valid.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<style type="text/css">
+</style>
+<table id="T_39bbe">
+<thead>
+<tr>
+<th class="col_heading level0 col0" id="T_39bbe_level0_col0">Nation</th>
+<th class="col_heading level0 col1" id="T_39bbe_level0_col1">E</th>
+<th class="col_heading level0 col2" id="T_39bbe_level0_col2">W</th>
+<th class="col_heading level0 col3" id="T_39bbe_level0_col3">S</th>
+<th class="col_heading level0 col4" id="T_39bbe_level0_col4">N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="data row0 col0" id="T_39bbe_row0_col0">E</td>
+<td class="data row0 col1" id="T_39bbe_row0_col1">-</td>
+<td class="data row0 col2" id="T_39bbe_row0_col2">96.1%</td>
+<td class="data row0 col3" id="T_39bbe_row0_col3">84.6%</td>
+<td class="data row0 col4" id="T_39bbe_row0_col4">61.6%</td>
+</tr>
+<tr>
+<td class="data row1 col0" id="T_39bbe_row1_col0">W</td>
+<td class="data row1 col1" id="T_39bbe_row1_col1">96.1%</td>
+<td class="data row1 col2" id="T_39bbe_row1_col2">-</td>
+<td class="data row1 col3" id="T_39bbe_row1_col3">80.8%</td>
+<td class="data row1 col4" id="T_39bbe_row1_col4">64.5%</td>
+</tr>
+<tr>
+<td class="data row2 col0" id="T_39bbe_row2_col0">S</td>
+<td class="data row2 col1" id="T_39bbe_row2_col1">84.6%</td>
+<td class="data row2 col2" id="T_39bbe_row2_col2">80.8%</td>
+<td class="data row2 col3" id="T_39bbe_row2_col3">-</td>
+<td class="data row2 col4" id="T_39bbe_row2_col4">52.2%</td>
+</tr>
+<tr>
+<td class="data row3 col0" id="T_39bbe_row3_col0">N</td>
+<td class="data row3 col1" id="T_39bbe_row3_col1">61.6%</td>
+<td class="data row3 col2" id="T_39bbe_row3_col2">64.5%</td>
+<td class="data row3 col3" id="T_39bbe_row3_col3">52.2%</td>
+<td class="data row3 col4" id="T_39bbe_row3_col4">-</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Data-sources">Data sources</h2><ul>
+<li><a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019">English Index of Multiple Deprivation 2019</a></li>
+<li><a href="https://www.gov.scot/collections/scottish-index-of-multiple-deprivation-2020/">Scottish Index of Multiple Deprivation 2020</a></li>
+<li><a href="https://gov.wales/welsh-index-multiple-deprivation-full-index-update-ranks-2019">Welsh Index of Multiple Deprivation (WIMD) 2019</a></li>
+<li><a href="https://www.nisra.gov.uk/statistics/deprivation/northern-ireland-multiple-deprivation-measure-2017-nimdm2017">Northern Ireland Multiple Deprivation Measures (NIMDM) 2017</a></li>
+<li><a href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/lowersuperoutputareamidyearpopulationestimates">ONS 2019 population estimates</a></li>
+<li><a href="https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates">National Records Scotland 2019 Population Estimates</a></li>
+<li><a href="https://www.nisra.gov.uk/publications/2019-mid-year-population-estimates-northern-ireland">NISRA 2019 2019 population estimates</a></li>
+</ul>
+<p>For WIMD the domain scores in the domains file for Income and Employment are scaled, and you need to use the original single indicator from the stats wales site instead.</p>
+<p>The SIMD and NIMDM datasets do not contain the raw score for the combined index. This was regenerated from the domain indexes (<code>create_missing_overall_scores.py</code>) using the following procedure:</p>
+<pre><code>scaled_rank &lt;- reversed_series/len(series) # scale to [0,1 - 1 is most deprived]
+transformed_score &lt;- -23*ln(1 - scaled_rank*(1 - exp(-100/23)))</code></pre>
+<p>This is then weighted by the correct weight to combine into the complete domain score. Comparing the ranks of this score against the published rank generally agrees, with a number of 1-2 rank differences where there is likely an undocumented rounding step in the original composite process.</p>
+<h2 id="National-domain-weights">National domain weights</h2><table>
+<thead><tr>
+<th>Domain weights</th>
+<th>NI</th>
+<th>E</th>
+<th>S</th>
+<th>W</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Income</td>
+<td>25</td>
+<td>22.5</td>
+<td>28</td>
+<td>22</td>
+</tr>
+<tr>
+<td>Employment</td>
+<td>25</td>
+<td>22.5</td>
+<td>28</td>
+<td>22</td>
+</tr>
+<tr>
+<td>Health deprivation</td>
+<td>15</td>
+<td>13.5</td>
+<td>14</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Education, skills and training</td>
+<td>15</td>
+<td>13.5</td>
+<td>14</td>
+<td>14</td>
+</tr>
+<tr>
+<td>Crime and disorder / Community Safety</td>
+<td>5</td>
+<td>9.3</td>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Barriers to housing and services</td>
+<td>-</td>
+<td>9.3</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>Access to services / Geographic access to services</td>
+<td>10</td>
+<td>-</td>
+<td>9</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Living Environment</td>
+<td>5</td>
+<td>9.3</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Physical Environment</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Housing</td>
+<td>-</td>
+<td>-</td>
+<td>2</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Differences-between-different-domains">Differences between different domains</h2><p>All four indexes have measures for Income, Employment, Health, Education, and Crime. Income and Employment use roughly equivalent measures in most cases, and the score for these domains represents a real percentile rather than a composite score. Northern Ireland changed its measure in 2017 to make it a proportion of housholds below 60% of NI median rather than a % of households recieving some form of income-assistance benefit like the other nations and so is no longer directly comparable.</p>
+<p>All indexes incorporate some measure of difficulty accessing services, generally the physical distance from an area to GPs, shops, etc.  This is a domain level score in all but England, where it is one sub-domain in the 'Barriers to housing and services' domain. Wales, Scotland and Northern Ireland incorporate measures of broadband speed into their access to services score. England does not.</p>
+<p>The quality of the physical environment is only a domain level measure in Wales. It is one of two sub-domains of Living Enviornment in England and one of three sub-domains of Living Environment in Northern Ireland. Scotland does not include an equivalent domain or sub-domain.</p>
+<p>Aspects of housing appear in different domains in different nations. The 'housing' domain in Scotland and Wales includes housing quality and overcrowding. The equivalent overcrowding measure is includes in one of two sub-domains of Living Enviornment in England and one of three sub-domains of Living Environment in Northern Ireland. England uniquely includes a measure of affordability as part of the access to housing subdomain.</p>
+<h3 id="Benefits-used-to-generate-Income-and-Employment-domains">Benefits used to generate Income and Employment domains</h3><h4 id="Income">Income</h4><table>
+<thead><tr>
+<th>Benefit</th>
+<th>England</th>
+<th>Scotland</th>
+<th>Wales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jobseeker’s Allowance</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Employment and Support Allowance</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Pension Credit</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Universal Credit (excluding 'Working - no   requirements')</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Working Tax Credit</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Child Tax Credit</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Supported Asylum seekers</td>
+<td>yes</td>
+<td></td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Income Support</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="Employment">Employment</h4><table>
+<thead><tr>
+<th>Benefit</th>
+<th>England</th>
+<th>Scotland</th>
+<th>Wales</th>
+<th>Northern Ireland</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jobseeker’s Allowance (contrib + income)</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Employment and Support Allowance (contrib   + income)</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Incapacity Benefit</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Carer’s Allowance</td>
+<td>yes</td>
+<td></td>
+<td></td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Severe Disablement Allowance</td>
+<td></td>
+<td>yes</td>
+<td></td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Universal Credit - 'Searching for   work',  'No work requirements'</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Generating-index">Generating index</h2><p>To recreate the indexes requires python (3.8+) and pipenv:</p>
+<pre><code>pipenv install
+pipenv run python create_missing_overall_scores.py
+pipenv run python merge_indexes.py</code></pre>
+<p>Alternatively, the <code>requirements.txt</code> can be used without pipenv.</p>
+<h3 id="Maintenance">Maintenance</h3><p>The column names and sources files used can be adjusted in <code>country_indexes\join_description.yaml</code>.</p>
+<p>If you've added or changed the packages used, run the following to update the requirements.txt from pipenv:</p>
+<pre><code>pipenv run pipenv_to_requirements</code></pre>
+<p>The readme file should not be edited directly, instead edit the jupyter notebook and rerun the final cell to update.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Licencing">Licencing</h2><p>Source indexes for each country are licenced as Open Government License (OGL) version 3.0.</p>
+<p>Unless otherwise stated, composite datasets are licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+<p>Code and scripts are licenced under a MIT Licence.</p>
+<h2 id="Citation">Citation</h2><p>Future versions may use same URL, but past versions will be included in git history.</p>
+<p>Suggested citation if using the dataset, but worth also referencing the original methodology paper:</p>
+<pre><code>Parsons, Alex (2021), UK 2020 Composite Index of Multiple Deprivation, https://github.com/mysociety/composite_uk_imd</code></pre>
+</div>
+</div>
+</div>
+</div>

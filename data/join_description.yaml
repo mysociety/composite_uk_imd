@@ -1,0 +1,28 @@
+E:
+  source_file: raw/country_indexes/eimd2019/File_5_-_IoD2019_Scores.csv
+  overall_score: Index of Multiple Deprivation (IMD) Score
+  income_score: Income Score (rate)
+  employment_score: Employment Score (rate)
+  lsoa: LSOA code (2011)
+  adjustment:  domains_times_100
+S:
+  source_file: interim/country_indexes/simd2020/simd2020-with-overall.csv
+  overall_score: overall_imd_score
+  income_score: Income_rate
+  employment_score: Employment_rate
+  lsoa: Data_Zone
+  adjustment:  none
+W:
+  source_file: interim/country_indexes/wimd2019/wimd-2019-index-and-domain-scores-overall.csv
+  overall_score: WIMD 2019
+  income_score: indicator_income
+  employment_score: indicator_employment
+  lsoa: lsoa
+  adjustment: none
+N:
+  source_file: interim/country_indexes/nimdm2017/nimdm2017-soa-withoverall.csv
+  overall_score: overall_imd_score
+  income_score: Income_perc
+  employment_score: Empl_perc
+  lsoa: SOA2001
+  adjustment: none

@@ -1,0 +1,11 @@
+title: "{{page_title}}"
+slug: "{{page_title.lower().replace(' ', '_')}}"
+notebooks:
+  - v1_error_analysis
+parameters:
+  page_title: "V1 UK index error analysis"
+options:
+  rerun: true
+  hide_input: true
+upload:
+  jekyll:
