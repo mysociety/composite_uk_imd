@@ -42,7 +42,7 @@
             "json": {
                 "include": "all",
                 "exclude": "none",
-                "render": true
+                "render": false
             }
         },
         "change_log": {

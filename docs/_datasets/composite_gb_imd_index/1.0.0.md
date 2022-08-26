@@ -33,7 +33,7 @@ custom:
     json:
       include: all
       exclude: none
-      render: true
+      render: false
   change_log:
     1.0.0: Initial release of dataset.
 resources:

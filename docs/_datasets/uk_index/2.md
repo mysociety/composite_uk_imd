@@ -32,7 +32,7 @@ custom:
     json:
       include: all
       exclude: none
-      render: true
+      render: false
   change_log:
     2.0.0: Updated release of datset fixing incorrect comparison of NI SOAs.
     1.0.0: Initial release of dataset.
