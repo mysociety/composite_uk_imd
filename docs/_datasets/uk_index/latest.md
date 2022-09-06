@@ -36,7 +36,88 @@ custom:
   change_log:
     2.0.0: Updated release of datset fixing incorrect comparison of NI SOAs.
     1.0.0: Initial release of dataset.
+    2.1.0: 'New resource(s) added: la_labels'
 resources:
+- title: Local Authority deprivation
+  description: Deprivation scores calculated for local authorities from UK (E) index.
+  custom:
+    row_count: 409
+  path: la_labels.csv
+  name: la_labels
+  profile: tabular-data-resource
+  scheme: file
+  format: csv
+  hashing: md5
+  encoding: utf-8
+  schema:
+    fields:
+    - name: local-authority-code
+      type: string
+      description: 3/4 letter local authority code.
+      constraints:
+        unique: true
+      example: DRS
+    - name: la-deprivation-score
+      type: number
+      description: Composite score calculated for the local authority geography.
+      constraints:
+        unique: true
+      example: 62.310842986626255
+    - name: label
+      type: string
+      description: Quintile label - Quintiles are calclated for lower-tiers, and higher
+        geographies are slotted in depending on score.
+      constraints:
+        unique: false
+        enum:
+        - 1st IMD quintile
+        - 2nd IMD quintile
+        - 3rd IMD quintile
+        - 4th IMD quintile
+        - 5th IMD quintile
+      example: 1st IMD quintile
+    - name: desc
+      type: string
+      description: Fuller description of quintile label
+      constraints:
+        unique: false
+        enum:
+        - Councils in most deprived quintile (20%)
+        - Councils in second most deprived quintile (20%)
+        - Councils in middle deprivation quintile (20%)
+        - Councils in second least deprived quintile (20%)
+        - Councils in least deprived quintile (20%)
+      example: Councils in most deprived quintile (20%)
+    - name: high-deprivation
+      type: number
+      description: Proportion of LA population living in a high deprivation lsoa (quintile
+        1)
+      constraints:
+        unique: false
+      example: 0.8599785833267233
+    - name: low-deprivation
+      type: number
+      description: Proportion of LA population living in a low deprivation losa (quintile
+        4,5)
+      constraints:
+        unique: false
+      example: 0.0
+    - name: medium-deprivation
+      type: number
+      description: Proportion of LA population living in a medium deprivation losa
+        (quintile 2,3)
+      constraints:
+        unique: true
+      example: 0.1400214166732767
+    - name: density
+      type: number
+      description: Population density (people per km2)
+      constraints:
+        unique: true
+      example: 120.79056754596324
+  _sheet_order: 1
+  hash: d574a1e660ed4a33a3f85643726c1e0c
+  download_id: uk-index-la-labels
 - title: UK_IMD_E
   description: England-anchored composite UK Index. English IMD rank ordering will
     be preserved.
@@ -554,6 +635,6 @@ resources:
       example: 1
   hash: c0d0acd7836ee8e263987b1b4f6d80e3
   download_id: uk-index-uk-imd-w
-full_version: 2.0.0
+full_version: 2.1.0
 permalink: /datasets/uk_index/latest
 ---
