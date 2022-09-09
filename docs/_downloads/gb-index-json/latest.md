@@ -5,6 +5,6 @@ package: gb_index
 title: gb_index_json
 filename: gb_index.json
 version: latest
-full_version: latest
+full_version: 1.0.0
 file: /data/gb_index/latest/gb_index.json
 ---

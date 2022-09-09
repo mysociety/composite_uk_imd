@@ -5,6 +5,6 @@ package: uk_index
 title: la_labels
 filename: la_labels.csv
 version: latest
-full_version: latest
+full_version: 2.1.0
 file: /data/uk_index/latest/la_labels.csv
 ---
