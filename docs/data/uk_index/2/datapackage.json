@@ -2,7 +2,7 @@
     "name": "uk_index",
     "title": "Composite UK IMD Index",
     "description": "Composite index that combines four national IMD indexes\n",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "licenses": [
         {
             "name": "CC-BY-4.0",
@@ -48,7 +48,8 @@
         "change_log": {
             "2.0.0": "Updated release of datset fixing incorrect comparison of NI SOAs.",
             "1.0.0": "Initial release of dataset.",
-            "2.1.0": "New resource(s) added: la_labels"
+            "2.1.0": "New resource(s) added: la_labels",
+            "2.1.1": "Minor change in data for resource(s): la_labels,uk_imd_e,uk_imd_n,uk_imd_s,uk_imd_w"
         }
     },
     "resources": [
@@ -156,7 +157,7 @@
                 ]
             },
             "_sheet_order": 1,
-            "hash": "d574a1e660ed4a33a3f85643726c1e0c"
+            "hash": "5287656844cbd7f58e0a157a782ea17a"
         },
         {
             "title": "UK_IMD_E",
@@ -323,7 +324,7 @@
                     }
                 ]
             },
-            "hash": "0f1216618a5b986a5beaf4a385c7c028"
+            "hash": "17fe26b8e51af6040a5b188514a18bf5"
         },
         {
             "title": "UK_IMD_N",
@@ -490,7 +491,7 @@
                     }
                 ]
             },
-            "hash": "9650db4ef4ca23a9e224d4fe61ff75e8"
+            "hash": "4d07dc852a08d50294643606e633217a"
         },
         {
             "title": "UK_IMD_S",
@@ -565,7 +566,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": 128.81086921571062
+                        "example": 128.81086921571065
                     },
                     {
                         "name": "original_decile",
@@ -657,7 +658,7 @@
                     }
                 ]
             },
-            "hash": "7d1d5d7cc0649cc12c0612b7b711055c"
+            "hash": "12a0945faaa7d16f965e2c789f8c2560"
         },
         {
             "title": "UM_IMD_W",
@@ -824,7 +825,7 @@
                     }
                 ]
             },
-            "hash": "c0d0acd7836ee8e263987b1b4f6d80e3"
+            "hash": "8e490fa089d6bee6045ffbb08e4b9f0e"
         }
     ]
 }

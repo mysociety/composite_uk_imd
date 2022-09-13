@@ -5,6 +5,6 @@ package: uk_index
 title: uk_imd_s
 filename: UK_IMD_S.csv
 version: latest
-full_version: 2.1.0
+full_version: 2.1.1
 file: /data/uk_index/latest/UK_IMD_S.csv
 ---

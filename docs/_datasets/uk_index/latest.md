@@ -37,6 +37,7 @@ custom:
     2.0.0: Updated release of datset fixing incorrect comparison of NI SOAs.
     1.0.0: Initial release of dataset.
     2.1.0: 'New resource(s) added: la_labels'
+    2.1.1: 'Minor change in data for resource(s): la_labels,uk_imd_e,uk_imd_n,uk_imd_s,uk_imd_w'
 resources:
 - title: Local Authority deprivation
   description: Deprivation scores calculated for local authorities from UK (E) index.
@@ -116,7 +117,7 @@ resources:
         unique: true
       example: 120.79056754596324
   _sheet_order: 1
-  hash: d574a1e660ed4a33a3f85643726c1e0c
+  hash: 5287656844cbd7f58e0a157a782ea17a
   download_id: uk-index-la-labels
 - title: UK_IMD_E
   description: England-anchored composite UK Index. English IMD rank ordering will
@@ -246,7 +247,7 @@ resources:
         - 4
         - 5
       example: 1
-  hash: 0f1216618a5b986a5beaf4a385c7c028
+  hash: 17fe26b8e51af6040a5b188514a18bf5
   download_id: uk-index-uk-imd-e
 - title: UK_IMD_N
   description: Northern Ireland anchored composite UK Index. Northern Ireland IMD
@@ -375,7 +376,7 @@ resources:
         - 4
         - 5
       example: 1
-  hash: 9650db4ef4ca23a9e224d4fe61ff75e8
+  hash: 4d07dc852a08d50294643606e633217a
   download_id: uk-index-uk-imd-n
 - title: UK_IMD_S
   description: Scotland-anchored composite UK Index. Scotland IMD rank ordering will
@@ -432,7 +433,7 @@ resources:
         re-predicted based on Scottish model.
       constraints:
         unique: false
-      example: 128.81086921571062
+      example: 128.81086921571065
     - name: original_decile
       type: integer
       description: Deprivation decile in original index.
@@ -504,7 +505,7 @@ resources:
         - 4
         - 5
       example: 1
-  hash: 7d1d5d7cc0649cc12c0612b7b711055c
+  hash: 12a0945faaa7d16f965e2c789f8c2560
   download_id: uk-index-uk-imd-s
 - title: UM_IMD_W
   description: Wales-anchored composite UK Index. Wales IMD rank ordering will be
@@ -633,8 +634,8 @@ resources:
         - 4
         - 5
       example: 1
-  hash: c0d0acd7836ee8e263987b1b4f6d80e3
+  hash: 8e490fa089d6bee6045ffbb08e4b9f0e
   download_id: uk-index-uk-imd-w
-full_version: 2.1.0
+full_version: 2.1.1
 permalink: /datasets/uk_index/latest
 ---
