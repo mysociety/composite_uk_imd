@@ -9,6 +9,7 @@ def update_data_and_build():
     fill_in_scores()
     produce_indexes_and_analysis()
     run_notebook(Path("notebooks", "generate_la_imd.ipynb"))
+    run_notebook(Path("notebooks", "generate_con_imd.ipynb"))
 
 
 @click.group()

@@ -11,6 +11,10 @@ versions:
   - '2'
   - '2.1'
   - 2.1.1
+  3.0.0:
+  - '3'
+  - '3.0'
+  - 3.0.0
   - latest
 permalink: /datasets/uk_index/versions
 ---

@@ -53,7 +53,7 @@ schema:
       re-predicted based on Scottish model.
     constraints:
       unique: false
-    example: 128.81086921571065
+    example: 128.81086921571062
   - name: original_decile
     type: integer
     description: Deprivation decile in original index.
@@ -125,4 +125,4 @@ schema:
       - 4
       - 5
     example: 1
-hash: 12a0945faaa7d16f965e2c789f8c2560
+hash: 7d1d5d7cc0649cc12c0612b7b711055c

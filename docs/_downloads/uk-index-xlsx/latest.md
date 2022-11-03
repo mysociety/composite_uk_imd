@@ -5,6 +5,6 @@ package: uk_index
 title: uk_index_xlsx
 filename: uk_index.xlsx
 version: latest
-full_version: 2.1.1
+full_version: 3.0.0
 file: /data/uk_index/latest/uk_index.xlsx
 ---

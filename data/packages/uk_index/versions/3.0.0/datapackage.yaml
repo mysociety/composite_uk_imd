@@ -1,0 +1,40 @@
+name: uk_index
+title: Composite UK IMD Index
+description: "Composite index that combines four national IMD indexes\n"
+version: 3.0.0
+licenses:
+- name: CC-BY-4.0
+  path: https://creativecommons.org/licenses/by/4.0/
+  title: Creative Commons Attribution 4.0 International License
+contributors:
+- title: mySociety
+  path: https://mysociety.org
+  role: author
+custom:
+  build: composite_uk_imd.__main__:update_data_and_build
+  tests:
+  - test_composite_uk_imd
+  dataset_order: 0
+  download_options:
+    gate: default
+    survey: default
+    header_text: default
+  composite:
+    xlsx:
+      include: all
+      exclude: none
+      render: true
+    sqlite:
+      include: all
+      exclude: none
+      render: true
+    json:
+      include: all
+      exclude: none
+      render: false
+  change_log:
+    2.0.0: Updated release of datset fixing incorrect comparison of NI SOAs.
+    1.0.0: Initial release of dataset.
+    2.1.0: 'New resource(s) added: la_labels'
+    2.1.1: 'Minor change in data for resource(s): la_labels,uk_imd_e,uk_imd_n,uk_imd_s,uk_imd_w'
+    3.0.0: Tidied up and added LA/Constituency level deprivation scores

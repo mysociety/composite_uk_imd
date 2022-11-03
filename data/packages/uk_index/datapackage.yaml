@@ -1,7 +1,7 @@
 name: uk_index
 title: Composite UK IMD Index
 description: "Composite index that combines four national IMD indexes\n"
-version: 2.1.1
+version: 3.0.0
 licenses:
 - name: CC-BY-4.0
   path: https://creativecommons.org/licenses/by/4.0/
@@ -37,3 +37,4 @@ custom:
     1.0.0: Initial release of dataset.
     2.1.0: 'New resource(s) added: la_labels'
     2.1.1: 'Minor change in data for resource(s): la_labels,uk_imd_e,uk_imd_n,uk_imd_s,uk_imd_w'
+    3.0.0: Tidied up and added LA/Constituency level deprivation scores

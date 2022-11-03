@@ -14,7 +14,7 @@ contributors:
 custom:
   build: composite_uk_imd.__main__:update_data_and_build
   tests:
-  - test_composite_uk_imd_index
+  - test_composite_uk_imd
   dataset_order: 0
   download_options:
     gate: default
@@ -38,13 +38,14 @@ custom:
     1.0.0: Initial release of dataset.
     2.1.0: 'New resource(s) added: la_labels'
     2.1.1: 'Minor change in data for resource(s): la_labels,uk_imd_e,uk_imd_n,uk_imd_s,uk_imd_w'
+    3.0.0: Tidied up and added LA/Constituency level deprivation scores
 resources:
 - title: Local Authority deprivation
   description: Deprivation scores calculated for local authorities from UK (E) index.
   custom:
     row_count: 409
-  path: la_labels.csv
-  name: la_labels
+  path: la_imd.csv
+  name: la_imd
   profile: tabular-data-resource
   scheme: file
   format: csv
@@ -58,6 +59,12 @@ resources:
       constraints:
         unique: true
       example: DRS
+    - name: official-name
+      type: string
+      description: Full name of local authority.
+      constraints:
+        unique: true
+      example: Derry City and Strabane District Council
     - name: la-deprivation-score
       type: number
       description: Composite score calculated for the local authority geography.
@@ -89,13 +96,6 @@ resources:
         - Councils in second least deprived quintile (20%)
         - Councils in least deprived quintile (20%)
       example: Councils in most deprived quintile (20%)
-    - name: high-deprivation
-      type: number
-      description: Proportion of LA population living in a high deprivation lsoa (quintile
-        1)
-      constraints:
-        unique: false
-      example: 0.8599785833267233
     - name: low-deprivation
       type: number
       description: Proportion of LA population living in a low deprivation losa (quintile
@@ -110,15 +110,166 @@ resources:
       constraints:
         unique: true
       example: 0.1400214166732767
+    - name: high-deprivation
+      type: number
+      description: Proportion of LA population living in a high deprivation lsoa (quintile
+        1)
+      constraints:
+        unique: false
+      example: 0.8599785833267233
     - name: density
       type: number
       description: Population density (people per km2)
       constraints:
         unique: true
       example: 120.79056754596324
+    - name: la-imd-pop-quintile
+      type: integer
+      description: Local authorities grouped into five quintiles. Quintile 1 is councils
+        with highest deprivation that account for 1/5 of population (not 1/5 of councils).
+        Higher level authorites are slotted into based on scores.
+      constraints:
+        unique: false
+        enum:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+      example: 1
+    - name: la-imd-pop-decile
+      type: integer
+      description: Local authorities grouped into 10 decile. Decile 1 is councils
+        with highest deprivation that account for 1/10 of population (not 1/10 of
+        councils). Higher level authorites are slotted into based on scores.
+      constraints:
+        unique: false
+        enum:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 10
+      example: 1
   _sheet_order: 1
-  hash: 5287656844cbd7f58e0a157a782ea17a
-  download_id: uk-index-la-labels
+  hash: dc0cfa31acbb13a85ebcff61de41590f
+  download_id: uk-index-la-imd
+- title: Westminster Constituency deprivation
+  description: Deprivation scores calculated for parliamentary constituencies from
+    UK (E) index.
+  custom:
+    row_count: 650
+  path: constituency_imd.csv
+  name: constituency_imd
+  profile: tabular-data-resource
+  scheme: file
+  format: csv
+  hashing: md5
+  encoding: utf-8
+  schema:
+    fields:
+    - name: gss-code
+      type: string
+      description: GSS code for 2010-set Westminster Parliamentary constituencies
+      constraints:
+        unique: true
+      example: N06000004
+    - name: constituency-name
+      type: string
+      description: Name of constituency
+      constraints:
+        unique: true
+      example: Belfast West
+    - name: pcon-deprivation-score
+      type: number
+      description: Composite score calculated for the constituency geography.
+      constraints:
+        unique: true
+      example: 71.9006169718264
+    - name: label
+      type: string
+      description: IMD Quintile of constituency
+      constraints:
+        unique: false
+        enum:
+        - 1st IMD quintile
+        - 2nd IMD quintile
+        - 3rd IMD quintile
+        - 4th IMD quintile
+        - 5th IMD quintile
+      example: 1st IMD quintile
+    - name: desc
+      type: string
+      description: Fuller description of label
+      constraints:
+        unique: false
+        enum:
+        - Constituencies in most deprived quintile (20%)
+        - Constituencies in second most deprived quintile (20%)
+        - Constituencies in middle deprivation quintile (20%)
+        - Constituencies in second least deprived quintile (20%)
+        - Constituencies in least deprived quintile (20%)
+      example: Constituencies in most deprived quintile (20%)
+    - name: low-deprivation
+      type: number
+      description: Proportion of constituency population living in a low deprivation
+        losa (quintile 4,5)
+      constraints:
+        unique: false
+      example: 0.0
+    - name: medium-deprivation
+      type: number
+      description: Proportion of constituency population living in a low deprivation
+        losa (quintile 2,3 )
+      constraints:
+        unique: true
+      example: 0.0461904007603358
+    - name: high-deprivation
+      type: number
+      description: Proportion of constituency population living in a high deprivation
+        lsoa (quintile 1)
+      constraints:
+        unique: false
+      example: 0.953809599239664
+    - name: pcon-imd-pop-quintile
+      type: integer
+      description: Constituencies grouped into five quintiles. Quintile 1 is constituencies
+        with highest deprivation that account for 1/5 of population (not 1/5 of constituencies)
+      constraints:
+        unique: false
+        enum:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+      example: 1
+    - name: pcon-imd-pop-decile
+      type: integer
+      description: Constituencies grouped into ten deciles. Decile 1 is constituencies
+        with highest deprivation that account for 1/10 of population (not 1/5 of constituencies)
+      constraints:
+        unique: false
+        enum:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 10
+      example: 1
+  _sheet_order: 2
+  hash: ee0f3bf77ce51ef068a11fe0b1f3e9da
+  download_id: uk-index-constituency-imd
 - title: UK_IMD_E
   description: England-anchored composite UK Index. English IMD rank ordering will
     be preserved.
@@ -247,7 +398,7 @@ resources:
         - 4
         - 5
       example: 1
-  hash: 17fe26b8e51af6040a5b188514a18bf5
+  hash: 0f1216618a5b986a5beaf4a385c7c028
   download_id: uk-index-uk-imd-e
 - title: UK_IMD_N
   description: Northern Ireland anchored composite UK Index. Northern Ireland IMD
@@ -376,7 +527,7 @@ resources:
         - 4
         - 5
       example: 1
-  hash: 4d07dc852a08d50294643606e633217a
+  hash: 9650db4ef4ca23a9e224d4fe61ff75e8
   download_id: uk-index-uk-imd-n
 - title: UK_IMD_S
   description: Scotland-anchored composite UK Index. Scotland IMD rank ordering will
@@ -433,7 +584,7 @@ resources:
         re-predicted based on Scottish model.
       constraints:
         unique: false
-      example: 128.81086921571065
+      example: 128.81086921571062
     - name: original_decile
       type: integer
       description: Deprivation decile in original index.
@@ -505,7 +656,7 @@ resources:
         - 4
         - 5
       example: 1
-  hash: 12a0945faaa7d16f965e2c789f8c2560
+  hash: 7d1d5d7cc0649cc12c0612b7b711055c
   download_id: uk-index-uk-imd-s
 - title: UM_IMD_W
   description: Wales-anchored composite UK Index. Wales IMD rank ordering will be
@@ -634,8 +785,8 @@ resources:
         - 4
         - 5
       example: 1
-  hash: 8e490fa089d6bee6045ffbb08e4b9f0e
+  hash: c0d0acd7836ee8e263987b1b4f6d80e3
   download_id: uk-index-uk-imd-w
-full_version: 2.1.1
+full_version: 3.0.0
 permalink: /datasets/uk_index/latest
 ---
