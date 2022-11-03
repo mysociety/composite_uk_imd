@@ -75,5 +75,34 @@ schema:
     constraints:
       unique: true
     example: 120.79056754596324
+  - name: la_imd_pop_quintile
+    type: integer
+    description: Local authorities grouped into five quintiles. Quintile 1 is councils with highest deprivation that account for 1/5 of population (not 1/5 of councils). Higher level authorites are slotted into based on scores.
+    constraints:
+      unique: false
+      enum:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+    example: 1
+  - name: la_imd_pop_decile
+    type: integer
+    description: Local authorities grouped into 10 decile. Decile 1 is councils with highest deprivation that account for 1/10 of population (not 1/10 of councils). Higher level authorites are slotted into based on scores.
+    constraints:
+      unique: false
+      enum:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+    example: 1
 _sheet_order: 1
-hash: 5287656844cbd7f58e0a157a782ea17a
+hash: d0eccb8fe7a3a3278b00b415e593f878
