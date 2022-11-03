@@ -2,7 +2,7 @@ name: gb_index
 title: Composite GB IMD Index
 description: "Composite index that combines three national IMD indexes (Excluding\
   \ Northern Ireland)\n"
-version: 1.0.1
+version: 1.0.2
 licenses:
 - name: CC-BY-4.0
   path: https://creativecommons.org/licenses/by/4.0/
@@ -36,3 +36,4 @@ custom:
   change_log:
     1.0.0: Initial release of dataset.
     1.0.1: 'Minor change in data for resource(s): gb_imd_e,gb_imd_s,gb_imd_w'
+    1.0.2: 'Minor change in data for resource(s): gb_imd_e,gb_imd_s,gb_imd_w'

@@ -5,6 +5,6 @@ package: gb_index
 title: gb_imd_w
 filename: GB_IMD_W.csv
 version: latest
-full_version: 1.0.1
+full_version: 1.0.2
 file: /data/gb_index/latest/GB_IMD_W.csv
 ---
