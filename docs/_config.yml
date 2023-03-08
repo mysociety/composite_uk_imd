@@ -3,7 +3,7 @@ title: Composite 2020 UK Index of Multiple Deprivation
 description: Composite version of UK and GB wide deprivation indexes for small areas.
 
 baseurl: "/composite_uk_imd"
-url: "https://mysociety.github.io"
+url: "https://pages.mysociety.org"
 
 collections:
   versionlists:
