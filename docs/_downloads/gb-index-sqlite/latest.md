@@ -5,6 +5,6 @@ package: gb_index
 title: gb_index_sqlite
 filename: gb_index.sqlite
 version: latest
-full_version: 1.0.2
+full_version: 1.0.3
 file: /data/gb_index/latest/gb_index.sqlite
 ---

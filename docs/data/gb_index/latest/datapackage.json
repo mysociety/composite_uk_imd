@@ -2,7 +2,7 @@
     "name": "gb_index",
     "title": "Composite GB IMD Index",
     "description": "Composite index that combines three national IMD indexes (Excluding Northern Ireland)\n",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "licenses": [
         {
             "name": "CC-BY-4.0",
@@ -48,7 +48,8 @@
         "change_log": {
             "1.0.0": "Initial release of dataset.",
             "1.0.1": "Minor change in data for resource(s): gb_imd_e,gb_imd_s,gb_imd_w",
-            "1.0.2": "Minor change in data for resource(s): gb_imd_e,gb_imd_s,gb_imd_w"
+            "1.0.2": "Minor change in data for resource(s): gb_imd_e,gb_imd_s,gb_imd_w",
+            "1.0.3": "gb_imd_e: example changed from E01021988 to E01000001"
         }
     },
     "resources": [
@@ -88,7 +89,7 @@
                         "constraints": {
                             "unique": true
                         },
-                        "example": "E01021988"
+                        "example": "E01000001"
                     },
                     {
                         "name": "overall_local_score",
@@ -97,7 +98,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": 92.735
+                        "example": 0.5
                     },
                     {
                         "name": "income_score",
@@ -106,7 +107,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": 56.89999999999999
+                        "example": 0.0
                     },
                     {
                         "name": "employment_score",
@@ -115,7 +116,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": 53.400000000000006
+                        "example": 0.0
                     },
                     {
                         "name": "GB_IMD_E_score",
@@ -124,7 +125,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": 92.735
+                        "example": 0.541
                     },
                     {
                         "name": "original_decile",
@@ -254,7 +255,7 @@
                         "constraints": {
                             "unique": true
                         },
-                        "example": "E01021988"
+                        "example": "E01000001"
                     },
                     {
                         "name": "overall_local_score",
@@ -263,7 +264,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": 92.735
+                        "example": 0.5
                     },
                     {
                         "name": "income_score",
@@ -272,7 +273,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": 56.89999999999999
+                        "example": 0.0
                     },
                     {
                         "name": "employment_score",
@@ -281,7 +282,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": 53.400000000000006
+                        "example": 0.0
                     },
                     {
                         "name": "GB_IMD_S_score",
@@ -290,7 +291,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": 101.4675158494616
+                        "example": 0.9816448989246505
                     },
                     {
                         "name": "original_decile",
@@ -411,7 +412,7 @@
                                 "S"
                             ]
                         },
-                        "example": "W"
+                        "example": "E"
                     },
                     {
                         "name": "lsoa",
@@ -420,7 +421,7 @@
                         "constraints": {
                             "unique": true
                         },
-                        "example": "W01000240"
+                        "example": "E01000001"
                     },
                     {
                         "name": "overall_local_score",
@@ -429,7 +430,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": 86.6
+                        "example": 0.5
                     },
                     {
                         "name": "income_score",
@@ -438,7 +439,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": 61.0
+                        "example": 0.0
                     },
                     {
                         "name": "employment_score",
@@ -447,7 +448,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": 43.0
+                        "example": 0.0
                     },
                     {
                         "name": "GB_IMD_W_score",
@@ -456,7 +457,7 @@
                         "constraints": {
                             "unique": false
                         },
-                        "example": 86.6
+                        "example": -4.168546562431074
                     },
                     {
                         "name": "original_decile",
