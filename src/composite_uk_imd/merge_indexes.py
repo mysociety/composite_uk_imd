@@ -188,7 +188,7 @@ def transform_all_to(
     just_origin = just_origin.groupby("original_decile")
     limits = just_origin.agg({col_name + "_score": ["min"]})
     limits = limits.reset_index()
-    limits.columns = ["decile", "min_score"]
+    limits.columns = ["decile", "min_score"]  # type: ignore
     limits = limits.sort_values("decile", ascending=True)
 
     decile_col = destination_index + "_expanded_decile"
@@ -248,8 +248,8 @@ def deprivation_breakdown(nation="E", setting="uk", nations="ENSW"):
         index=[f"{setting.upper()}_IMD_{nation}_pop_decile"],
         aggfunc="sum",
     ).fillna(0)
-    pt.index.name = "IMD Decile distribution"
-    pt.columns.name = None
+    pt.index.name = "IMD Decile distribution"  # type: ignore
+    pt.columns.name = None  # type: ignore
     for n in nations:
         pt[n] = round(pt[n] / pt[n].sum(), 4)
     pt.to_csv(
