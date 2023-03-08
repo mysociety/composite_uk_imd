@@ -17,19 +17,19 @@ schema:
     description: GSS code for 2010-set Westminster Parliamentary constituencies
     constraints:
       unique: true
-    example: N06000004
+    example: E14000530
   - name: constituency-name
     type: string
     description: Name of constituency
     constraints:
       unique: true
-    example: Belfast West
+    example: Aberavon
   - name: pcon-deprivation-score
     type: number
     description: Composite score calculated for the constituency geography.
     constraints:
       unique: true
-    example: 71.9006169718264
+    example: 6.064711140989138
   - name: label
     type: string
     description: IMD Quintile of constituency
@@ -53,7 +53,7 @@ schema:
       - Constituencies in middle deprivation quintile (20%)
       - Constituencies in second least deprived quintile (20%)
       - Constituencies in least deprived quintile (20%)
-    example: Constituencies in most deprived quintile (20%)
+    example: Constituencies in least deprived quintile (20%)
   - name: low-deprivation
     type: number
     description: Proportion of constituency population living in a low deprivation
@@ -67,14 +67,14 @@ schema:
       losa (quintile 2,3 )
     constraints:
       unique: true
-    example: 0.0461904007603358
+    example: 0.0305634644451474
   - name: high-deprivation
     type: number
     description: Proportion of constituency population living in a high deprivation
       lsoa (quintile 1)
     constraints:
       unique: false
-    example: 0.953809599239664
+    example: 0.0
   - name: pcon-imd-pop-quintile
     type: integer
     description: Constituencies grouped into five quintiles. Quintile 1 is constituencies

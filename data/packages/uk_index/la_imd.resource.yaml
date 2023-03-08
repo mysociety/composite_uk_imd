@@ -1,7 +1,7 @@
 title: Local Authority deprivation
 description: Deprivation scores calculated for local authorities from UK (E) index.
 custom:
-  row_count: 409
+  row_count: 393
 path: la_imd.csv
 name: la_imd
 profile: tabular-data-resource
@@ -16,19 +16,19 @@ schema:
     description: 3/4 letter local authority code.
     constraints:
       unique: true
-    example: DRS
+    example: ABC
   - name: official-name
     type: string
     description: Full name of local authority.
     constraints:
       unique: true
-    example: Derry City and Strabane District Council
+    example: Aberdeen City Council
   - name: la-deprivation-score
     type: number
     description: Composite score calculated for the local authority geography.
     constraints:
       unique: true
-    example: 62.310842986626255
+    example: 5.618004130911788
   - name: label
     type: string
     description: Quintile label - Quintiles are calclated for lower-tiers, and higher
@@ -53,7 +53,7 @@ schema:
       - Councils in middle deprivation quintile (20%)
       - Councils in second least deprived quintile (20%)
       - Councils in least deprived quintile (20%)
-    example: Councils in most deprived quintile (20%)
+    example: Councils in least deprived quintile (20%)
   - name: low-deprivation
     type: number
     description: Proportion of LA population living in a low deprivation losa (quintile
@@ -67,20 +67,20 @@ schema:
       2,3)
     constraints:
       unique: true
-    example: 0.1400214166732767
+    example: 0.0
   - name: high-deprivation
     type: number
     description: Proportion of LA population living in a high deprivation lsoa (quintile
       1)
     constraints:
       unique: false
-    example: 0.8599785833267233
+    example: 0.0
   - name: density
     type: number
     description: Population density (people per km2)
     constraints:
       unique: true
-    example: 120.79056754596324
+    example: 8.671465968586388
   - name: la-imd-pop-quintile
     type: integer
     description: Local authorities grouped into five quintiles. Quintile 1 is councils
@@ -115,4 +115,4 @@ schema:
       - 10
     example: 1
 _sheet_order: 1
-hash: dc0cfa31acbb13a85ebcff61de41590f
+hash: fdf3939cda09f8ce4156da3d195f110b
