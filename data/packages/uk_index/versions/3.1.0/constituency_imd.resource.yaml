@@ -1,0 +1,110 @@
+title: Westminster Constituency deprivation
+description: Deprivation scores calculated for parliamentary constituencies from UK
+  (E) index.
+custom:
+  row_count: 650
+path: constituency_imd.csv
+name: constituency_imd
+profile: tabular-data-resource
+scheme: file
+format: csv
+hashing: md5
+encoding: utf-8
+schema:
+  fields:
+  - name: gss-code
+    type: string
+    description: GSS code for 2010-set Westminster Parliamentary constituencies
+    constraints:
+      unique: true
+    example: E14000530
+  - name: constituency-name
+    type: string
+    description: Name of constituency
+    constraints:
+      unique: true
+    example: Aberavon
+  - name: pcon-deprivation-score
+    type: number
+    description: Composite score calculated for the constituency geography.
+    constraints:
+      unique: true
+    example: 6.064711140989138
+  - name: label
+    type: string
+    description: IMD Quintile of constituency
+    constraints:
+      unique: false
+      enum:
+      - 1st IMD quintile
+      - 2nd IMD quintile
+      - 3rd IMD quintile
+      - 4th IMD quintile
+      - 5th IMD quintile
+    example: 1st IMD quintile
+  - name: desc
+    type: string
+    description: Fuller description of label
+    constraints:
+      unique: false
+      enum:
+      - Constituencies in most deprived quintile (20%)
+      - Constituencies in second most deprived quintile (20%)
+      - Constituencies in middle deprivation quintile (20%)
+      - Constituencies in second least deprived quintile (20%)
+      - Constituencies in least deprived quintile (20%)
+    example: Constituencies in least deprived quintile (20%)
+  - name: low-deprivation
+    type: number
+    description: Proportion of constituency population living in a low deprivation
+      losa (quintile 4,5)
+    constraints:
+      unique: false
+    example: 0.0
+  - name: medium-deprivation
+    type: number
+    description: Proportion of constituency population living in a low deprivation
+      losa (quintile 2,3 )
+    constraints:
+      unique: true
+    example: 0.0305634644451474
+  - name: high-deprivation
+    type: number
+    description: Proportion of constituency population living in a high deprivation
+      lsoa (quintile 1)
+    constraints:
+      unique: false
+    example: 0.0
+  - name: pcon-imd-pop-quintile
+    type: integer
+    description: Constituencies grouped into five quintiles. Quintile 1 is constituencies
+      with highest deprivation that account for 1/5 of population (not 1/5 of constituencies)
+    constraints:
+      unique: false
+      enum:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+    example: 1
+  - name: pcon-imd-pop-decile
+    type: integer
+    description: Constituencies grouped into ten deciles. Decile 1 is constituencies
+      with highest deprivation that account for 1/10 of population (not 1/5 of constituencies)
+    constraints:
+      unique: false
+      enum:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+    example: 1
+_sheet_order: 2
+hash: ee0f3bf77ce51ef068a11fe0b1f3e9da

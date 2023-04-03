@@ -39,6 +39,8 @@ custom:
     2.1.0: 'New resource(s) added: la_labels'
     2.1.1: 'Minor change in data for resource(s): la_labels,uk_imd_e,uk_imd_n,uk_imd_s,uk_imd_w'
     3.0.0: Tidied up and added LA/Constituency level deprivation scores
+    3.1.0-futurecouncils: Update to 2023 councils
+    3.1.0: Release 2023 council data
   formats:
     csv: true
     parquet: true
@@ -46,7 +48,7 @@ resources:
 - title: Local Authority deprivation
   description: Deprivation scores calculated for local authorities from UK (E) index.
   custom:
-    row_count: 409
+    row_count: 393
   path: la_imd.csv
   name: la_imd
   profile: tabular-data-resource
@@ -61,19 +63,19 @@ resources:
       description: 3/4 letter local authority code.
       constraints:
         unique: true
-      example: DRS
+      example: ABC
     - name: official-name
       type: string
       description: Full name of local authority.
       constraints:
         unique: true
-      example: Derry City and Strabane District Council
+      example: Aberdeen City Council
     - name: la-deprivation-score
       type: number
       description: Composite score calculated for the local authority geography.
       constraints:
         unique: true
-      example: 62.310842986626255
+      example: 5.618004130911788
     - name: label
       type: string
       description: Quintile label - Quintiles are calclated for lower-tiers, and higher
@@ -98,7 +100,7 @@ resources:
         - Councils in middle deprivation quintile (20%)
         - Councils in second least deprived quintile (20%)
         - Councils in least deprived quintile (20%)
-      example: Councils in most deprived quintile (20%)
+      example: Councils in least deprived quintile (20%)
     - name: low-deprivation
       type: number
       description: Proportion of LA population living in a low deprivation losa (quintile
@@ -112,20 +114,20 @@ resources:
         (quintile 2,3)
       constraints:
         unique: true
-      example: 0.1400214166732767
+      example: 0.0
     - name: high-deprivation
       type: number
       description: Proportion of LA population living in a high deprivation lsoa (quintile
         1)
       constraints:
         unique: false
-      example: 0.8599785833267233
+      example: 0.0
     - name: density
       type: number
       description: Population density (people per km2)
       constraints:
         unique: true
-      example: 120.79056754596324
+      example: 8.671465968586388
     - name: la-imd-pop-quintile
       type: integer
       description: Local authorities grouped into five quintiles. Quintile 1 is councils
@@ -160,7 +162,7 @@ resources:
         - 10
       example: 1
   _sheet_order: 1
-  hash: dc0cfa31acbb13a85ebcff61de41590f
+  hash: fdf3939cda09f8ce4156da3d195f110b
 - title: Westminster Constituency deprivation
   description: Deprivation scores calculated for parliamentary constituencies from
     UK (E) index.
@@ -180,19 +182,19 @@ resources:
       description: GSS code for 2010-set Westminster Parliamentary constituencies
       constraints:
         unique: true
-      example: N06000004
+      example: E14000530
     - name: constituency-name
       type: string
       description: Name of constituency
       constraints:
         unique: true
-      example: Belfast West
+      example: Aberavon
     - name: pcon-deprivation-score
       type: number
       description: Composite score calculated for the constituency geography.
       constraints:
         unique: true
-      example: 71.9006169718264
+      example: 6.064711140989138
     - name: label
       type: string
       description: IMD Quintile of constituency
@@ -216,7 +218,7 @@ resources:
         - Constituencies in middle deprivation quintile (20%)
         - Constituencies in second least deprived quintile (20%)
         - Constituencies in least deprived quintile (20%)
-      example: Constituencies in most deprived quintile (20%)
+      example: Constituencies in least deprived quintile (20%)
     - name: low-deprivation
       type: number
       description: Proportion of constituency population living in a low deprivation
@@ -230,14 +232,14 @@ resources:
         losa (quintile 2,3 )
       constraints:
         unique: true
-      example: 0.0461904007603358
+      example: 0.0305634644451474
     - name: high-deprivation
       type: number
       description: Proportion of constituency population living in a high deprivation
         lsoa (quintile 1)
       constraints:
         unique: false
-      example: 0.953809599239664
+      example: 0.0
     - name: pcon-imd-pop-quintile
       type: integer
       description: Constituencies grouped into five quintiles. Quintile 1 is constituencies
@@ -295,38 +297,38 @@ resources:
         - E
         - S
         - W
-      example: N
+      example: E
     - name: lsoa
       type: string
       description: UK small statistical area (LSOA, DZ, SOA)
       constraints:
         unique: true
-      example: 95ZZ06W1
+      example: 95AA01S1
     - name: overall_local_score
       type: number
       description: The overall IMD score for this area in the individual index
       constraints:
         unique: false
-      example: 75.19204448526636
+      example: 0.5
     - name: income_score
       type: number
       description: The Income subdomain score in the individual index
       constraints:
         unique: false
-      example: 25.8
+      example: 0.0
     - name: employment_score
       type: number
       description: The Employment subdomain score in the individual index
       constraints:
         unique: false
-      example: 53.0
+      example: 0.0
     - name: UK_IMD_E_score
       type: number
       description: The composite score for the UK wide composite, with other nations
         re-predicted based on English model.
       constraints:
         unique: false
-      example: 123.00849692191194
+      example: 0.3879532776292187
     - name: original_decile
       type: integer
       description: Deprivation decile in original index.
@@ -424,38 +426,38 @@ resources:
         - S
         - E
         - W
-      example: N
+      example: E
     - name: lsoa
       type: string
       description: UK small statistical area (LSOA, DZ, SOA)
       constraints:
         unique: true
-      example: 95ZZ06W1
+      example: 95AA01S1
     - name: overall_local_score
       type: number
       description: The overall IMD score for this area in the indiviudal index
       constraints:
         unique: false
-      example: 75.19204448526636
+      example: 0.5
     - name: income_score
       type: number
       description: The Income subdomain score in the individual index
       constraints:
         unique: false
-      example: 25.8
+      example: 0.0
     - name: employment_score
       type: number
       description: The Employment subdomain score in the individual index
       constraints:
         unique: false
-      example: 53.0
+      example: 0.0
     - name: UK_IMD_N_score
       type: number
       description: The composite score for the UK wide composite, with other nations
         re-predicted based on Northern Ireland model.
       constraints:
         unique: false
-      example: 75.19204448526636
+      example: -10.296098055297383
     - name: original_decile
       type: integer
       description: Deprivation decile in original index.
@@ -552,38 +554,38 @@ resources:
         - E
         - S
         - W
-      example: N
+      example: E
     - name: lsoa
       type: string
       description: UK small statistical area (LSOA, DZ, SOA)
       constraints:
         unique: true
-      example: 95GG35S2
+      example: 95AA01S1
     - name: overall_local_score
       type: number
       description: The overall IMD score for this area in the indiviudal index
       constraints:
         unique: false
-      example: 68.03145551017063
+      example: 0.5
     - name: income_score
       type: number
       description: The Income subdomain score in the individual index
       constraints:
         unique: false
-      example: 18.8
+      example: 0.0
     - name: employment_score
       type: number
       description: The Employment subdomain score in the individual index
       constraints:
         unique: false
-      example: 59.4
+      example: 0.0
     - name: UK_IMD_S_score
       type: number
       description: The composite score for the UK wide composite, with other nations
         re-predicted based on Scottish model.
       constraints:
         unique: false
-      example: 128.81086921571062
+      example: 0.9816448989246505
     - name: original_decile
       type: integer
       description: Deprivation decile in original index.
@@ -680,38 +682,38 @@ resources:
         - E
         - S
         - W
-      example: N
+      example: E
     - name: lsoa
       type: string
       description: UK small statistical area (LSOA, DZ, SOA)
       constraints:
         unique: true
-      example: 95ZZ06W1
+      example: 95AA01S1
     - name: overall_local_score
       type: number
       description: The overall IMD score for this area in the indiviudal index
       constraints:
         unique: false
-      example: 75.19204448526636
+      example: 0.5
     - name: income_score
       type: number
       description: The Income subdomain score in the individual index
       constraints:
         unique: false
-      example: 25.8
+      example: 0.0
     - name: employment_score
       type: number
       description: The Employment subdomain score in the individual index
       constraints:
         unique: false
-      example: 53.0
+      example: 0.0
     - name: UK_IMD_W_score
       type: number
       description: The composite score for the UK wide composite, with other nations
         re-predicted based on Wales model.
       constraints:
         unique: false
-      example: 133.27419581040678
+      example: -3.501677163033204
     - name: original_decile
       type: integer
       description: Deprivation decile in original index.
@@ -784,6 +786,6 @@ resources:
         - 5
       example: 1
   hash: c0d0acd7836ee8e263987b1b4f6d80e3
-full_version: 3.0.0
+full_version: 3.1.0
 permalink: /datasets/uk_index/latest
 ---
