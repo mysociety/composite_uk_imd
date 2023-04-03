@@ -20,38 +20,38 @@ schema:
       - W
       - E
       - S
-    example: W
+    example: E
   - name: lsoa
     type: string
     description: GB small statistical area (LSOA, DZ)
     constraints:
       unique: true
-    example: W01000240
+    example: E01000001
   - name: overall_local_score
     type: number
     description: The overall IMD score for this area in the indiviudal index
     constraints:
       unique: false
-    example: 86.6
+    example: 0.5
   - name: income_score
     type: number
     description: The Income subdomain score in the individual index
     constraints:
       unique: false
-    example: 61.0
+    example: 0.0
   - name: employment_score
     type: number
     description: The Employment subdomain score in the individual index
     constraints:
       unique: false
-    example: 43.0
+    example: 0.0
   - name: GB_IMD_W_score
     type: number
     description: The composite score for the GB wide composite, with other nations
       re-predicted based on Wales model.
     constraints:
       unique: false
-    example: 86.6
+    example: -4.168546562431074
   - name: original_decile
     type: integer
     description: Deprivation decile in original index.
