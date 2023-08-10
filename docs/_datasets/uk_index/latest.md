@@ -41,6 +41,7 @@ custom:
     3.0.0: Tidied up and added LA/Constituency level deprivation scores
     3.1.0-futurecouncils: Update to 2023 councils
     3.1.0: Release 2023 council data
+    3.2.0: 'New resource(s) added: constituency_imd,parl25_imd'
   formats:
     csv: true
     parquet: true
@@ -229,7 +230,7 @@ resources:
     - name: medium-deprivation
       type: number
       description: Proportion of constituency population living in a low deprivation
-        losa (quintile 2,3 )
+        losa (quintile 2,3)
       constraints:
         unique: true
       example: 0.0305634644451474
@@ -786,6 +787,112 @@ resources:
         - 5
       example: 1
   hash: c0d0acd7836ee8e263987b1b4f6d80e3
-full_version: 3.1.0
+- title: Constituencies (2025) by IMD
+  description: Composite IMD scores and bandings for 2025 Constituencies
+  custom:
+    row_count: 650
+  path: parl25_imd.csv
+  name: parl25_imd
+  profile: tabular-data-resource
+  scheme: file
+  format: csv
+  hashing: md5
+  encoding: utf-8
+  schema:
+    fields:
+    - name: parl25
+      type: string
+      description: short code for constituency as used in https://pages.mysociety.org/2025-constituencies/datasets/parliament_con_2025/latest
+      constraints:
+        unique: true
+      example: UKPARL.2025.AAD
+    - name: constituency-name
+      type: string
+      description: name of constituency
+      constraints:
+        unique: true
+      example: Aberafan Maesteg
+    - name: parl25-deprivation-score
+      type: number
+      description: IMD score for constituency
+      constraints:
+        unique: true
+      example: 5.732661845759454
+    - name: label
+      type: string
+      description: IMD banding for constituency
+      constraints:
+        unique: false
+        enum:
+        - 1st IMD quintile
+        - 2nd IMD quintile
+        - 3rd IMD quintile
+        - 4th IMD quintile
+        - 5th IMD quintile
+      example: 1st IMD quintile
+    - name: desc
+      type: string
+      description: IMD descriptive banding for constituency
+      constraints:
+        unique: false
+        enum:
+        - Constituencies in most deprived quintile (20%)
+        - Constituencies in second most deprived quintile (20%)
+        - Constituencies in middle deprivation quintile (20%)
+        - Constituencies in second least deprived quintile (20%)
+        - Constituencies in least deprived quintile (20%)
+      example: Constituencies in least deprived quintile (20%)
+    - name: low-deprivation
+      type: number
+      description: Proportion of constituency population living in a low deprivation
+        losa (quintile 4,5)
+      constraints:
+        unique: false
+      example: 0.0
+    - name: medium-deprivation
+      type: number
+      description: Proportion of constituency population living in a low deprivation
+        losa (quintile 2,3)
+      constraints:
+        unique: true
+      example: 0.0255266784800157
+    - name: high-deprivation
+      type: number
+      description: Proportion of constituency population living in a high deprivation
+        losa (quintile 1)
+      constraints:
+        unique: false
+      example: 0.0
+    - name: parl25-imd-pop-quintile
+      type: integer
+      description: IMD quintile for constituency
+      constraints:
+        unique: false
+        enum:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+      example: 1
+    - name: parl25-imd-pop-decile
+      type: integer
+      description: IMD decile for constituency
+      constraints:
+        unique: false
+        enum:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 10
+      example: 1
+  hash: e0270ef9b7667f0332a354a499ead450
+full_version: 3.2.0
 permalink: /datasets/uk_index/latest
 ---
