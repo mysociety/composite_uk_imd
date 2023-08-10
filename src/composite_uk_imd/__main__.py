@@ -8,8 +8,9 @@ from pathlib import Path
 def update_data_and_build():
     fill_in_scores()
     produce_indexes_and_analysis()
-    run_notebook(Path("notebooks", "generate_la_imd.ipynb"))
-    run_notebook(Path("notebooks", "generate_con_imd.ipynb"))
+    run_notebook(Path("notebooks", "generate_la_imd.ipynb"), save=False)
+    run_notebook(Path("notebooks", "generate_con_imd.ipynb"), save=False)
+    run_notebook(Path("notebooks", "generate_con_2025_imd.ipynb"), save=False)
 
 
 @click.group()

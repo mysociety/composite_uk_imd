@@ -1,10 +1,9 @@
-title: Westminster Constituency deprivation
-description: Deprivation scores calculated for parliamentary constituencies from UK
-  (E) index.
+title: Constituencies (2025) by IMD
+description: Composite IMD scores and bandings for 2025 Constituencies
 custom:
   row_count: 650
-path: constituency_imd.csv
-name: constituency_imd
+path: parl25_imd.csv
+name: parl25_imd
 profile: tabular-data-resource
 scheme: file
 format: csv
@@ -12,27 +11,27 @@ hashing: md5
 encoding: utf-8
 schema:
   fields:
-  - name: gss-code
+  - name: parl25
     type: string
-    description: GSS code for 2010-set Westminster Parliamentary constituencies
+    description: short code for constituency as used in https://pages.mysociety.org/2025-constituencies/datasets/parliament_con_2025/latest
     constraints:
       unique: true
-    example: E14000530
+    example: UKPARL.2025.AAD
   - name: constituency-name
     type: string
-    description: Name of constituency
+    description: name of constituency
     constraints:
       unique: true
-    example: Aberavon
-  - name: pcon-deprivation-score
+    example: Aberafan Maesteg
+  - name: parl25-deprivation-score
     type: number
-    description: Composite score calculated for the constituency geography.
+    description: IMD score for constituency
     constraints:
       unique: true
-    example: 6.064711140989138
+    example: 5.732661845759454
   - name: label
     type: string
-    description: IMD Quintile of constituency
+    description: IMD banding for constituency
     constraints:
       unique: false
       enum:
@@ -44,7 +43,7 @@ schema:
     example: 1st IMD quintile
   - name: desc
     type: string
-    description: Fuller description of label
+    description: IMD descriptive banding for constituency
     constraints:
       unique: false
       enum:
@@ -67,18 +66,17 @@ schema:
       losa (quintile 2,3)
     constraints:
       unique: true
-    example: 0.0305634644451474
+    example: 0.0255266784800157
   - name: high-deprivation
     type: number
     description: Proportion of constituency population living in a high deprivation
-      lsoa (quintile 1)
+      losa (quintile 1)
     constraints:
       unique: false
     example: 0.0
-  - name: pcon-imd-pop-quintile
+  - name: parl25-imd-pop-quintile
     type: integer
-    description: Constituencies grouped into five quintiles. Quintile 1 is constituencies
-      with highest deprivation that account for 1/5 of population (not 1/5 of constituencies)
+    description: IMD quintile for constituency
     constraints:
       unique: false
       enum:
@@ -88,10 +86,9 @@ schema:
       - 4
       - 5
     example: 1
-  - name: pcon-imd-pop-decile
+  - name: parl25-imd-pop-decile
     type: integer
-    description: Constituencies grouped into ten deciles. Decile 1 is constituencies
-      with highest deprivation that account for 1/10 of population (not 1/5 of constituencies)
+    description: IMD decile for constituency
     constraints:
       unique: false
       enum:
@@ -106,5 +103,4 @@ schema:
       - 9
       - 10
     example: 1
-_sheet_order: 2
-hash: ee0f3bf77ce51ef068a11fe0b1f3e9da
+hash: e0270ef9b7667f0332a354a499ead450
