@@ -39,6 +39,10 @@ custom:
     1.0.1: 'Minor change in data for resource(s): gb_imd_e,gb_imd_s,gb_imd_w'
     1.0.2: 'Minor change in data for resource(s): gb_imd_e,gb_imd_s,gb_imd_w'
     1.0.3: 'gb_imd_e: example changed from E01021988 to E01000001'
+    1.0.4: 'Minor change in data for resource(s): gb_imd_e,gb_imd_s,gb_imd_w'
+  datasette:
+    about: Info & Downloads
+    about_url: https://pages.mysociety.org/composite_uk_imd/datasets/gb_index/1_0_4
   formats:
     csv: true
     parquet: true
@@ -48,6 +52,9 @@ resources:
     be preserved.
   custom:
     row_count: 41729
+    datasette:
+      about: Info & Downloads
+      about_url: https://pages.mysociety.org/composite_uk_imd/datasets/gb_index/1_0_4#gb_imd_e
   path: GB_IMD_E.csv
   name: gb_imd_e
   profile: tabular-data-resource
@@ -64,8 +71,8 @@ resources:
         unique: false
         enum:
         - E
-        - W
         - S
+        - W
       example: E
     - name: lsoa
       type: string
@@ -169,12 +176,15 @@ resources:
         - 4
         - 5
       example: 1
-  hash: 3c9d2c45254b5610b663f89c8f5127e3
+  hash: 829312a1fd74ca7da1f19d71362a7817
 - title: GB_IMD_S
   description: Scotland-anchored composite GB Index. Scotland IMD rank ordering will
     be preserved.
   custom:
     row_count: 41729
+    datasette:
+      about: Info & Downloads
+      about_url: https://pages.mysociety.org/composite_uk_imd/datasets/gb_index/1_0_4#gb_imd_s
   path: GB_IMD_S.csv
   name: gb_imd_s
   profile: tabular-data-resource
@@ -191,8 +201,8 @@ resources:
         unique: false
         enum:
         - E
-        - W
         - S
+        - W
       example: E
     - name: lsoa
       type: string
@@ -296,12 +306,15 @@ resources:
         - 4
         - 5
       example: 1
-  hash: e5c62bd4fda230030caa2a45d596be2b
+  hash: 07512ebaeffa5e38c9ccb4ad248fe4a1
 - title: GB_IMD_W
   description: Wales-anchored composite GB Index. Wales IMD rank ordering will be
     preserved.
   custom:
     row_count: 41729
+    datasette:
+      about: Info & Downloads
+      about_url: https://pages.mysociety.org/composite_uk_imd/datasets/gb_index/1_0_4#gb_imd_w
   path: GB_IMD_W.csv
   name: gb_imd_w
   profile: tabular-data-resource
@@ -317,9 +330,9 @@ resources:
       constraints:
         unique: false
         enum:
-        - W
         - E
         - S
+        - W
       example: E
     - name: lsoa
       type: string
@@ -423,7 +436,7 @@ resources:
         - 4
         - 5
       example: 1
-  hash: 2ac0723fc09c65162a8aa17d9b4f39f4
-full_version: 1.0.3
+  hash: 1e34a23da691d09b44f36a2eba6accc7
+full_version: 1.0.4
 permalink: /datasets/gb_index/latest
 ---

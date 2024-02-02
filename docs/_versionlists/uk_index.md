@@ -20,9 +20,12 @@ versions:
   3.1.0-futurecouncils:
   - 3.1.0-futurecouncils
   3.2.0:
-  - '3'
   - '3.2'
   - 3.2.0
+  3.3.0:
+  - '3'
+  - '3.3'
+  - 3.3.0
   - latest
 permalink: /datasets/uk_index/versions
 ---
