@@ -1,7 +1,7 @@
 title: Local Authority deprivation
 description: Deprivation scores calculated for local authorities from UK (E) index.
 custom:
-  row_count: 393
+  row_count: 394
 path: la_imd.csv
 name: la_imd
 profile: tabular-data-resource
@@ -48,11 +48,11 @@ schema:
     constraints:
       unique: false
       enum:
-      - Councils in most deprived quintile (20%)
-      - Councils in second most deprived quintile (20%)
-      - Councils in middle deprivation quintile (20%)
-      - Councils in second least deprived quintile (20%)
       - Councils in least deprived quintile (20%)
+      - Councils in middle deprivation quintile (20%)
+      - Councils in most deprived quintile (20%)
+      - Councils in second least deprived quintile (20%)
+      - Councils in second most deprived quintile (20%)
     example: Councils in least deprived quintile (20%)
   - name: low-deprivation
     type: number
@@ -115,4 +115,4 @@ schema:
       - 10
     example: 1
 _sheet_order: 1
-hash: fdf3939cda09f8ce4156da3d195f110b
+hash: 25e5362fe634217161cd82c3751706cf

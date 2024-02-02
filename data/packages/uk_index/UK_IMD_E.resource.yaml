@@ -18,8 +18,8 @@ schema:
     constraints:
       unique: false
       enum:
-      - N
       - E
+      - N
       - S
       - W
     example: E
@@ -53,7 +53,7 @@ schema:
       re-predicted based on English model.
     constraints:
       unique: false
-    example: 0.3879532776292187
+    example: 0.3879532776292205
   - name: original_decile
     type: integer
     description: Deprivation decile in original index.
@@ -126,4 +126,4 @@ schema:
       - 4
       - 5
     example: 1
-hash: 0f1216618a5b986a5beaf4a385c7c028
+hash: 17fe26b8e51af6040a5b188514a18bf5

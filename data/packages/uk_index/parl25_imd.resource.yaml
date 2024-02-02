@@ -47,11 +47,11 @@ schema:
     constraints:
       unique: false
       enum:
-      - Constituencies in most deprived quintile (20%)
-      - Constituencies in second most deprived quintile (20%)
-      - Constituencies in middle deprivation quintile (20%)
-      - Constituencies in second least deprived quintile (20%)
       - Constituencies in least deprived quintile (20%)
+      - Constituencies in middle deprivation quintile (20%)
+      - Constituencies in most deprived quintile (20%)
+      - Constituencies in second least deprived quintile (20%)
+      - Constituencies in second most deprived quintile (20%)
     example: Constituencies in least deprived quintile (20%)
   - name: low-deprivation
     type: number
@@ -103,4 +103,4 @@ schema:
       - 9
       - 10
     example: 1
-hash: e0270ef9b7667f0332a354a499ead450
+hash: a4f488c647e21f82a54c3b00286afd0b

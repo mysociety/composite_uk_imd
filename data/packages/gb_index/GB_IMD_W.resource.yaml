@@ -17,9 +17,9 @@ schema:
     constraints:
       unique: false
       enum:
-      - W
       - E
       - S
+      - W
     example: E
   - name: lsoa
     type: string
@@ -123,4 +123,4 @@ schema:
       - 4
       - 5
     example: 1
-hash: 2ac0723fc09c65162a8aa17d9b4f39f4
+hash: 1e34a23da691d09b44f36a2eba6accc7

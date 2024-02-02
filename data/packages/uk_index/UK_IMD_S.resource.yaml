@@ -18,8 +18,8 @@ schema:
     constraints:
       unique: false
       enum:
-      - N
       - E
+      - N
       - S
       - W
     example: E
@@ -125,4 +125,4 @@ schema:
       - 4
       - 5
     example: 1
-hash: 7d1d5d7cc0649cc12c0612b7b711055c
+hash: 12a0945faaa7d16f965e2c789f8c2560

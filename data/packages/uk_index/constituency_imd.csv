@@ -25,7 +25,7 @@ N06000017,Upper Bann,42.74928900626301,1st IMD quintile,Constituencies in most d
 N06000010,Mid Ulster,42.40653306347661,1st IMD quintile,Constituencies in most deprived quintile (20%),0.0,0.1732541626557124,0.8267458373442876,1,1
 E14000581,Bootle,42.20251706756279,1st IMD quintile,Constituencies in most deprived quintile (20%),0.09666705970207916,0.2803325079589671,0.6230004323389537,1,1
 E14000589,Bradford West,42.17544704154893,1st IMD quintile,Constituencies in most deprived quintile (20%),0.010893041600150248,0.3634570894407499,0.6256498689590999,1,1
-S14000032,Glasgow North East,42.173356588674494,1st IMD quintile,Constituencies in most deprived quintile (20%),0.1274689164151625,0.2925877157206614,0.5799433678641761,1,1
+S14000032,Glasgow North East,42.17335658867449,1st IMD quintile,Constituencies in most deprived quintile (20%),0.1274689164151625,0.2925877157206614,0.5799433678641761,1,1
 E14000777,Leeds Central,41.74055831306584,1st IMD quintile,Constituencies in most deprived quintile (20%),0.03439318503049674,0.39121133790890456,0.5743954770605987,1,1
 E14000807,Manchester Central,40.96990580652183,1st IMD quintile,Constituencies in most deprived quintile (20%),0.011688021138811124,0.47501859320486384,0.513293385656325,1,1
 E14000568,"Birmingham, Yardley",40.794518877978895,1st IMD quintile,Constituencies in most deprived quintile (20%),0.0,0.3023359424138654,0.6976640575861346,1,1
@@ -131,11 +131,11 @@ E14000756,Huddersfield,30.17399131283366,2nd IMD quintile,Constituencies in seco
 E14000671,Dudley North,30.121218086485214,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.2461058088841758,0.3410156710262755,0.41287852008954873,2,3
 W07000048,Swansea East,30.10923881567859,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.16414858841010402,0.46410698365527486,0.3717444279346211,2,3
 E14000879,"Plymouth, Moor View",29.96485108703789,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.15008929430762155,0.5188052742458107,0.3311054314465678,2,3
-S14000033,Glasgow North West,29.737694103640198,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.2813127315691065,0.31697580783922363,0.40171146059166984,2,3
+S14000033,Glasgow North West,29.73769410364019,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.2813127315691065,0.31697580783922363,0.40171146059166984,2,3
 E14000555,Bethnal Green and Bow,29.687620007450832,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.04249589877322667,0.6713920642078913,0.286112037018882,2,3
 E14000989,Telford,29.677274038121237,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.25274280802871735,0.4133171545578644,0.33394003741341827,2,3
 E14000999,Torbay,29.6417456849356,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.20682447094423762,0.5200175190619338,0.2731580099938285,2,3
-S14000038,Inverclyde,29.555251163325117,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.37169665809768637,0.2153470437017995,0.41295629820051416,2,3
+S14000038,Inverclyde,29.55525116332511,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.37169665809768637,0.2153470437017995,0.41295629820051416,2,3
 S14000029,Glasgow Central,29.45854835379294,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.2200009124503855,0.4154842830421096,0.3645148045075049,2,3
 E14000884,Portsmouth South,29.232991769618632,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.07591877046765894,0.7105244918822449,0.21355673765009617,2,3
 E14000740,Hemsworth,29.127537351298983,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.18047883975748374,0.46581499645414864,0.3537061637883676,2,3
@@ -186,7 +186,7 @@ E14000548,Batley and Spen,26.780464914464556,2nd IMD quintile,Constituencies in 
 E14001008,Vauxhall,26.707207133158178,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.06465479146077888,0.7640465688046858,0.17129863973453532,2,3
 W07000060,Vale of Clwyd,26.654944518796288,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.23667333287359493,0.5588442176401628,0.20448244948624233,2,3
 E14000913,Scarborough and Whitby,26.647152279300514,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.2983830295295244,0.4297683131426454,0.2718486573278302,2,3
-S14000036,Glenrothes,26.640311055871642,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.22802683468564436,0.5114342051584244,0.26053896015593125,2,3
+S14000036,Glenrothes,26.64031105587164,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.22802683468564436,0.5114342051584244,0.26053896015593125,2,3
 E14000809,"Manchester, Withington",26.639251610346857,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.23629935179728934,0.5206855912055758,0.2430150569971349,2,3
 E14000764,Islington South and Finsbury,26.60132237404617,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.1032958523561392,0.7182473744494814,0.17845677319437947,2,3
 E14000787,Lewisham East,26.58476618309065,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.15085423807691276,0.6174588542738753,0.231686907649212,2,3
@@ -214,7 +214,7 @@ E14000882,Poplar and Limehouse,25.59183520047513,2nd IMD quintile,Constituencies
 E14000867,Nottingham South,25.495290026322518,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.2658987201808745,0.46231093581100596,0.2717903440081195,2,4
 E14000676,"Ealing, Southall",25.42349498650212,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.16287778837761585,0.6138388779507581,0.22328333367162603,2,4
 S14000053,Paisley and Renfrewshire South,25.370815806389825,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.35595947556615015,0.33261025029797375,0.31143027413587604,2,4
-S14000056,Rutherglen and Hamilton West,25.24926239787267,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.40609496142310086,0.28721397445813135,0.3066910641187678,2,4
+S14000056,Rutherglen and Hamilton West,25.249262397872666,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.40609496142310086,0.28721397445813135,0.3066910641187678,2,4
 E14000726,Hammersmith,25.23796660891612,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.16539192900908514,0.6236974434819353,0.21091062750897951,2,4
 W07000045,Llanelli,25.102381820681842,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.13871400186723482,0.6800804347305676,0.1812055634021976,2,4
 E14000919,Sheffield Central,25.051023708485104,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.2738605543191235,0.4861921153006677,0.23994733038020882,2,4
@@ -222,12 +222,12 @@ E14000902,Rossendale and Darwen,25.03983215290285,2nd IMD quintile,Constituencie
 E14000883,Portsmouth North,25.00160655012616,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.220549060605756,0.5067803254958333,0.27267061389841074,2,4
 W07000076,Caerphilly,24.922150315184847,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.29814206412144556,0.46469921830746574,0.2371587175710887,2,4
 E14000626,Chatham and Aylesford,24.91484786504597,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.34363799283154123,0.362250662303257,0.2941113448652018,2,4
-S14000048,North Ayrshire and Arran,24.914756154694857,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.3832141101949435,0.3133293288920439,0.3034565609130126,2,4
+S14000048,North Ayrshire and Arran,24.914756154694853,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.3832141101949435,0.3133293288920439,0.3034565609130126,2,4
 E14000859,North West Norfolk,24.811379027881593,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.1840615176678988,0.6141425104696764,0.20179597186242487,2,4
 W07000069,Neath,24.723383178844,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.22906040268456376,0.5800268456375839,0.19091275167785235,2,4
 E14000577,Bolsover,24.65547841995593,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.2168173796871417,0.5893859482956302,0.19379667201722814,2,4
 E14000833,Newcastle upon Tyne North,24.634421344270162,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.365529352734571,0.2908004101311111,0.34367023713431794,2,4
-S14000040,Kilmarnock and Loudoun,24.578111841835277,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.3752907275908202,0.35886590511474736,0.2658433672944324,2,4
+S14000040,Kilmarnock and Loudoun,24.57811184183527,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.3752907275908202,0.35886590511474736,0.2658433672944324,2,4
 E14000654,Croydon Central,24.53526965805328,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.285852087403641,0.4328736440255377,0.28127426857082133,2,4
 E14001053,Workington,24.532594231899647,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.255449804269795,0.5390897607464011,0.20546043498380379,2,4
 E14000861,Northampton North,24.529052754339027,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.2744391850174933,0.4932885138688802,0.23227230111362648,2,4
@@ -270,7 +270,7 @@ E14000552,Bedford,23.274184488275914,3rd IMD quintile,Constituencies in middle d
 E14000712,Gloucester,23.13011547259279,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.41175930409229794,0.30830814953333446,0.2799325463743676,3,5
 E14000662,Derby North,23.096751889711356,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.31024556456350605,0.5096639642815181,0.18009047115497592,3,5
 E14000711,Gillingham and Rainham,23.00294566339952,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.40209279214326077,0.38387341920146534,0.21403378865527387,3,5
-S14000010,Central Ayrshire,22.98817761250882,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.338823634296922,0.42700648583591505,0.23416987986716295,3,5
+S14000010,Central Ayrshire,22.988177612508817,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.338823634296922,0.42700648583591505,0.23416987986716295,3,5
 E14000546,Bassetlaw,22.9073226021376,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.3848794706889372,0.40595937630130013,0.20916115300976265,3,5
 E14000995,Thurrock,22.902058953820013,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.2607712846653316,0.6019024212634262,0.1373262940712422,3,5
 E14000602,Bristol West,22.88061527267639,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.39223423234337285,0.3633539720852136,0.24441179557141357,3,5
@@ -296,9 +296,9 @@ E14000544,Basildon and Billericay,22.19717662779899,3rd IMD quintile,Constituenc
 E14000805,Makerfield,22.19680448377695,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.3925283251944643,0.3988978748866027,0.20857379991893302,3,5
 E14000958,Southport,22.16715665477349,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.3152016434209104,0.5394421018488486,0.1453562547302411,3,5
 E14000643,Cleethorpes,22.11578047643269,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.4586406408952187,0.3363852153272296,0.20497414377755171,3,5
-S14000031,Glasgow North,21.927765696101538,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.5385254027261462,0.21524163568773233,0.24623296158612143,3,5
+S14000031,Glasgow North,21.927765696101535,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.5385254027261462,0.21524163568773233,0.24623296158612143,3,5
 E14000688,Ellesmere Port and Neston,21.861171482112436,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.5020556501987508,0.220022714366837,0.2779216354344123,3,5
-S14000042,Lanark and Hamilton East,21.850332739868243,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.3982758794934764,0.41701280457609474,0.1847113159304288,3,5
+S14000042,Lanark and Hamilton East,21.850332739868236,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.3982758794934764,0.41701280457609474,0.1847113159304288,3,5
 E14000892,Redditch,21.807497683914733,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.43209808785756626,0.32566793264692323,0.24223397949551054,3,5
 E14000715,Gravesham,21.76374323679855,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.3766165758048981,0.42361533210521884,0.19976809208988303,3,5
 E14000580,Bolton West,21.71368340487149,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.45079381496612714,0.3566530485597559,0.19255313647411698,3,5
@@ -313,7 +313,7 @@ E14001000,Torridge and West Devon,21.277464393887414,3rd IMD quintile,Constituen
 E14000863,Norwich North,21.196141391827535,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.440848994815892,0.32607706226480027,0.23307394291930775,3,5
 E14000779,Leeds North East,21.175840529143567,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.5446946507695272,0.19712310293897298,0.2581822462914999,3,5
 E14001024,Weaver Vale,21.144423093859398,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.5737796957220547,0.1815759924260772,0.24464431185186816,3,5
-S14000009,"Caithness, Sutherland and Easter Ross",20.99841758436577,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.2614858502255043,0.6213345228064958,0.11717962696799987,3,5
+S14000009,"Caithness, Sutherland and Easter Ross",20.998417584365765,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.2614858502255043,0.6213345228064958,0.11717962696799987,3,5
 E14000752,Hornsey and Wood Green,20.935533299280973,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.31405445758516365,0.5834505520411771,0.1024949903736592,3,5
 E14000533,Amber Valley,20.9255008764385,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.3286154449150236,0.5272458056157389,0.14413874946923755,3,5
 E14000574,Blaydon,20.90151441277449,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.3164243415746907,0.5706237470909468,0.11295191133436254,3,5
@@ -326,7 +326,7 @@ E14000614,Calder Valley,20.631261790018844,3rd IMD quintile,Constituencies in mi
 W07000059,Clwyd West,20.616702225690283,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.39439244708058985,0.46411274963269306,0.1414948032867171,3,6
 E14000592,Brent North,20.587868968101755,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.20662948511635768,0.7820543908765587,0.0113161240070836,3,6
 S14000001,Aberdeen North,20.578823738033677,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.3615243716291849,0.5078864353312302,0.13058919303958483,3,6
-S14000012,"Cumbernauld, Kilsyth and Kirkintilloch East",20.560908631192103,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.37695108323420207,0.49291662160700767,0.13013229515879024,3,6
+S14000012,"Cumbernauld, Kilsyth and Kirkintilloch East",20.5609086311921,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.37695108323420207,0.49291662160700767,0.13013229515879024,3,6
 E14001052,Worcester,20.556707919227044,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.4754697595384403,0.3489853984311711,0.17554484203038864,3,6
 E14000924,Sherwood,20.520131406558594,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.32601341441952325,0.5407125677076204,0.13327401787285634,3,6
 E14000618,Cannock Chase,20.45915396677319,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.36305353208550845,0.5358071495206527,0.10113931839383895,3,6
@@ -377,7 +377,7 @@ E14000536,Ashford,18.833146133483073,3rd IMD quintile,Constituencies in middle d
 S14000045,Midlothian,18.746261923308126,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.4163962794722042,0.5064027687648713,0.0772009517629245,3,6
 W07000073,Bridgend,18.73737130468534,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.5665115082335329,0.31405548278443113,0.11943300898203593,3,6
 E14000634,Chingford and Woodford Green,18.727545716099005,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.35180875819758833,0.5955574360059234,0.052633805796488256,3,6
-S14000004,Angus,18.692734712971166,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.4123051452156373,0.5028273618673413,0.0848674929170213,3,6
+S14000004,Angus,18.692734712971163,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.4123051452156373,0.5028273618673413,0.0848674929170213,3,6
 W07000064,Ceredigion,18.58857880949613,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.2635532017332691,0.7197606437856799,0.016686154481050968,3,6
 E14000713,Gosport,18.55886677025841,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.48084393635162,0.37724883207038856,0.14190723157799146,3,6
 E14000968,Stevenage,18.54521097016368,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.29068288861987934,0.6713935485183565,0.03792356286176414,3,6
@@ -426,7 +426,7 @@ S14000007,Banff and Buchan,17.03885025744118,4th IMD quintile,Constituencies in 
 E14000998,Tooting,17.00212784371006,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.37054044184772683,0.5953806828555779,0.034078875296695274,4,7
 W07000068,Brecon and Radnorshire,16.98812968646423,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.46359023290107126,0.5196397334142921,0.016770033684636625,4,7
 E14000876,Penistone and Stocksbridge,16.97040046483316,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.5556416357700182,0.3341486359360301,0.11020972829395163,4,7
-S14000039,"Inverness, Nairn, Badenoch and Strathspey",16.96546898044917,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.6026309070103931,0.30435111544026555,0.09301797754934132,4,7
+S14000039,"Inverness, Nairn, Badenoch and Strathspey",16.965468980449174,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.6026309070103931,0.30435111544026555,0.09301797754934132,4,7
 E14000734,Harwich and North Essex,16.906988813234584,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.5414662285355226,0.39220634740778126,0.06632742405669609,4,7
 S14000008,"Berwickshire, Roxburgh and Selkirk",16.90179724101959,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.5332428051116865,0.40864018189856627,0.058117012989747155,4,7
 E14000639,Cities of London and Westminster,16.882227236955423,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.4695898791316485,0.49457280313604374,0.035837317732307784,4,7
@@ -447,8 +447,8 @@ E14000759,Ilford North,16.35815553336392,4th IMD quintile,Constituencies in seco
 E14000900,Romford,16.35569741320307,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.424313453406715,0.575686546593285,0.0,4,7
 E14000623,Central Devon,16.28722436406364,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.35600791810896926,0.6439920818910307,0.0,4,7
 E14000887,Putney,16.241025508928125,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.5095483419196719,0.4713449707397589,0.0191066873405692,4,7
-S14000017,Dunfermline and West Fife,16.234339158690158,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.5497738219690679,0.34688773167371745,0.10333844635721473,4,7
-S14000014,"Dumfriesshire, Clydesdale and Tweeddale",16.195578850448044,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.5031790334348617,0.47583587154157064,0.0209850950235677,4,7
+S14000017,Dunfermline and West Fife,16.234339158690155,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.5497738219690679,0.34688773167371745,0.10333844635721473,4,7
+S14000014,"Dumfriesshire, Clydesdale and Tweeddale",16.19557885044804,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.5031790334348617,0.47583587154157064,0.0209850950235677,4,7
 E14000926,Shrewsbury and Atcham,16.167626520949185,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.48203307089504305,0.438171006992237,0.07979592211272,4,7
 E14000829,Newark,16.10957648879899,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.5463756967987616,0.3527819720235891,0.10084233117764926,4,7
 E14000981,Suffolk Coastal,16.063315220845247,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.4463799096782891,0.5219786039614448,0.031641486360266154,4,7
@@ -466,7 +466,7 @@ S14000020,East Lothian,15.834838816381332,4th IMD quintile,Constituencies in sec
 E14001061,York Central,15.817020163736931,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.5965581828894029,0.3331017683940239,0.0703400487165733,4,8
 E14000731,Harrow East,15.801011667019933,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.4992673553833252,0.4837113288053746,0.017021315811300237,4,8
 E14000732,Harrow West,15.791265048421355,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.544686251215034,0.455313748784966,0.0,4,8
-S14000019,"East Kilbride, Strathaven and Lesmahagow",15.772775492922092,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.4743343238361592,0.5016605488550953,0.024005127308745558,4,8
+S14000019,"East Kilbride, Strathaven and Lesmahagow",15.772775492922094,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.4743343238361592,0.5016605488550953,0.024005127308745558,4,8
 E14000556,Beverley and Holderness,15.76702053915276,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.5614433133315422,0.3813674856454807,0.057189201022977185,4,8
 E14000706,Fylde,15.761169030121104,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.5667230215413633,0.36881390240255785,0.06446307605607884,4,8
 E14000710,Gedling,15.753646044220895,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.5389500157183276,0.43311327674735406,0.027936707534318348,4,8
@@ -612,7 +612,7 @@ E14000888,Rayleigh and Wickford,9.856443675248926,5th IMD quintile,Constituencie
 E14000767,Kenilworth and Southam,9.811884713561396,5th IMD quintile,Constituencies in least deprived quintile (20%),0.8671367795326068,0.1328632204673932,0.0,5,10
 E14000824,Mole Valley,9.77040455415389,5th IMD quintile,Constituencies in least deprived quintile (20%),0.7849793180087667,0.2150206819912333,0.0,5,10
 E14000960,St Albans,9.540887990995412,5th IMD quintile,Constituencies in least deprived quintile (20%),0.8146747861891156,0.1853252138108844,0.0,5,10
-S14000037,Gordon,9.475936462355106,5th IMD quintile,Constituencies in least deprived quintile (20%),0.862021884010923,0.13797811598907708,0.0,5,10
+S14000037,Gordon,9.475936462355108,5th IMD quintile,Constituencies in least deprived quintile (20%),0.862021884010923,0.13797811598907708,0.0,5,10
 E14000699,Fareham,9.474621052528343,5th IMD quintile,Constituencies in least deprived quintile (20%),0.833117570907379,0.16688242909262094,0.0,5,10
 E14000753,Horsham,9.439649197507798,5th IMD quintile,Constituencies in least deprived quintile (20%),0.7720087939589325,0.22799120604106743,0.0,5,10
 E14001005,Twickenham,9.308053342016459,5th IMD quintile,Constituencies in least deprived quintile (20%),0.8672835068548762,0.12056293715165303,0.012153555993470741,5,10
@@ -636,7 +636,7 @@ E14000951,South West Hertfordshire,8.295880526691807,5th IMD quintile,Constituen
 E14000694,Epsom and Ewell,8.269831896087098,5th IMD quintile,Constituencies in least deprived quintile (20%),0.8799899392763465,0.12001006072365349,0.0,5,10
 E14000749,Hitchin and Harpenden,8.251973031149548,5th IMD quintile,Constituencies in least deprived quintile (20%),0.8401098270319914,0.15989017296800856,0.0,5,10
 E14000697,Esher and Walton,8.227923156284152,5th IMD quintile,Constituencies in least deprived quintile (20%),0.8403234972677596,0.15967650273224043,0.0,5,10
-S14000058,West Aberdeenshire and Kincardine,8.16171005320636,5th IMD quintile,Constituencies in least deprived quintile (20%),0.9482169329599737,0.05178306704002635,0.0,5,10
+S14000058,West Aberdeenshire and Kincardine,8.161710053206363,5th IMD quintile,Constituencies in least deprived quintile (20%),0.9482169329599737,0.05178306704002635,0.0,5,10
 E14001041,Winchester,8.046847591541022,5th IMD quintile,Constituencies in least deprived quintile (20%),0.8413158410025455,0.15868415899745447,0.0,5,10
 E14000934,South Cambridgeshire,7.985670813827261,5th IMD quintile,Constituencies in least deprived quintile (20%),0.9485463735667278,0.05145362643327227,0.0,5,10
 E14000744,Hertford and Stortford,7.953605912097808,5th IMD quintile,Constituencies in least deprived quintile (20%),0.887749800852007,0.11225019914799293,0.0,5,10

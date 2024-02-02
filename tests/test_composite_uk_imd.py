@@ -23,7 +23,7 @@ def test_all_las():
     """
     df = pd.read_csv(packages_path / "uk_index" / "la_imd.csv")
     no_dupes = df["local-authority-code"].drop_duplicates()
-    assert len(no_dupes) == 393
+    assert len(no_dupes) == 394
 
 
 def test_all_lsoas():

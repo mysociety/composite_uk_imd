@@ -13,7 +13,7 @@ UKPARL.2025.LWL,Liverpool Walton,47.35001208407566,1st IMD quintile,Constituenci
 UKPARL.2025.BSN,Birmingham Hodge Hill and Solihull North,45.56298935604408,1st IMD quintile,Constituencies in most deprived quintile (20%),0.060624863626445556,0.16425512764564695,0.7751200087279075,1,1
 UKPARL.2025.LWD,Liverpool West Derby,45.320432120486366,1st IMD quintile,Constituencies in most deprived quintile (20%),0.026050110537951362,0.33250736919675755,0.6414425202652911,1,1
 UKPARL.2025.FST,Fermanagh and South Tyrone,45.129838486129366,1st IMD quintile,Constituencies in most deprived quintile (20%),0.0,0.16366860514639264,0.8363313948536073,1,1
-UKPARL.2025.SDW,South Down,44.987192607767,1st IMD quintile,Constituencies in most deprived quintile (20%),0.0,0.18427898030931247,0.8157210196906876,1,1
+UKPARL.2025.SDW,South Down,44.98719260776701,1st IMD quintile,Constituencies in most deprived quintile (20%),0.0,0.18427898030931247,0.8157210196906876,1,1
 UKPARL.2025.BDE,Bradford East,44.63252375540858,1st IMD quintile,Constituencies in most deprived quintile (20%),0.04698848757349671,0.24148567475806965,0.7115258376684337,1,1
 UKPARL.2025.MTE,Middlesbrough and Thornaby East,44.556291919951974,1st IMD quintile,Constituencies in most deprived quintile (20%),0.1536621040083193,0.2286542835160933,0.6176836124755873,1,1
 UKPARL.2025.LSO,Leeds South,44.0883610070423,1st IMD quintile,Constituencies in most deprived quintile (20%),0.06519677412845641,0.27927061403213765,0.6555326118394059,1,1
@@ -26,7 +26,7 @@ UKPARL.2025.BPB,Birmingham Perry Barr,42.13629881351289,1st IMD quintile,Constit
 UKPARL.2025.BTL,Bootle,41.758991887615664,1st IMD quintile,Constituencies in most deprived quintile (20%),0.10676511482955363,0.2735772162823033,0.6196576688881431,1,1
 UKPARL.2025.BYA,Birmingham Yardley,41.401979767558295,1st IMD quintile,Constituencies in most deprived quintile (20%),0.0,0.24914655054696627,0.7508534494530338,1,1
 UKPARL.2025.MUL,Mid Ulster,41.05334482403424,1st IMD quintile,Constituencies in most deprived quintile (20%),0.0,0.24140561343896816,0.7585943865610318,1,1
-UKPARL.2025.GNE,Glasgow North East,40.638566500641794,1st IMD quintile,Constituencies in most deprived quintile (20%),0.12425939977075699,0.319454982806774,0.5562856174224691,1,1
+UKPARL.2025.GNE,Glasgow North East,40.63856650064179,1st IMD quintile,Constituencies in most deprived quintile (20%),0.12425939977075699,0.319454982806774,0.5562856174224691,1,1
 UKPARL.2025.MCT,Manchester Central,40.537191425982,1st IMD quintile,Constituencies in most deprived quintile (20%),0.04159845999283391,0.4301903229659189,0.5282112170412472,1,1
 UKPARL.2025.BLS,Bolton South and Walkden,40.49543536543979,1st IMD quintile,Constituencies in most deprived quintile (20%),0.07297226421497548,0.24167000894702742,0.6853577268379971,1,1
 UKPARL.2025.NAN,North Antrim,40.44026662431669,1st IMD quintile,Constituencies in most deprived quintile (20%),0.0,0.4380896436327388,0.5619103563672612,1,1
@@ -53,7 +53,7 @@ UKPARL.2025.TIP,Tipton and Wednesbury,37.15099511781795,1st IMD quintile,Constit
 UKPARL.2025.LEA,Leeds East,37.084401596062946,1st IMD quintile,Constituencies in most deprived quintile (20%),0.25294680787410995,0.21387542631484474,0.5331777658110453,1,1
 UKPARL.2025.EAS,Easington,35.94000265509852,1st IMD quintile,Constituencies in most deprived quintile (20%),0.08285161762400042,0.3916374849736058,0.5255108974023938,1,1
 UKPARL.2025.EAN,East Antrim,35.90390920659977,1st IMD quintile,Constituencies in most deprived quintile (20%),0.0232281637861037,0.580926419982214,0.39584541623168235,1,1
-UKPARL.2025.GEA,Glasgow East,35.54586076354527,1st IMD quintile,Constituencies in most deprived quintile (20%),0.18939730490152526,0.33177411346591057,0.4788285816325642,1,1
+UKPARL.2025.GEA,Glasgow East,35.545860763545264,1st IMD quintile,Constituencies in most deprived quintile (20%),0.18939730490152526,0.33177411346591057,0.4788285816325642,1,1
 UKPARL.2025.HUN,Kingston upon Hull North and Cottingham,35.236743821451554,1st IMD quintile,Constituencies in most deprived quintile (20%),0.2121770165331682,0.34104446599251975,0.4467785174743121,1,1
 UKPARL.2025.LEW,Leicester West,35.17903098332677,1st IMD quintile,Constituencies in most deprived quintile (20%),0.08611494026519627,0.4892674281213076,0.42461763161349614,1,1
 UKPARL.2025.DES,Derby South,35.14526765748452,1st IMD quintile,Constituencies in most deprived quintile (20%),0.14454836643177452,0.25938073884262225,0.5960708947256033,1,1
@@ -144,7 +144,7 @@ UKPARL.2025.BEA,Brent East,29.381706084245504,2nd IMD quintile,Constituencies in
 UKPARL.2025.TFD,Telford,29.30636850934267,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.24236635669889167,0.43740364010123245,0.3202300031998759,2,3
 UKPARL.2025.POS,Portsmouth South,29.232991769618632,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.07591877046765894,0.7105244918822449,0.21355673765009617,2,3
 UKPARL.2025.LWE,Lewisham East,29.195660791711248,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.07956529083844811,0.5936145053212456,0.3268202038403063,2,3
-UKPARL.2025.WDB,West Dunbartonshire,29.085485533276618,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.201664954862425,0.4286069517271204,0.3697280934104546,2,3
+UKPARL.2025.WDB,West Dunbartonshire,29.085485533276614,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.201664954862425,0.4286069517271204,0.3697280934104546,2,3
 UKPARL.2025.NAH,Normanton and Hemsworth,28.99083868888091,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.16963685427200473,0.4787113530240654,0.3516517927039299,2,3
 UKPARL.2025.PMV,Plymouth Moor View,28.965780980898504,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.1841822328955698,0.5047075491604787,0.31111021794395155,2,3
 UKPARL.2025.LES,Leicester South,28.928561705825707,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.1789833003202142,0.464020919617622,0.3569957800621638,2,3
@@ -152,7 +152,7 @@ UKPARL.2025.EHM,East Ham,28.922182018214937,2nd IMD quintile,Constituencies in s
 UKPARL.2025.BIA,Bishop Auckland,28.91840935331197,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.18426470276121146,0.5175520512766093,0.29818324596217927,2,3
 UKPARL.2025.SAB,Stratford and Bow,28.83076661212045,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.0,0.823508021091204,0.17649197890879592,2,3
 UKPARL.2025.MAN,Mansfield,28.508844565605187,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.25316293578988774,0.34854957781782586,0.3982874863922864,2,3
-UKPARL.2025.CAB,Coatbridge and Bellshill,28.326265648296882,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.27349872660943786,0.3914274757367474,0.3350737976538148,2,3
+UKPARL.2025.CAB,Coatbridge and Bellshill,28.326265648296875,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.27349872660943786,0.3914274757367474,0.3350737976538148,2,3
 UKPARL.2025.ISN,Islington North,28.313677621565,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.04820046154601548,0.6844547373934107,0.26734480106057384,2,3
 UKPARL.2025.NHN,Northampton North,28.20077270943466,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.18469955446801634,0.49060843201982196,0.3246920135121617,2,3
 UKPARL.2025.LAA,Leigh and Atherton,28.1757235301348,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.33537100012291554,0.3066005654115623,0.3580284344655222,2,3
@@ -162,7 +162,7 @@ UKPARL.2025.EWH,Edmonton and Winchmore Hill,27.86317500170567,2nd IMD quintile,C
 UKPARL.2025.WGN,Wigan,27.844578052157452,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.32069998948438433,0.3309790038206737,0.348321006694942,2,3
 UKPARL.2025.MCL,Middlesbrough South and East Cleveland,27.630501060535362,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.379321681584864,0.27327875111356215,0.34739956730157384,2,3
 UKPARL.2025.LEE,Leicester East,27.580471963178596,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.09531660569838735,0.6383894069761451,0.26629398732546755,2,3
-UKPARL.2025.GNO,Glasgow North,27.553552280609708,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.41807168014609963,0.27070016957996346,0.31122815027393685,2,3
+UKPARL.2025.GNO,Glasgow North,27.553552280609704,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.41807168014609963,0.27070016957996346,0.31122815027393685,2,3
 UKPARL.2025.GMF,Glenrothes and Mid Fife,27.51459586276424,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.23239751997850383,0.46443677039897296,0.3031657096225232,2,3
 UKPARL.2025.CFE,Cardiff East,27.482546382942957,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.2511433648754702,0.45826605446656504,0.2905905806579648,2,3
 UKPARL.2025.LWT,Lowestoft,27.46615527164374,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.2558471774358137,0.4598044818155843,0.284348340748602,2,3
@@ -190,11 +190,11 @@ UKPARL.2025.GSO,Glasgow South,26.55826851562336,2nd IMD quintile,Constituencies 
 UKPARL.2025.IPS,Ipswich,26.45675610531896,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.2687577310478883,0.4237321081463156,0.3075101608057961,2,4
 UKPARL.2025.WAW,Whitehaven and Workington,26.320405951590136,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.26620235821639127,0.4686643693431869,0.26513327244042184,2,4
 UKPARL.2025.WKF,Wakefield and Rothwell,26.300450723693476,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.347997957458797,0.3570925482462319,0.2949094942949711,2,4
-UKPARL.2025.IRW,Inverclyde and Renfrewshire West,26.16730412520529,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.4497170127804171,0.2026036988539829,0.3476792883656,2,4
+UKPARL.2025.IRW,Inverclyde and Renfrewshire West,26.167304125205288,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.4497170127804171,0.2026036988539829,0.3476792883656,2,4
 UKPARL.2025.CRR,Camborne and Redruth,26.13139349662077,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.1473101758402876,0.6455879251649445,0.20710189899476797,2,4
-UKPARL.2025.MWC,"Motherwell, Wishaw and Carluke",26.044165626215488,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.3185372101470054,0.38825486035441875,0.2932079294985758,2,4
+UKPARL.2025.MWC,"Motherwell, Wishaw and Carluke",26.044165626215484,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.3185372101470054,0.38825486035441875,0.2932079294985758,2,4
 UKPARL.2025.RAD,Rossendale and Darwen,26.03317841176025,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.3569277108433735,0.38574107751761766,0.25733121163900885,2,4
-UKPARL.2025.GWE,Glasgow West,26.020807485426477,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.3811426250720162,0.2684573900395735,0.35039998488841034,2,4
+UKPARL.2025.GWE,Glasgow West,26.020807485426474,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.3811426250720162,0.2684573900395735,0.35039998488841034,2,4
 UKPARL.2025.WSL,Worsley and Eccles,25.79585334478195,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.3512651247794303,0.39734843710612555,0.25138643811444417,2,4
 UKPARL.2025.SCU,Scunthorpe,25.768696516950964,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.32305720891794265,0.35161988244361286,0.3253229086384445,2,4
 UKPARL.2025.SBR,Stourbridge,25.72604949488645,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.3106916444499924,0.3460897167262579,0.3432186388237497,2,4
@@ -215,7 +215,7 @@ UKPARL.2025.NWN,North West Norfolk,25.027928863332598,2nd IMD quintile,Constitue
 UKPARL.2025.PON,Portsmouth North,25.00160655012616,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.220549060605756,0.5067803254958333,0.27267061389841074,2,4
 UKPARL.2025.MWI,Manchester Withington,24.91757072691552,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.23077533686571014,0.5974082673493283,0.1718163957849616,2,4
 UKPARL.2025.HAL,Halesowen,24.892823357678118,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.29284111225227283,0.47385788732930123,0.23330100041842597,2,4
-UKPARL.2025.NAA,North Ayrshire and Arran,24.874163520916586,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.3731006837007028,0.3233064318904378,0.3035928844088594,2,4
+UKPARL.2025.NAA,North Ayrshire and Arran,24.87416352091658,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.3731006837007028,0.3233064318904378,0.3035928844088594,2,4
 UKPARL.2025.NSW,Neath and Swansea East,24.73269359533874,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.2927335708240666,0.46209332992186425,0.24517309925406916,2,4
 UKPARL.2025.WSM,Weston-super-Mare,24.729445838972968,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.3854435831180017,0.3660842459292072,0.24847217095279112,2,4
 UKPARL.2025.NRS,Norwich South,24.69308042143353,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.36776746226104756,0.32786286048466684,0.3043696772542856,2,4
@@ -223,7 +223,7 @@ UKPARL.2025.STS,Stoke-on-Trent South,24.578441604475728,2nd IMD quintile,Constit
 UKPARL.2025.BOL,Bolsover,24.543053181778028,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.21346329397214286,0.5957379977816386,0.19079870824621847,2,4
 UKPARL.2025.TOR,Torfaen,24.533779595572575,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.2519981694532838,0.49107608475857006,0.25692574578814614,2,4
 UKPARL.2025.PAL,Poplar and Limehouse,24.518292938271607,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.23134814814814814,0.5494913580246914,0.2191604938271605,2,4
-UKPARL.2025.PRS,Paisley and Renfrewshire South,24.50688863284878,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.3820561273721454,0.3261800418140881,0.2917638308137665,2,4
+UKPARL.2025.PRS,Paisley and Renfrewshire South,24.506888632848778,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.3820561273721454,0.3261800418140881,0.2917638308137665,2,4
 UKPARL.2025.HAY,Hayes and Harlington,24.471897395550734,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.08186962250988296,0.8330129447329664,0.08511743275715061,2,4
 UKPARL.2025.LLE,Llanelli,24.459431435119438,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.13658536585365855,0.703222051743294,0.16019258240304746,2,4
 UKPARL.2025.CHD,Chesterfield,24.452959259024166,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.30183868647116074,0.4357517667470695,0.2624095467817697,2,4
@@ -240,7 +240,7 @@ UKPARL.2025.MKF,Makerfield,24.15220767216687,2nd IMD quintile,Constituencies in 
 UKPARL.2025.WAN,Warrington North,24.129104688542487,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.4033379834617173,0.2966984088473747,0.29996360769090796,2,4
 UKPARL.2025.DWN,Dulwich and West Norwood,24.094025332533604,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.18779769255195286,0.5939826412165261,0.218219666231521,2,4
 UKPARL.2025.NUN,Nuneaton,24.01771036953758,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.3290639151860297,0.4442646548916184,0.22667142992235192,2,4
-UKPARL.2025.HCV,Hamilton and Clyde Valley,23.989702257650286,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.3724242711993163,0.38306903427974553,0.24450669452093818,2,4
+UKPARL.2025.HCV,Hamilton and Clyde Valley,23.98970225765028,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.3724242711993163,0.38306903427974553,0.24450669452093818,2,4
 UKPARL.2025.GAW,Greenwich and Woolwich,23.912469321325407,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.2223036713179918,0.6475552181235874,0.13014111055842081,2,4
 UKPARL.2025.HAV,Havant,23.868802876594508,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.35826865486047066,0.3086743417303089,0.33305700340922045,2,4
 UKPARL.2025.BAB,Basildon and Billericay,23.824051647617566,2nd IMD quintile,Constituencies in second most deprived quintile (20%),0.2893053560153369,0.4929492400186678,0.2177454039659953,2,4
@@ -251,7 +251,7 @@ UKPARL.2025.RHV,Rother Valley,23.73921871828897,3rd IMD quintile,Constituencies 
 UKPARL.2025.PRN,Paisley and Renfrewshire North,23.73092123346439,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.3700905034071304,0.3690592079265178,0.2608502886663518,3,5
 UKPARL.2025.FEL,Feltham and Heston,23.71575443527838,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.045180914766212256,0.8613119505669512,0.09350713466683654,3,5
 UKPARL.2025.CAE,Caerphilly,23.63830031342279,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.27835497835497836,0.5257122722239002,0.19593274942112152,3,5
-UKPARL.2025.RGN,Rutherglen,23.53307870091648,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.4428654017974457,0.2877384769012456,0.2693961213013087,3,5
+UKPARL.2025.RGN,Rutherglen,23.533078700916477,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.4428654017974457,0.2877384769012456,0.2693961213013087,3,5
 UKPARL.2025.NCR,North Cornwall,23.4881972784562,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.07478985971522285,0.8450747324835283,0.08013540780124889,3,5
 UKPARL.2025.BWT,Bridgwater,23.472225515451196,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.291268172800758,0.5123422062989172,0.19638962090032472,3,5
 UKPARL.2025.ELN,Ealing North,23.414300871889203,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.19749898953238032,0.6592125776410324,0.14328843282658726,3,5
@@ -316,7 +316,7 @@ UKPARL.2025.NPI,Newport West and Islwyn,20.69671050689901,3rd IMD quintile,Const
 UKPARL.2025.KAB,Kensington and Bayswater,20.6727869370036,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.4590239751368951,0.368303241083321,0.17267278377978393,3,6
 UKPARL.2025.BAI,Brentford and Isleworth,20.591035993020306,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.2586373730964467,0.6634279822335025,0.07793464467005076,3,6
 UKPARL.2025.WOR,Worcester,20.556707919227044,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.4754697595384403,0.3489853984311711,0.17554484203038864,3,6
-UKPARL.2025.CKY,Cowdenbeath and Kirkcaldy,20.51291732002469,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.4319780739425406,0.37205778751411395,0.19596413854334546,3,6
+UKPARL.2025.CKY,Cowdenbeath and Kirkcaldy,20.512917320024684,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.4319780739425406,0.37205778751411395,0.19596413854334546,3,6
 UKPARL.2025.GNB,Gainsborough,20.50873368037045,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.43044100891634524,0.39937491506998235,0.17018407601367241,3,6
 UKPARL.2025.FLK,Falkirk,20.49083586936035,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.4094264846861627,0.4431969797297965,0.1473765355840408,3,6
 UKPARL.2025.CKC,Cannock Chase,20.45915396677319,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.36305353208550845,0.5358071495206527,0.10113931839383895,3,6
@@ -368,7 +368,7 @@ UKPARL.2025.KET,Kettering,18.803500995228358,3rd IMD quintile,Constituencies in 
 UKPARL.2025.BSC,Bristol Central,18.753987439017553,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.46383109964672237,0.3756518813435765,0.1605170190097011,3,6
 UKPARL.2025.MID,Midlothian,18.746261923308126,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.4163962794722042,0.5064027687648713,0.0772009517629245,3,6
 UKPARL.2025.DHM,City of Durham,18.74230964696754,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.4978478136372873,0.3757089283405073,0.12644325802220538,3,6
-UKPARL.2025.BAL,Bathgate and Linlithgow,18.609324586583593,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.5043931716436267,0.40168249126777195,0.09392433708860137,3,6
+UKPARL.2025.BAL,Bathgate and Linlithgow,18.60932458658359,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.5043931716436267,0.40168249126777195,0.09392433708860137,3,6
 UKPARL.2025.CSR,"Caithness, Sutherland and Easter Ross",18.60689475352951,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.37877709738522136,0.5438118241313302,0.07741107848344841,3,6
 UKPARL.2025.GOS,Gosport,18.55886677025841,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.48084393635162,0.37724883207038856,0.14190723157799146,3,6
 UKPARL.2025.SVG,Stevenage,18.54521097016368,3rd IMD quintile,Constituencies in middle deprivation quintile (20%),0.29068288861987934,0.6713935485183565,0.03792356286176414,3,6
@@ -408,7 +408,7 @@ UKPARL.2025.WSF,West Suffolk,17.29512377104492,4th IMD quintile,Constituencies i
 UKPARL.2025.BXC,Bexleyheath and Crayford,17.25273910617934,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.5388812859023195,0.3853871566670444,0.07573155743063606,4,7
 UKPARL.2025.WRH,Worthing West,17.218899592722213,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.4829618714312028,0.43513231411555225,0.08190581445324492,4,7
 UKPARL.2025.CAW,Carshalton and Wallington,17.19403215279511,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.5115788889813351,0.43018923741113607,0.05823187360752882,4,7
-UKPARL.2025.NHI,Na h-Eileanan an Iar,17.186569946950932,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.2343188622754491,0.7656811377245509,0.0,4,7
+UKPARL.2025.NHI,Na h-Eileanan an Iar,17.18656994695093,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.2343188622754491,0.7656811377245509,0.0,4,7
 UKPARL.2025.WAV,Waveney Valley,17.16835273593038,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.2878986905299454,0.7121013094700546,0.0,4,7
 UKPARL.2025.ABM,Aberdeenshire North and Moray East,17.124976698196903,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.44026259873655327,0.4975274175567646,0.06220998370668217,4,7
 UKPARL.2025.CHN,Chester North and Neston,17.09540580941752,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.5506865023702505,0.33952431170586367,0.10978918592388577,4,7
@@ -448,7 +448,7 @@ UKPARL.2025.SUT,Sutton Coldfield,16.00432077450505,4th IMD quintile,Constituenci
 UKPARL.2025.RMF,Romford,15.999270267840286,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.4479469174541237,0.5520530825458763,0.0,4,8
 UKPARL.2025.SFC,Suffolk Coastal,15.943132248374077,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.45358916524219406,0.5131742644158314,0.033236570341974574,4,8
 UKPARL.2025.WAS,Warrington South,15.93172999279366,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.6519721354792217,0.2461013692049003,0.10192649531587797,4,8
-UKPARL.2025.ENL,Edinburgh North and Leith,15.9107253056454,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.5883120417507124,0.29064611148464764,0.12104184676463997,4,8
+UKPARL.2025.ENL,Edinburgh North and Leith,15.910725305645398,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.5883120417507124,0.29064611148464764,0.12104184676463997,4,8
 UKPARL.2025.SWW,South West Wiltshire,15.905565853233059,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.5226004031632812,0.4367246859978291,0.04067491083888975,4,8
 UKPARL.2025.PUT,Putney,15.891945947379588,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.5123240681802108,0.47079001343800836,0.01688591838178089,4,8
 UKPARL.2025.WDS,West Dorset,15.878054449328499,4th IMD quintile,Constituencies in second least deprived quintile (20%),0.4287580772580874,0.5568598456458768,0.014382077096035813,4,8
@@ -593,8 +593,8 @@ UKPARL.2025.TAY,Thornbury and Yate,10.728461678130884,5th IMD quintile,Constitue
 UKPARL.2025.NBY,Newbury,10.727309738940448,5th IMD quintile,Constituencies in least deprived quintile (20%),0.8137972577005932,0.17081687034824955,0.015385871951157258,5,10
 UKPARL.2025.RNP,"Ruislip, Northwood and Pinner",10.651577922904805,5th IMD quintile,Constituencies in least deprived quintile (20%),0.773216787033163,0.22678321296683707,0.0,5,10
 UKPARL.2025.BWS,Bicester and Woodstock,10.614955296513108,5th IMD quintile,Constituencies in least deprived quintile (20%),0.7914991091880885,0.20850089081191142,0.0,5,10
-UKPARL.2025.EWE,Edinburgh West,10.605034727332807,5th IMD quintile,Constituencies in least deprived quintile (20%),0.7536905276457093,0.2202264188582638,0.026083053496026864,5,10
-UKPARL.2025.GDB,Gordon and Buchan,10.552407024035976,5th IMD quintile,Constituencies in least deprived quintile (20%),0.8075664926671638,0.19243350733283618,0.0,5,10
+UKPARL.2025.EWE,Edinburgh West,10.605034727332809,5th IMD quintile,Constituencies in least deprived quintile (20%),0.7536905276457093,0.2202264188582638,0.026083053496026864,5,10
+UKPARL.2025.GDB,Gordon and Buchan,10.552407024035977,5th IMD quintile,Constituencies in least deprived quintile (20%),0.8075664926671638,0.19243350733283618,0.0,5,10
 UKPARL.2025.HGK,Harrogate and Knaresborough,10.494026788959237,5th IMD quintile,Constituencies in least deprived quintile (20%),0.796467032651734,0.18923468314237074,0.014298284205895292,5,10
 UKPARL.2025.MDE,Mid Derbyshire,10.428066589574197,5th IMD quintile,Constituencies in least deprived quintile (20%),0.8155734420260817,0.1336371234586277,0.050789434515290645,5,10
 UKPARL.2025.TAT,Tatton,10.39564097069085,5th IMD quintile,Constituencies in least deprived quintile (20%),0.7412698905695148,0.23809671708544275,0.0206333923450425,5,10
@@ -635,7 +635,7 @@ UKPARL.2025.WIT,Witney,8.644810345340728,5th IMD quintile,Constituencies in leas
 UKPARL.2025.HBV,Hamble Valley,8.636346490120266,5th IMD quintile,Constituencies in least deprived quintile (20%),0.8927315471448833,0.09247313917115156,0.014795313683965106,5,10
 UKPARL.2025.NSS,North Somerset,8.62200113137436,5th IMD quintile,Constituencies in least deprived quintile (20%),0.8648682312155528,0.13513176878444724,0.0,5,10
 UKPARL.2025.SHA,Sheffield Hallam,8.56105792334333,5th IMD quintile,Constituencies in least deprived quintile (20%),0.8462226788407046,0.14057036803817918,0.013206953121116211,5,10
-UKPARL.2025.WAK,West Aberdeenshire and Kincardine,8.27461594793632,5th IMD quintile,Constituencies in least deprived quintile (20%),0.9447975814422201,0.05520241855777989,0.0,5,10
+UKPARL.2025.WAK,West Aberdeenshire and Kincardine,8.274615947936322,5th IMD quintile,Constituencies in least deprived quintile (20%),0.9447975814422201,0.05520241855777989,0.0,5,10
 UKPARL.2025.SRH,Surrey Heath,8.272938603851372,5th IMD quintile,Constituencies in least deprived quintile (20%),0.8438422573728208,0.1561577426271792,0.0,5,10
 UKPARL.2025.MAI,Maidenhead,8.023803442223306,5th IMD quintile,Constituencies in least deprived quintile (20%),0.8400487567040468,0.1599512432959532,0.0,5,10
 UKPARL.2025.EAW,Esher and Walton,8.012390848756592,5th IMD quintile,Constituencies in least deprived quintile (20%),0.8371521125091355,0.16284788749086457,0.0,5,10
