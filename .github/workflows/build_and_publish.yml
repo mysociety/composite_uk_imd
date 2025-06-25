@@ -20,7 +20,7 @@ jobs:
     steps:
 
       - name: Checkout repo content
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: 'recursive'
           
@@ -29,7 +29,6 @@ jobs:
         with:
           run: |
             pip install poetry
-            script/test
             dataset build --all
             dataset version auto --auto-ban major --all --publish
             notebook render --publish --all
@@ -49,7 +48,7 @@ jobs:
           destination: docs/_site
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: docs/_site
 
@@ -62,8 +61,8 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
 
-      - uses: geekyeggo/delete-artifact@v1
+      - uses: geekyeggo/delete-artifact@v4
         with:
           name: github-pages
