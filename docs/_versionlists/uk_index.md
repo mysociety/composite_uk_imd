@@ -23,9 +23,12 @@ versions:
   - '3.2'
   - 3.2.0
   3.3.0:
-  - '3'
   - '3.3'
   - 3.3.0
+  3.4.0:
+  - '3'
+  - '3.4'
+  - 3.4.0
   - latest
 permalink: /datasets/uk_index/versions
 ---

@@ -1,0 +1,129 @@
+title: UK_IMD_E
+description: England-anchored composite UK Index. English IMD rank ordering will be
+  preserved.
+custom:
+  row_count: 42619
+path: UK_IMD_E.csv
+name: uk_imd_e
+profile: tabular-data-resource
+scheme: file
+format: csv
+hashing: md5
+encoding: utf-8
+schema:
+  fields:
+  - name: nation
+    type: string
+    description: One letter string of UK Nation (N, E, S, W)
+    constraints:
+      unique: false
+      enum:
+      - E
+      - N
+      - S
+      - W
+    example: E
+  - name: lsoa
+    type: string
+    description: UK small statistical area (LSOA, DZ, SOA)
+    constraints:
+      unique: true
+    example: 95AA01S1
+  - name: overall_local_score
+    type: number
+    description: The overall IMD score for this area in the individual index
+    constraints:
+      unique: false
+    example: 0.5
+  - name: income_score
+    type: number
+    description: The Income subdomain score in the individual index
+    constraints:
+      unique: false
+    example: 0.0
+  - name: employment_score
+    type: number
+    description: The Employment subdomain score in the individual index
+    constraints:
+      unique: false
+    example: 0.0
+  - name: UK_IMD_E_score
+    type: number
+    description: The composite score for the UK wide composite, with other nations
+      re-predicted based on English model.
+    constraints:
+      unique: false
+    example: 0.3879532776292205
+  - name: original_decile
+    type: integer
+    description: Deprivation decile in original index.
+    constraints:
+      unique: false
+      enum:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+    example: 1
+  - name: E_expanded_decile
+    type: integer
+    description: Based on bands of original English index, fit other nations into
+      same bands.
+    constraints:
+      unique: false
+      enum:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+    example: 1
+  - name: UK_IMD_E_rank
+    type: number
+    description: Rank ordering of all LSOA by this index. One is most deprived.
+    constraints:
+      unique: false
+    example: 1.0
+  - name: UK_IMD_E_pop_decile
+    type: integer
+    description: LSOAs divided into ten deciles of even population (not LSOA count).
+      Decile 1 is most deprived.
+    constraints:
+      unique: false
+      enum:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+    example: 1
+  - name: UK_IMD_E_pop_quintile
+    type: integer
+    description: LSOAs divided into five quintiles of even population (not LSOA count).
+      Quintile 1 is most deprived.
+    constraints:
+      unique: false
+      enum:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+    example: 1
+hash: 17fe26b8e51af6040a5b188514a18bf5

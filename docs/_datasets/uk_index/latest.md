@@ -43,9 +43,10 @@ custom:
     3.1.0: Release 2023 council data
     3.2.0: 'New resource(s) added: constituency_imd,parl25_imd'
     3.3.0: 'Change in data for resource(s): la_imd'
+    3.4.0: 'Change in data for resource(s): la_imd'
   datasette:
     about: Info & Downloads
-    about_url: https://pages.mysociety.org/composite_uk_imd/datasets/uk_index/3_3_0
+    about_url: https://pages.mysociety.org/composite_uk_imd/datasets/uk_index/3_4_0
   formats:
     csv: true
     parquet: true
@@ -53,10 +54,10 @@ resources:
 - title: Local Authority deprivation
   description: Deprivation scores calculated for local authorities from UK (E) index.
   custom:
-    row_count: 394
+    row_count: 397
     datasette:
       about: Info & Downloads
-      about_url: https://pages.mysociety.org/composite_uk_imd/datasets/uk_index/3_3_0#la_imd
+      about_url: https://pages.mysociety.org/composite_uk_imd/datasets/uk_index/3_4_0#la_imd
   path: la_imd.csv
   name: la_imd
   profile: tabular-data-resource
@@ -134,7 +135,7 @@ resources:
       type: number
       description: Population density (people per km2)
       constraints:
-        unique: true
+        unique: false
       example: 8.671465968586388
     - name: la-imd-pop-quintile
       type: integer
@@ -170,7 +171,7 @@ resources:
         - 10
       example: 1
   _sheet_order: 1
-  hash: 25e5362fe634217161cd82c3751706cf
+  hash: c1359548b5512f945c7a827e0c580438
 - title: Westminster Constituency deprivation
   description: Deprivation scores calculated for parliamentary constituencies from
     UK (E) index.
@@ -178,7 +179,7 @@ resources:
     row_count: 650
     datasette:
       about: Info & Downloads
-      about_url: https://pages.mysociety.org/composite_uk_imd/datasets/uk_index/3_3_0#constituency_imd
+      about_url: https://pages.mysociety.org/composite_uk_imd/datasets/uk_index/3_4_0#constituency_imd
   path: constituency_imd.csv
   name: constituency_imd
   profile: tabular-data-resource
@@ -291,7 +292,7 @@ resources:
     row_count: 42619
     datasette:
       about: Info & Downloads
-      about_url: https://pages.mysociety.org/composite_uk_imd/datasets/uk_index/3_3_0#uk_imd_e
+      about_url: https://pages.mysociety.org/composite_uk_imd/datasets/uk_index/3_4_0#uk_imd_e
   path: UK_IMD_E.csv
   name: uk_imd_e
   profile: tabular-data-resource
@@ -423,7 +424,7 @@ resources:
     row_count: 42619
     datasette:
       about: Info & Downloads
-      about_url: https://pages.mysociety.org/composite_uk_imd/datasets/uk_index/3_3_0#uk_imd_n
+      about_url: https://pages.mysociety.org/composite_uk_imd/datasets/uk_index/3_4_0#uk_imd_n
   path: UK_IMD_N.csv
   name: uk_imd_n
   profile: tabular-data-resource
@@ -554,7 +555,7 @@ resources:
     row_count: 42619
     datasette:
       about: Info & Downloads
-      about_url: https://pages.mysociety.org/composite_uk_imd/datasets/uk_index/3_3_0#uk_imd_s
+      about_url: https://pages.mysociety.org/composite_uk_imd/datasets/uk_index/3_4_0#uk_imd_s
   path: UK_IMD_S.csv
   name: uk_imd_s
   profile: tabular-data-resource
@@ -685,7 +686,7 @@ resources:
     row_count: 42619
     datasette:
       about: Info & Downloads
-      about_url: https://pages.mysociety.org/composite_uk_imd/datasets/uk_index/3_3_0#uk_imd_w
+      about_url: https://pages.mysociety.org/composite_uk_imd/datasets/uk_index/3_4_0#uk_imd_w
   path: UK_IMD_W.csv
   name: uk_imd_w
   profile: tabular-data-resource
@@ -815,7 +816,7 @@ resources:
     row_count: 650
     datasette:
       about: Info & Downloads
-      about_url: https://pages.mysociety.org/composite_uk_imd/datasets/uk_index/3_3_0#parl25_imd
+      about_url: https://pages.mysociety.org/composite_uk_imd/datasets/uk_index/3_4_0#parl25_imd
   path: parl25_imd.csv
   name: parl25_imd
   profile: tabular-data-resource
@@ -918,6 +919,6 @@ resources:
         - 10
       example: 1
   hash: a4f488c647e21f82a54c3b00286afd0b
-full_version: 3.3.0
+full_version: 3.4.0
 permalink: /datasets/uk_index/latest
 ---

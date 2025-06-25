@@ -5,6 +5,6 @@ package: uk_index
 title: parl25_imd
 filename: parl25_imd.parquet
 version: latest
-full_version: 3.3.0
+full_version: 3.4.0
 file: /data/uk_index/latest/parl25_imd.parquet
 ---
