@@ -1,4 +1,3 @@
-from xxlimited import Str
 import pandas as pd
 import numpy as np
 import yaml
@@ -175,7 +174,7 @@ def transform_all_to(
 
     df = pd.concat(collection)
     pop = pd.read_csv(
-        Path("data", "analysis", "population", "2019_population.csv"), thousands=","
+        Path("data", "analysis", "population", "2025_population.csv"), thousands=","
     )
     df = pd.merge(df, pop, on="lsoa")
 

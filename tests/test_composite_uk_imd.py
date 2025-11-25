@@ -32,4 +32,4 @@ def test_all_lsoas():
     """
     df = pd.read_csv(packages_path / "uk_index" / "UK_IMD_E.csv")
     no_dupes = df["lsoa"].drop_duplicates()
-    assert len(no_dupes) == 42619
+    assert len(no_dupes) == 43530

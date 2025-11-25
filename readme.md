@@ -133,11 +133,10 @@ In all cases, the r² shows majority of the variation in the IMD score is explai
 
 | Nation | Intercept | Employment score | r² | Residuals SD |
 | :--- | :--- | :--- | :--- | :--- |
-| England | 0.06 | 2.16 | 0.90 | 4.74 |
+| England | -2.3 | 1.78 | 0.92 | 4.53 |
 | Scotland | 0.11 | 2.26 | 0.94 | 3.90 |
 | Wales | -3.49 | 2.40 | 0.87 | 5.54 |
 | Northern Ireland | -7.84 | 1.40 | 0.88 | 5.11 |
-
 
 
 
@@ -151,7 +150,7 @@ In all cases, the r² shows majority of the variation in the IMD score is explai
 
 | Nation | Intercept | Income score | Employment score | r² | Residuals SD |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| England | 0.51 | 1.09 | 0.72 | 0.94 | 3.63 |
+| England | -2.17 | 0.47 | 0.97 | 0.95 | 3.62 |
 | Scotland | 0.28 | 1.03 | 0.92 | 0.97 | 2.82 |
 | Wales | -3.73 | 1.24 | 0.53 | 0.94 | 3.87 |
 
@@ -174,15 +173,16 @@ This is why a dataset that is mostly Scottish data should use the Scotland based
 
 |  | Northern Ireland | Scotland | Wales |
 | :--- | :--- | :--- | :--- |
-| count | 869.00 | 6945.00 | 1845.00 |
-| mean | 29.58 | 108.93 | 8.61 |
-| std | 26.72 | 102.22 | 8.03 |
-| min | 1.00 | 1.00 | 0.50 |
-| 25% | 9.00 | 31.00 | 2.50 |
-| 50% | 23.00 | 81.00 | 6.00 |
-| 75% | 42.00 | 154.00 | 12.00 |
-| max | 216.00 | 819.00 | 57.00 |
-| % of total | 97.60 | 99.60 | 96.60 |
+| count | 868.0 | 6958.0 | 1863.0 |
+| mean | 22.26 | 188.76 | 16.39 |
+| std | 20.19 | 178.66 | 15.63 |
+| min | 1.0 | 1.0 | 0.5 |
+| 25% | 7.0 | 54.0 | 4.5 |
+| 50% | 17.0 | 137.0 | 12.0 |
+| 75% | 32.0 | 274.0 | 22.5 |
+| max | 163.0 | 1376.0 | 110.0 |
+| % of total | 97.5 | 99.7 | 97.6 |
+
 
 
 
@@ -198,16 +198,15 @@ This is why a dataset that is mostly Scottish data should use the Scotland based
 
 |  | Scotland | Wales |
 | :--- | :--- | :--- |
-| count | 6953.00 | 1876.00 |
-| mean | 117.22 | 13.12 |
-| std | 113.24 | 11.46 |
-| min | 1.00 | 0.50 |
-| 25% | 31.00 | 4.00 |
-| 50% | 81.00 | 9.50 |
-| 75% | 170.00 | 19.50 |
-| max | 1037.00 | 69.50 |
-| % of total | 99.70 | 98.30 |
-
+| count | 6968.0 | 1903.0 |
+| mean | 287.76 | 67.45 |
+| std | 275.13 | 59.64 |
+| min | 1.0 | 0.5 |
+| 25% | 73.0 | 22.0 |
+| 50% | 201.5 | 52.0 |
+| 75% | 431.0 | 96.25 |
+| max | 2029.0 | 384.0 |
+| % of total | 99.9 | 99.7 |
 
 
 
@@ -223,20 +222,16 @@ The following table and graph show the distribution of the population by nation 
 
 | IMD Decile distribution | E | N | S | W |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | 9% | 41% | 9% | 8% |
-| 2 | 10% | 23% | 9% | 10% |
-| 3 | 10% | 16% | 8% | 10% |
-| 4 | 10% | 10% | 8% | 12% |
-| 5 | 10% | 7% | 9% | 13% |
-| 6 | 10% | 2% | 11% | 14% |
-| 7 | 10% | 0% | 11% | 11% |
-| 8 | 10% | 0% | 11% | 10% |
-| 9 | 10% | 0% | 11% | 9% |
-| 10 | 10% | 0% | 15% | 3% |
-
-
-
-
+| 1 | 10% | 23% | 4% | 3% |
+| 2 | 10% | 21% | 6% | 6% |
+| 3 | 10% | 16% | 6% | 7% |
+| 4 | 10% | 14% | 6% | 8% |
+| 5 | 10% | 10% | 6% | 10% |
+| 6 | 10% | 8% | 7% | 11% |
+| 7 | 9% | 3% | 10% | 13% |
+| 8 | 9% | 0% | 11% | 13% |
+| 9 | 9% | 0% | 13% | 12% |
+| 10 | 8% | 0% | 26% | 13% |
 
 
 
